@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
-gem 'rails', '~> 6.0.3', '>= 6.0.3.7'
+gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.3', '>= 4.3.8'
 gem 'sass-rails', '>= 6.0.0'
@@ -35,9 +35,9 @@ group :development do
 end
 
 group :test do
-  gem 'capybara', '>= 2.15'
+  gem 'capybara', '>= 3.35.3'
   gem 'selenium-webdriver'
-  gem 'webdrivers'
+  gem 'webdrivers', '>= 4.5.0'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
