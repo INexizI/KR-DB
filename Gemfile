@@ -25,6 +25,7 @@ gem 'acts-as-taggable-on', '~> 6.5', '>= 6.5.0'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'brakeman'
 end
 
 group :development do
