@@ -272,7 +272,7 @@ DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
   capybara (>= 3.35.3)
-  carrierwave (>= 2.1.1)
+  carrierwave (>= 2.2.0)
   friendly_id (>= 5.4.2)
   image_processing
   jbuilder (~> 2.7)
@@ -299,4 +299,4 @@ RUBY VERSION
    ruby 3.0.0p0
 
 BUNDLED WITH
-   2.2.3
+   2.2.16
