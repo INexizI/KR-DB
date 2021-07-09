@@ -19,7 +19,7 @@ gem 'slim-rails', '>= 3.2.0'
 gem 'simple_form', '>= 5.0.3'
 gem 'friendly_id', '>= 5.4.2'
 gem 'mini_magick'
-gem 'carrierwave', '>= 2.2.0'
+gem 'carrierwave', '>= 2.2.2'
 gem 'image_processing'
 gem 'acts-as-taggable-on', '~> 6.5', '>= 6.5.0'
 
