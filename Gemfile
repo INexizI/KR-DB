@@ -16,7 +16,7 @@ gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'slim-rails', '>= 3.2.0'
-gem 'simple_form', '>= 5.0.3'
+gem 'simple_form', '>= 5.1.0'
 gem 'friendly_id', '>= 5.4.2'
 gem 'mini_magick'
 gem 'carrierwave', '>= 2.2.2'
