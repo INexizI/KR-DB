@@ -13,6 +13,24 @@ class CharsController < ApplicationController
     @skills = Skill.all
     @stats = Stat.all
     @gears = Gear.order('id ASC')
+
+    require('zip')
+    Zip::File.open('./public/images/media/genericPerks/generic_perks.zip') do |zip_file|
+      zip_file.each do |entry|
+        content = entry.get_input_stream.read
+        @perk_image = entry
+        @perk_name = entry.name
+      end
+    end
+
+    # Zip::File.open('./public/images/media/genericPerks/generic_perks.zip') do |zip_file|
+    #   zip_file.each do |entry|
+    #     @tempfile = Tempfile.new(File.basename(entry.name))
+    #     @tempfile.binmode
+    #     @tempfile.write entry.get_input_stream.read
+    #     @tempfile.close
+    #   end
+    # end
   end
 
   # def new

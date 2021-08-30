@@ -1,27 +1,29 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.0.0'
+ruby '3.0.1'
 
-gem 'rails', '~> 6.0.4', '>= 6.0.4.1'
+gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'puma', '~> 4.3', '>= 4.3.8'
+gem 'bootsnap', '>= 1.4.2', require: false
 gem 'sass-rails', '>= 6.0.0'
+
 gem 'webpacker', '~> 4.3', '>= 4.3.0'
-gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.7'
 gem 'json', '~> 2.5', '>= 2.5.1'
-
-gem 'bootsnap', '>= 1.4.2', require: false
+# gem 'hotwire-rails', '~> 0.1.3'
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'slim-rails', '>= 3.2.0'
 gem 'simple_form', '>= 5.1.0'
 gem 'friendly_id', '>= 5.4.2'
-gem 'mini_magick'
-gem 'carrierwave', '>= 2.2.2'
-gem 'image_processing'
-gem 'acts-as-taggable-on', '~> 6.5', '>= 6.5.0'
+# gem 'mini_magick'
+# gem 'carrierwave'
+# gem 'image_processing'
+gem 'acts-as-taggable-on'
+gem 'rack-cors'
+gem 'rubyzip'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
