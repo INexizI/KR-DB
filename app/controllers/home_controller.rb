@@ -1,7 +1,7 @@
 class HomeController < ApplicationController
   def index
     @char = Char.offset(rand(Char.count)).first
-    @gear = Gear.offset(rand(Gear.where('name <> ? AND tier <> ?', '', 'TM').count)).first
+    @gear = Gear.offset(rand(Gear.where('id <= ?', '743').count)).first
     @perk = Perk.offset(rand(Perk.count)).first
     @role = Role.offset(rand(Role.count)).first
     @rune = Rune.offset(rand(Rune.count)).first
