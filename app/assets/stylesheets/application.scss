@@ -42,6 +42,15 @@ select {
     z-index: 1;
     left: 5px;
     top: 3px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  .inner_links:focus {
+    top: 0;
   }
 
   .input_search {
@@ -86,6 +95,11 @@ select {
 
 .back {
   position: absolute;
+
+  img {
+    width: 24px;
+    height: 24px;
+  }
 }
 
 #a {
@@ -110,7 +124,7 @@ select {
       color: white;
     }
     a {
-      display: none;
+      // display: none;
       margin: 5px 0;
       outline: none;
       text-decoration: none;
@@ -130,10 +144,10 @@ select {
   to {opacity: 1}
 }
 
-.home-a:hover a {
-  display: block;
-  opacity: 1;
-}
+// .home-a:hover a {
+//   display: block;
+//   opacity: 1;
+// }
 
 .h-title {
   padding: 5px 0;
@@ -242,6 +256,8 @@ select {
   .c-avatar {
     img {
       border-radius: 10%;
+      width: 124px;
+      height: 124px;
     }
   }
   .c-title {

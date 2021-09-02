@@ -198,7 +198,6 @@
       gearStat();
       gearSet();
     });
-    $('#bg').parent().css('background-image', 'url(/images/media/background/bg' + Math.trunc(1 + Math.random() * 31) + '.png)');
     $chars = $('#calc_char_id').html();
     $('#calc_role_id').change(function() {
       $('#calc_gear_weapon').parent().hide();

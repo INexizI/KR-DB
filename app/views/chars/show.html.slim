@@ -1,13 +1,13 @@
 title = @char['name']
 
 = link_to 'javascript:history.back()', class: 'back', id: 'a' do
-  = image_tag '/images/left.svg'
+  img src='/images/left.svg' alt='Back'
 
 .char
   .c-main
     .c-sub#centr
       .c-avatar
-        img src='/images/media/heroes/#{@char.name}/portrait.png'
+        img src='/images/media/heroes/#{@char.name}/portrait.png' alt=@char.name
       .c-title
         p#c-name = @char.name
 

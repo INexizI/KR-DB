@@ -3,7 +3,7 @@
   .c-g
     - @gears.where(char: @char).where(gear_type: '10-UW').each do |gear|
       .c-perk-img
-        img src="/images/media/heroes/#{@char.name}/uw.png"
+        img src='/images/media/heroes/#{@char.name}/uw.png' alt=gear.name
         .g-description
           .p1
             = gear.name
@@ -18,7 +18,7 @@
   .c-g
     - @gears.where(char: @char).where(gear_type: '9-UT').each do |gear|
       .c-perk-img
-        img src="/images/media/heroes/#{@char.name}/ut#{gear.gear_skill}.png"
+        img src='/images/media/heroes/#{@char.name}/ut#{gear.gear_skill}.png' alt=gear.name
         .g-description
           .p1
             = gear.name
@@ -31,9 +31,9 @@
 .c-gear
   h4 Soul Weapon
   .c-g
-    - @skills.where(char: @char).where.not("length(parent_id) < 4").each do |skill|
+    - @skills.where(char: @char).where.not('length(parent_id) < 4').each do |skill|
       .c-perk-img
-        img src="/images/media/heroes/#{@char.name}/sw.png"
+        img src='/images/media/heroes/#{@char.name}/sw.png' alt=skill.name
         .s-description.sw-description
           .p1
             | Soul of 
@@ -51,9 +51,9 @@
             p = skill.description
             p#ad-re = skill.parent_id
             hr
-            img src="/images/media/manaOrb.png" id="a1"
+            img src="/images/media/manaOrb.png" id="a1" alt='ap1'
             span Advancement Phase 1
             .a1
-            img src="/images/media/manaOrb.png" id="a2"
+            img src="/images/media/manaOrb.png" id="a2" alt='ap2'
             span Advancement Phase 2
             .a2
