@@ -3,12 +3,10 @@ title = @gear.set + ' ' + @gear.name
 .gear
   .gear-description
     p
-      = @gear.set
-    p
-      = @gear.name
+      = @gear.set + ' ' + @gear.name
     p
       - if !@gear.char_id.blank?
-        img src='/images/media/heroes/#{@gear.char.name}/portrait.png' id='char-icon'
+        img src='/images/media/heroes/#{@gear.char.name}/portrait.png' id='char-icon' alt=@gear.char.name
         = @gear.char.name
       - elsif !@gear.role_id.blank?
         = @gear.role.name

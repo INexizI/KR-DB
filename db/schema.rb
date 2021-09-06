@@ -2,8 +2,8 @@
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
 #
-# This file is the source Rails uses to define your schema when running `rails
-# db:schema:load`. When creating a new database, `rails db:schema:load` tends to
+# This file is the source Rails uses to define your schema when running `bin/rails
+# db:schema:load`. When creating a new database, `bin/rails db:schema:load` tends to
 # be faster and is potentially less error prone than running all of your
 # migrations from scratch. Old migrations may fail to apply correctly if those
 # migrations use external dependencies or application code.
@@ -107,7 +107,7 @@ ActiveRecord::Schema.define(version: 2021_02_23_004432) do
     t.bigint "char_id"
     t.integer "cooldown"
     t.string "skill_number"
-    t.string "parent_id"
+    t.integer "parent_id"
     t.index ["char_id"], name: "index_skills_on_char_id"
   end
 
@@ -151,10 +151,10 @@ ActiveRecord::Schema.define(version: 2021_02_23_004432) do
 
   add_foreign_key "chars", "roles"
   add_foreign_key "enchants", "stats"
-  add_foreign_key "gears", "chars", name: "gears_char_id_fkey"
+  add_foreign_key "gears", "chars"
   add_foreign_key "gears", "roles"
-  add_foreign_key "gears", "stats", name: "gears_stat_id_fkey"
-  add_foreign_key "skills", "chars", name: "skills_char_id_fkey"
+  add_foreign_key "gears", "stats"
+  add_foreign_key "skills", "chars"
   add_foreign_key "stats", "roles"
   add_foreign_key "taggings", "tags"
 end

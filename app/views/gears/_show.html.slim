@@ -70,3 +70,22 @@
       img src='/images/media/gears/#{@gear.gear_type}/Earrings/#{@gear.set}.png' title=(@gear.set + ' ' + @gear.name) alt=''
   - else
     img src='/images/media/gears/#{@gear.gear_type}/#{@gear.set}.png' title=(@gear.set + ' ' + @gear.name) alt=''
+- elsif @gear.tier == 'TM'
+  - if @gear.gear_type == '7-J'
+    - if @gear.set == 'Reclaimed'
+      img src='/images/media/gears/#{@gear.gear_type}/#{@gear.gear_skill}/Reclaimed Perseverance #{@gear.name}.png' title=(@gear.set + ' ' + @gear.name) alt=''
+      img src='/images/media/gears/#{@gear.gear_type}/#{@gear.gear_skill}/Reclaimed Hope #{@gear.name}.png' title=(@gear.set + ' ' + @gear.name) alt=''
+      img src='/images/media/gears/#{@gear.gear_type}/#{@gear.gear_skill}/Reclaimed Authority #{@gear.name}.png' title=(@gear.set + ' ' + @gear.name) alt=''
+    - else
+      img src='/images/media/gears/#{@gear.gear_type}/#{@gear.gear_skill}/Perseverance #{@gear.name}.png' title=(@gear.set + ' ' + @gear.name) alt=''
+      img src='/images/media/gears/#{@gear.gear_type}/#{@gear.gear_skill}/Hope #{@gear.name}.png' title=(@gear.set + ' ' + @gear.name) alt=''
+      img src='/images/media/gears/#{@gear.gear_type}/#{@gear.gear_skill}/Authority #{@gear.name}.png' title=(@gear.set + ' ' + @gear.name) alt=''
+  -else
+    - if @gear.set == 'Reclaimed'
+      img src='/images/media/gears/#{@gear.gear_type}/Reclaimed Perseverance #{@gear.name}.png' title=(@gear.set + ' ' + @gear.name) alt=''
+      img src='/images/media/gears/#{@gear.gear_type}/Reclaimed Hope #{@gear.name}.png' title=(@gear.set + ' ' + @gear.name) alt=''
+      img src='/images/media/gears/#{@gear.gear_type}/Reclaimed Authority #{@gear.name}.png' title=(@gear.set + ' ' + @gear.name) alt=''
+    - else
+      img src='/images/media/gears/#{@gear.gear_type}/Perseverance #{@gear.name}.png' title=(@gear.set + ' ' + @gear.name) alt=''
+      img src='/images/media/gears/#{@gear.gear_type}/Hope #{@gear.name}.png' title=(@gear.set + ' ' + @gear.name) alt=''
+      img src='/images/media/gears/#{@gear.gear_type}/Authority #{@gear.name}.png' title=(@gear.set + ' ' + @gear.name) alt=''

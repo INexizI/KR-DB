@@ -656,6 +656,15 @@ input {
       padding: 5px 0;
     }
   }
+  
+  .g-star-button {
+    .g-img {
+      img {
+        width: 100px;
+        height: 100px;
+      }
+    }
+  }
 }
 
 .g-main {
