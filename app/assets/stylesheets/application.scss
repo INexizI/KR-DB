@@ -563,6 +563,12 @@ input {
   .s-title {
     display: flex;
     justify-content: center;
+
+    img {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
   }
 
   .s-skills {
@@ -579,11 +585,11 @@ input {
     }
   }
 }
-
-#char-icon {
-  width: 24px;
-  border-radius: 50%;
-}
+// 
+// #char-icon {
+//   width: 24px;
+//   border-radius: 50%;
+// }
 
 /*
   Class
@@ -656,7 +662,7 @@ input {
       padding: 5px 0;
     }
   }
-  
+
   .g-star-button {
     .g-img {
       img {
