@@ -42,7 +42,7 @@
         $(this).hide().prev('p').hide();
     });
     $('.char').css('background-image', 'url("/images/media/heroes/' + $('title').text() + '/Loading Screen.png")');
-    $('#bg').parent().css('background-image', 'url(/images/media/background/bg' + Math.trunc(1 + Math.random() * 31) + '.png)');
+    // $('#bg').parent().css('background-image', 'url(~bg' + Math.trunc(1 + Math.random() * 31) + '.png)');
     $('.c-stat .r-stat').find('#s-val').each(function() {
       $zeroStat = $(this);
       $softcap = $($zeroStat).prev().text();

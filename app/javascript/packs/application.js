@@ -1,5 +1,6 @@
+// require.context('../images', true)
 import Rails from "@rails/ujs"
-require("turbolinks").start()
+import Turbolinks from "turbolinks"
 import * as ActiveStorage from "@rails/activestorage"
 require("channels")
 require("jquery-ui")
@@ -10,7 +11,11 @@ require("packs/stat")
 require("packs/search")
 require("packs/jquery.easy-autocomplete.js")
 
+import 'src/stylesheets/application'
+const images = require.context('../images', true)
+
 Rails.start()
+Turbolinks.start()
 ActiveStorage.start()
 
 console.log('Webpacker loaded')

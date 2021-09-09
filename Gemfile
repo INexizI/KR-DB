@@ -24,6 +24,7 @@ gem 'friendly_id', '>= 5.4.2'
 gem 'acts-as-taggable-on'
 gem 'rack-cors'
 gem 'rubyzip'
+gem 'uglifier'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
