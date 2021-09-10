@@ -16,10 +16,10 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-size: large;
   font-weight: bold;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-attachment: fixed;
 }
 
 input {
@@ -66,7 +66,7 @@ select {
       background-size: 15px;
       background-position: 5px 5px;
       background-repeat: no-repeat;
-      background-image: url('~search.svg');
+      background-image: url('search.svg');
     }
     input:focus {
       text-indent: 0px;
@@ -118,7 +118,8 @@ select {
     text-align: center;
 
     p {
-      width: 124px;
+      // width: 124px;
+      width: 100px;
       border: 1px solid rgba(0, 0, 0, 0.1);
       background: rgb(80, 80, 80);
       color: white;
@@ -132,12 +133,19 @@ select {
       animation: fadein 0.5s;
     }
     img {
-      width: 124px;
-      height: 124px;
+      // width: 124px;
+      // height: 124px;
+      width: 100px;
+      height: 100px;
       box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);
     }
   }
 }
+
+// #bg {
+//   min-height: 100vh;
+//   backdrop-filter: blur(3px) saturate(0.3) grayscale(0.5) opacity(0.8);
+// }
 
 @keyframes fadein {
   from {opacity: 0}
@@ -563,6 +571,7 @@ input {
   .s-title {
     display: flex;
     justify-content: center;
+    padding-bottom: 5px;
 
     img {
       width: 24px;
@@ -576,11 +585,13 @@ input {
     justify-content: center;
 
     .s-image {
-      margin: 5px;
+      margin: 0 5px;
 
       img {
-        width: 75px;
-        height: 75px;
+        // width: 75px;
+        // height: 75px;
+        width: 50px;
+        height: 50px;
       }
     }
   }
@@ -1581,11 +1592,6 @@ h4 {
 }
 .tgl-light:checked + .tgl-btn {
   background: #9FD6AE;
-}
-
-#bg {
-  min-height: 100vh;
-  backdrop-filter: blur(3px) saturate(0.3) grayscale(0.5) opacity(0.8);
 }
 
 .share-link {

@@ -7,7 +7,6 @@ html lang='en'
       .inner_links
         = link_to root_path do
           = image_tag 'home.svg', alt: 'home'
-          / = image_pack_tag 'media/images/home.svg'
 
       .input_search
         = form_with url: search_path, local: true, method: :get do |f|
