@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activerecord-hackery/ransack.git
-  revision: 81910c238dd4452bbe90541f13abb6e85b3bbfea
+  revision: 4caf7c25b07e6c7271b02e46dc3a7985cca61162
   specs:
     ransack (2.4.2)
       activerecord (>= 5.2.4)

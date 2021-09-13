@@ -12,17 +12,17 @@
     "jquery": "^3.6.0",
     "jquery-ui": "^1.12.1",
     "node-forge": "^0.10.0",
-    "normalize-url": "7.0.1",
+    "normalize-url": "7.0.2",
     "postcss": "8.3.6",
     "rails-ujs": "^5.2.6",
     "stimulus": "^2.0.0",
     "turbolinks": "^5.2.0",
-    "ws": "^8.2.1"
+    "ws": "^8.2.2"
   },
   "version": "0.1.0",
   "devDependencies": {
     "@webpack-cli/serve": "^1.5.2",
-    "webpack-dev-server": "^4.0.0",
+    "webpack-dev-server": "^4.2.0",
     "yarn-upgrade-all": "^0.5.4"
   }
 }

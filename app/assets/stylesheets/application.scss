@@ -16,10 +16,10 @@ body {
   font-family: 'Quicksand', sans-serif;
   font-size: large;
   font-weight: bold;
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
-  // background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 input {
@@ -571,11 +571,12 @@ input {
   .s-title {
     display: flex;
     justify-content: center;
-    padding-bottom: 5px;
+    margin: 3px 0;
 
     img {
       width: 24px;
       height: 24px;
+      padding: 0 3px;
       border-radius: 50%;
     }
   }
@@ -585,7 +586,9 @@ input {
     justify-content: center;
 
     .s-image {
-      margin: 0 5px;
+      width: 50px;
+      height: 50px;
+      margin: 1px 5px;
 
       img {
         // width: 75px;
