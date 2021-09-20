@@ -1,24 +1,31 @@
-title Rune
+title Runes
 
-.r
-  = image_tag '/images/media/rune.png'
-  span Rune
-br
+.r-sub#centr
+  .r-title Runes for Weapon
+  .r-main
+    .r-gear
+      - @runes.where(tier: 'Legendary', type_gear: 'weapon').each do |rune|
+        img src='/images/media/icons/runeW.png' width='20px' height='20px'
+        = rune.name
+        br
 
-#centr
-  - @runes.each do |rune|
-    = rune.name
-    br
-    = rune.value
-    br
-    = rune.tier
-    br
-    - if rune.type_gear == 'weapon'
-      img src="/images/media/icons/runeW.png" title='Runes for Secondary Gear'
-    - if rune.type_gear == 'armor'
-      img src="/images/media/icons/runeA.png" title='Runes for Secondary Gear'
-    - if rune.type_gear == 'secondary'
-      img src="/images/media/icons/runeS.png" title='Runes for Secondary Gear'
-    hr
+  .r-title Runes for Armor
+  .r-main
+    .r-gear
+      - @runes.where(tier: 'Legendary', type_gear: 'armor').each do |rune|
+        = rune.name
+        br
 
-= link_to 'New Rune', new_rune_path
+  .r-title Runes for Secondary
+  .r-main
+    .r-gear
+      - @runes.where(tier: 'Legendary', type_gear: 'secondary').each do |rune|
+        = rune.name
+        br
+
+  .r-title Velkazar Runes
+  .r-main
+    .r-gear
+      - @runes.where(type_gear: 'all').each do |rune|
+        = rune.name
+        br

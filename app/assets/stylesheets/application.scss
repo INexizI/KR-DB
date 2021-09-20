@@ -664,6 +664,26 @@ input {
   }
 }
 
+.r-sub {
+  padding: 10px 0;
+
+  h3 {
+    text-align: center;
+  }
+  .r-title {
+    width: fit-content;
+    padding: 5px 0;
+    margin: auto;
+    cursor: pointer;
+  }
+  .r-main {
+    display: none;
+    width: 80%;
+    margin: 0px auto;
+    justify-content: center;
+  }
+}
+
 /*
   Gear
 */
@@ -687,64 +707,61 @@ input {
   }
 }
 
-.g-main {
-  justify-content: center;
+.g-sub {
+  padding: 10px 0;
 
-  .g-sub {
-    padding: 10px 0;
+  h3 {
+    text-align: center;
+  }
+  .g-title {
+    width: fit-content;
+    padding: 5px 0;
+    margin: auto;
+    cursor: pointer;
+  }
+  .g-main {
+    display: none;
+    width: 80%;
+    margin: 0px auto;
+    justify-content: center;
 
-    h3 {
+    .g-gear {
+      display: flex;
+      flex-wrap: wrap;
+
+      a {
+        padding: 0 3px;
+        margin: 0 auto;
+      }
+    }
+    .g-un {
+      margin: auto;
+      padding: 5px;
+    }
+    .g-uw {
+      margin: 0 auto;
+      width: 135px;
       text-align: center;
     }
-    .g-title {
-      width: fit-content;
-      padding: 5px 0;
-      margin: auto;
-      cursor: pointer;
-    }
-    .g-main {
-      display: none;
-      width: 80%;
-      margin: 0px auto;
-
-      .g-gear {
+    .g-un, .guw {
+      p {
+        margin: 0;
+        justify-content: center;
         display: flex;
-        flex-wrap: wrap;
-
-        a {
-          padding: 0 3px;
-          margin: 0 auto;
-        }
-      }
-      .g-un {
-        margin: auto;
-        padding: 5px;
-      }
-      .g-uw {
-        margin: 0 auto;
-        width: 135px;
-        text-align: center;
-      }
-      .g-un, .guw {
-        p {
-          margin: 0;
-          justify-content: center;
-          display: flex;
-        }
       }
     }
-    #cl {
-      margin: 0 5px;
-    }
-    div {
-      a {
-        display: block;
-        padding: 0 5px;
+  }
+  #cl {
+    margin: 0 5px;
+  }
+  div {
+    a {
+      display: block;
+      padding: 0 5px;
 
-        img {
-          width: 75px;
-          height: 75px;
-        }
+      img {
+        width: 75px;
+        height: 75px;
       }
     }
   }
