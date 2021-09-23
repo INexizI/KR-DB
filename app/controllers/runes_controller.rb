@@ -8,6 +8,7 @@ class RunesController < ApplicationController
   def show
     # @rune = Rune.find(params[:id])
     # render json: @rune
+    @runes = Rune.all
   end
 
   def new
