@@ -9,7 +9,7 @@ Rails.application.routes.draw do
   resources :skills
   resources :gears
   resources :enchants
-  resources :runes
+  resources :runes, only: :index
 
   get :search, controller: :search
 end
