@@ -1,4 +1,4 @@
-title Skill
+title Skills
 
 .skill-main
   - @chars.order('name ASC').each do |c|
@@ -12,10 +12,49 @@ title Skill
           - if skill.parent_id.blank?
             div
               .s-image
-                = link_to skill do
-                  img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.png' title=skill.name alt=skill.name
+                img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.png' alt=skill.name
+                .s-desc
+                  .p1
+                    = skill.name
+                  .p2
+                    - if skill.mana.blank?
+                      | Passive
+                    - else
+                      | Mana cost: 
+                      - if skill.mana == 0
+                        | 0
+                      - else
+                        - skill.mana.times do
+                          = image_tag '/images/media/manaOrb.png', id: 'manaOrb'
+                  - if !skill.cooldown.blank?
+                    .p3
+                      | Cooldown: 
+                      = skill.cooldown
+                  .p4
+                    hr
+                    = skill.description
+
               - @skills.where(parent_id: skill.id).each do |skill|
                 - if !skill.parent_id.blank?
                   .s-image
-                    = link_to skill do
-                      img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.png' title=skill.name alt=skill.name
+                    img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.png' alt=skill.name
+                    .s-desc
+                      .p1
+                        = skill.name
+                      .p2
+                        - if skill.mana.blank?
+                          | Passive
+                        - else
+                          | Mana cost: 
+                          - if skill.mana == 0
+                            | 0
+                          - else
+                            - skill.mana.times do
+                              = image_tag '/images/media/manaOrb.png', id: 'manaOrb'
+                      - if !skill.cooldown.blank?
+                        .p3
+                          | Cooldown: 
+                          = skill.cooldown
+                      .p4
+                        hr
+                        = skill.description

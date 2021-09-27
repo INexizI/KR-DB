@@ -36,6 +36,19 @@
       $('.p-description').hide();
       $('.g-description').hide();
     });
+    $('.s-image').mouseenter(function() {
+      $left = 0;
+      if ($(document).width() - $(this).offset().left < $(document).width() / 2)
+      $left = -1;
+      $x = $left * 430;
+      $cs = {
+        'left': $x,
+        'display': 'grid'
+      }
+      $('.s-desc', this).css($cs);
+    }).mouseleave(function() {
+      $('.s-desc').removeAttr('style');
+    });
     $('.c-stat .r-stat').find('p').each(function() {
       $zeroStat = $(this).text();
       if ($zeroStat === '0')
