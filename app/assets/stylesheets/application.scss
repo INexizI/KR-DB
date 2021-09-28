@@ -806,6 +806,10 @@ input {
     margin: 0px auto;
     justify-content: center;
 
+    img {
+      width: 75px;
+      height: 75px;
+    }
     .g-gear {
       display: flex;
       flex-wrap: wrap;
@@ -820,31 +824,20 @@ input {
       padding: 5px;
     }
     .g-uw {
-      margin: 0 auto;
       width: 135px;
+      margin: 0 auto;
       text-align: center;
     }
     .g-un, .guw {
       p {
         margin: 0;
-        justify-content: center;
         display: flex;
+        justify-content: center;
       }
     }
   }
   #cl {
     margin: 0 5px;
-  }
-  div {
-    a {
-      display: block;
-      padding: 0 5px;
-
-      img {
-        width: 75px;
-        height: 75px;
-      }
-    }
   }
 }
 

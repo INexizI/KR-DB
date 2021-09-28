@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :perks
   resources :stats
   resources :skills, only: :index
-  resources :gears
+  resources :gears, only: :index
   resources :enchants
   resources :runes, only: :index
 

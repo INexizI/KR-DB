@@ -8,7 +8,7 @@ title KrCalc
   .home-a
     p Gear
     = link_to gears_path do
-      = render '/gears/show'
+      = render 'gear'
   .home-a
     p Perk
     = link_to perks_path do
@@ -16,7 +16,7 @@ title KrCalc
   .home-a
     p Rune
     = link_to runes_path do
-      = image_tag '/images/media/runes/velkazar.png', title: 'Rune'
+      img src='/images/media/runes/velkazar.png' title='Rune'
   .home-a
     p Skill
     = link_to skills_path do
