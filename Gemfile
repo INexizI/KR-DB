@@ -15,7 +15,7 @@ gem 'json', '~> 2.5', '>= 2.5.1'
 # gem 'hotwire-rails', '~> 0.1.3'
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
-gem 'slim-rails', '>= 3.2.0'
+gem 'slim-rails', '>= 3.3.0'
 gem 'simple_form', '>= 5.1.0'
 gem 'friendly_id', '>= 5.4.2'
 # gem 'mini_magick'
@@ -41,7 +41,7 @@ end
 group :test do
   gem 'capybara', '>= 3.35.3'
   gem 'selenium-webdriver'
-  gem 'webdrivers', '>= 4.5.0'
+  gem 'webdrivers', '>= 4.6.1'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
