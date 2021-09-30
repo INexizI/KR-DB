@@ -3,7 +3,8 @@ class GearsController < ApplicationController
 
   def index
     # @gears = Gear.all
-    @gears = Gear.order('gear_type,id ASC')
+    @gears = Gear.all
+    # @gears = Gear.order('gear_type,id ASC')
     @chars = Char.all
     @roles = Role.all
   end

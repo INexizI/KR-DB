@@ -802,7 +802,8 @@ input {
   }
   .g-main {
     display: none;
-    width: 80%;
+    // width: 80%;
+    width: auto;
     margin: 0px auto;
     justify-content: center;
 
@@ -811,12 +812,18 @@ input {
       height: 75px;
     }
     .g-gear {
+      width: 850px;
       display: flex;
       flex-wrap: wrap;
 
       a {
         padding: 0 3px;
         margin: 0 auto;
+      }
+      .g-image {
+        width: 75px;
+        height: 75px;
+        margin: 1px;
       }
     }
     .g-un {
@@ -908,6 +915,43 @@ h4 {
   .p4 {
     grid-area: p4;
     padding: 3px 5px 5px 5px;
+  }
+}
+
+.g-desc {
+  width: 300px;
+  border: 1px solid;
+  border-radius: 10px 10px 10px 10px;
+  background: #d2d2d2;
+  display: none;
+  position: relative;
+  margin: -50px 60px;
+  padding: 0px 5px;
+  font-size: medium;
+}
+.g-image:hover .g-desc {
+  display: grid;
+  gap: 1px 1px;
+  grid-template-areas: "p1 p1 p1" "p2 p2 p3" "p4 p4 p4";
+
+  .p1 {
+    grid-area: p1;
+    font-weight: bold;
+    padding: 10px 0 0 5px;
+  }
+  .p2 {
+    grid-area: p2;
+    text-align: left;
+    padding: 10px 0 0 5px;
+  }
+  .p3 {
+    grid-area: p3;
+    text-align: right;
+    padding: 10px 10px 0 0;
+   }
+  .p4 {
+    grid-area: p4;
+    padding: 10px 5px;
   }
 }
 
