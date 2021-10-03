@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_02_23_004432) do
+ActiveRecord::Schema.define(version: 2021_10_03_204444) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,9 +66,20 @@ ActiveRecord::Schema.define(version: 2021_02_23_004432) do
     t.bigint "stat_id"
     t.bigint "role_id"
     t.string "gear_skill"
+    t.string "description_2"
     t.index ["char_id"], name: "index_gears_on_char_id"
     t.index ["role_id"], name: "index_gears_on_role_id"
     t.index ["stat_id"], name: "index_gears_on_stat_id"
+  end
+
+  create_table "links", force: :cascade do |t|
+    t.string "title"
+    t.string "text"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.string "slug"
+    t.datetime "date_expired"
+    t.index ["slug"], name: "index_links_on_slug", unique: true
   end
 
   create_table "perks", force: :cascade do |t|
@@ -91,7 +102,7 @@ ActiveRecord::Schema.define(version: 2021_02_23_004432) do
 
   create_table "runes", force: :cascade do |t|
     t.string "name"
-    t.string "value", default: [], array: true
+    t.string "value", default: "{}"
     t.string "type_gear"
     t.string "tier"
     t.datetime "created_at", precision: 6, null: false
@@ -107,7 +118,7 @@ ActiveRecord::Schema.define(version: 2021_02_23_004432) do
     t.bigint "char_id"
     t.integer "cooldown"
     t.string "skill_number"
-    t.integer "parent_id"
+    t.string "parent_id"
     t.index ["char_id"], name: "index_skills_on_char_id"
   end
 
