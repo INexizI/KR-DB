@@ -26,6 +26,13 @@ title Gear
           .g-desc
             .p1
               p #{gear.set} #{gear.name}
+            .p2
+              - if gear.stat.name == 'HP'
+                | MAX HP
+              - else
+                | #{gear.stat.name}
+              br
+              | #{gear.stat.value}
             .p4
               hr
               p = gear.description
@@ -43,6 +50,10 @@ title Gear
           .g-desc
             .p1
               p Reclaimed #{gear.name} of Perseverance #{gear.gear_skill}
+            .p2
+              | #{gear.description}
+              br
+              | #{gear.stat.value}
             .p4
               hr
               - @gears.where(name: gear.name, set: 'Perseverance').each do |g|
@@ -57,6 +68,10 @@ title Gear
           .g-desc
             .p1
               p #{gear.name} of Perseverance #{gear.gear_skill}
+            .p2
+              | #{gear.description}
+              br
+              | #{gear.stat.value}
             .p4
               hr
               - @gears.where(name: gear.name, set: 'Perseverance').each do |g|
@@ -71,6 +86,10 @@ title Gear
           .g-desc
             .p1
               p Reclaimed #{gear.name} of Hope #{gear.gear_skill}
+            .p2
+              | #{gear.description}
+              br
+              | #{gear.stat.value}
             .p4
               hr
               - @gears.where(name: gear.name, set: 'Hope').each do |g|
@@ -85,6 +104,10 @@ title Gear
           .g-desc
             .p1
               p #{gear.name} of Hope #{gear.gear_skill}
+            .p2
+              | #{gear.description}
+              br
+              | #{gear.stat.value}
             .p4
               hr
               - @gears.where(name: gear.name, set: 'Hope').each do |g|
@@ -99,6 +122,10 @@ title Gear
           .g-desc
             .p1
               p Reclaimed #{gear.name} of Authority #{gear.gear_skill}
+            .p2
+              | #{gear.description}
+              br
+              | #{gear.stat.value}
             .p4
               hr
               - @gears.where(name: gear.name, set: 'Authority').each do |g|
@@ -112,7 +139,11 @@ title Gear
             img src='/images/media/gears/#{gear.gear_type}/Authority #{gear.name}.png' title=(gear.set + ' ' + gear.name)
           .g-desc
             .p1
-              p Reclaimed #{gear.name} of Authority #{gear.gear_skill}
+              p #{gear.name} of Authority #{gear.gear_skill}
+            .p2
+              | #{gear.description}
+              br
+              | #{gear.stat.value}
             .p4
               hr
               - @gears.where(name: gear.name, set: 'Authority').each do |g|
