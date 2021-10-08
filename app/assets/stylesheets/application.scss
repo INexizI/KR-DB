@@ -789,7 +789,7 @@ input {
 }
 
 .g-sub {
-  padding: 10px 0;
+  padding: 10px 0 100px 0;
 
   h3 {
     text-align: center;
@@ -831,21 +831,29 @@ input {
       width: 540px;
       margin: 0 auto;
     }
-    .g-un {
+    .g-ut {
       margin: auto;
       padding: 5px;
+
+      .g-un {
+        // width: 300px;
+        display: flex;
+
+        .g-image, img {
+          width: 75px;
+          height: 75px;
+        }
+      }
     }
-    .g-uw {
+    .g-ut > p {
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    #g-uw > .g-un {
       width: 135px;
       margin: 0 auto;
-      text-align: center;
-    }
-    .g-un, .guw {
-      p {
-        margin: 0;
-        display: flex;
-        justify-content: center;
-      }
+      justify-content: center;
     }
   }
   #cl {
