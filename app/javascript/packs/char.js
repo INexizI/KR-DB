@@ -36,24 +36,6 @@
       $('.p-description').hide();
       $('.g-description').hide();
     });
-    $('.s-image').mouseenter(function() {
-      $left = 0;
-      if ($(document).width() - $(this).offset().left < $(document).width() / 2)
-      $left = -1;
-      $x = $left * 430;
-      $cs = {
-        'left': $x,
-        'display': 'grid'
-      }
-      $('.s-desc', this).css($cs);
-    }).mouseleave(function() {
-      $('.s-desc').removeAttr('style');
-    });
-    $('.c-stat .r-stat').find('p').each(function() {
-      $zeroStat = $(this).text();
-      if ($zeroStat === '0')
-        $(this).hide().prev('p').hide();
-    });
     $('.char').css('background-image', 'url("/images/media/heroes/' + $('title').text() + '/Loading Screen.png")');
     // $bg = {
     //   'background-image': 'url("/images/media/background/bg' + Math.trunc(1 + Math.random() * 31) + '.png")',

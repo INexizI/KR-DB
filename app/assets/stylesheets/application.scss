@@ -801,8 +801,8 @@ input {
     cursor: default;
   }
   .g-main {
-    // display: none;
-    display: flex;
+    display: none;
+    // display: flex;
     flex-wrap: wrap;
     // width: 80%;
     width: auto;
@@ -933,13 +933,13 @@ h4 {
 
 .g-desc {
   // width: 300px;
-  width: 350px;
+  width: 340px;
   border: 1px solid;
   border-radius: 10px 10px 10px 10px;
   background: #d2d2d2;
   display: none;
   position: relative;
-  margin: -50px 60px;
+  margin: -65px 80px;
   padding: 0px 5px;
   font-size: medium;
 }
