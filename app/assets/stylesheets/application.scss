@@ -811,25 +811,25 @@ input {
     justify-content: center;
 
     img {
-      width: 75px;
-      height: 75px;
+      width: 50px;
+      height: 50px;
     }
     .g-gear, .g-gear-tm {
-      width: 850px;
+      width: 575px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
 
       .g-image {
-        width: 75px;
-        height: 75px;
+        width: 50px;
+        height: 50px;
         margin: 1px;
       }
     }
     .g-gear-tm {
       // width: 1100px;
-      width: 540px;
-      margin: 0 auto;
+      width: 400px;
+      margin: 0 10px;
     }
     .g-ut {
       margin: auto;
@@ -838,20 +838,39 @@ input {
       .g-un {
         // width: 300px;
         display: flex;
+        justify-content: center;
 
         .g-image, img {
-          width: 75px;
-          height: 75px;
+          width: 50px;
+          height: 50px;
+        }
+      }
+      .g-name {
+        display: flex;
+        justify-content: center;
+        margin: 3px 0;
+
+        p {
+         margin: 0;
+         display: flex;
+         justify-content: center;
+        }
+        img {
+          width: 24px;
+          height: 24px;
+          padding: 0 3px;
+          border-radius: 50%;
         }
       }
     }
-    .g-ut > p {
-      margin: 0;
-      display: flex;
-      justify-content: center;
-    }
+    // .g-ut > p {
+    //   margin: 0;
+    //   display: flex;
+    //   justify-content: center;
+    // }
     #g-uw > .g-un {
-      width: 135px;
+      // width: 135px;
+      width: 160px;
       margin: 0 auto;
       justify-content: center;
     }
@@ -893,7 +912,7 @@ h4 {
 .g-description {
   width: 500px;
   border: 1px solid;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px;
   background: rgba(210, 210, 210, 1);
   display: none;
   position: relative;
@@ -935,11 +954,12 @@ h4 {
   // width: 300px;
   width: 340px;
   border: 1px solid;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 10px;
   background: #d2d2d2;
   display: none;
   position: relative;
-  margin: -65px 80px;
+  // margin: -65px 80px;
+  margin: -53px 55px;
   padding: 0px 5px;
   font-size: medium;
 }

@@ -7,6 +7,7 @@ class GearsController < ApplicationController
     # @gears = Gear.order('gear_type,id ASC')
     @chars = Char.all
     @roles = Role.all
+    @skills = Skill.all
   end
 
   def show
