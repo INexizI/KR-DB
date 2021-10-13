@@ -20,6 +20,25 @@
     }).mouseleave(function() {
       $('.g-desc').removeAttr('style');
     });
+    $('.g-sw-desc').mouseenter(function() {
+      $left = 0;
+      if ($(document).width() - $(this).offset().left < $(document).width() / 2)
+      $left = -1;
+      $x = $left * 672;
+      $cs = {
+        'left': $x,
+        'display': 'grid'
+      }
+      $('.g-desc', this).css($cs);
+    }).mouseleave(function() {
+      $('.g-desc').removeAttr('style');
+    });
+
+    $adv = ('#ad-re').text().split(/\n/);
+    $('.a1').text($adv[1]);
+    $('.a2').text($adv[4]);
+    $('#ad-re').text('');
+
     $('.c-stat .r-stat').find('p').each(function() {
       $zeroStat = $(this).text();
       if ($zeroStat === '0')
