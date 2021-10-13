@@ -12,7 +12,7 @@ gem 'sass-rails'
 gem 'webpacker'
 gem 'jbuilder'
 gem 'json'
-gem 'hotwire-rails'
+gem 'hotwire-rails', '>= 0.1.3'
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'slim-rails'
