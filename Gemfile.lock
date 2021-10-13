@@ -87,7 +87,7 @@ GEM
       rack-test (>= 0.6.3)
       regexp_parser (>= 1.5, < 3.0)
       xpath (~> 3.2)
-    childprocess (3.0.0)
+    childprocess (4.1.0)
     concurrent-ruby (1.1.9)
     crass (1.0.6)
     erubi (1.10.0)
@@ -100,15 +100,19 @@ GEM
       activerecord (>= 4.0.0)
     globalid (0.5.2)
       activesupport (>= 5.0)
+    hotwire-rails (0.1.3)
+      rails (>= 6.0.0)
+      stimulus-rails
+      turbo-rails
     i18n (1.8.10)
       concurrent-ruby (~> 1.0)
     jbuilder (2.11.2)
       activesupport (>= 5.0.0)
     json (2.5.1)
     json (2.5.1-java)
-    listen (3.0.8)
-      rb-fsevent (~> 0.9, >= 0.9.4)
-      rb-inotify (~> 0.9, >= 0.9.7)
+    listen (3.7.0)
+      rb-fsevent (~> 0.10, >= 0.10.3)
+      rb-inotify (~> 0.9, >= 0.9.10)
     loofah (2.12.0)
       crass (~> 1.0.2)
       nokogiri (>= 1.5.9)
@@ -134,9 +138,9 @@ GEM
       racc (~> 1.4)
     pg (1.2.3)
     public_suffix (4.0.6)
-    puma (4.3.9)
+    puma (5.5.2)
       nio4r (~> 2.0)
-    puma (4.3.9-java)
+    puma (5.5.2-java)
       nio4r (~> 2.0)
     racc (1.5.2)
     racc (1.5.2-java)
@@ -178,6 +182,7 @@ GEM
     rb-inotify (0.10.1)
       ffi (~> 1.0)
     regexp_parser (2.1.1)
+    rexml (3.2.5)
     rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
@@ -191,9 +196,11 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
-    selenium-webdriver (3.142.7)
-      childprocess (>= 0.5, < 4.0)
+    selenium-webdriver (4.0.0)
+      childprocess (>= 0.5, < 5.0)
+      rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
+    semantic_range (3.0.0)
     simple_form (5.1.0)
       actionpack (>= 5.2)
       activemodel (>= 5.2)
@@ -215,9 +222,13 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
+    stimulus-rails (0.7.0)
+      rails (>= 6.0.0)
     temple (0.8.2)
     thor (1.1.0)
     tilt (2.0.10)
+    turbo-rails (7.1.0)
+      rails (>= 6.0.0)
     tzinfo (2.0.4)
       concurrent-ruby (~> 1.0)
     tzinfo-data (1.2021.3)
@@ -229,14 +240,14 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
-    webdrivers (4.6.1)
+    webdrivers (2.3.2)
       nokogiri (~> 1.6)
-      rubyzip (>= 1.3.0)
-      selenium-webdriver (>= 3.0, < 4.0)
-    webpacker (4.3.0)
-      activesupport (>= 4.2)
+      zip
+    webpacker (5.4.3)
+      activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
-      railties (>= 4.2)
+      railties (>= 5.2)
+      semantic_range (>= 2.3.0)
     websocket-driver (0.7.5)
       websocket-extensions (>= 0.1.0)
     websocket-driver (0.7.5-java)
@@ -245,6 +256,7 @@ GEM
     xpath (3.2.0)
       nokogiri (~> 1.8)
     zeitwerk (2.4.2)
+    zip (2.0.2)
 
 PLATFORMS
   java
@@ -255,32 +267,33 @@ PLATFORMS
 
 DEPENDENCIES
   acts-as-taggable-on
-  bootsnap (>= 1.4.2)
+  bootsnap
   brakeman
   byebug
-  capybara (>= 3.35.3)
-  friendly_id (>= 5.4.2)
-  jbuilder (~> 2.7)
-  json (~> 2.5, >= 2.5.1)
-  listen (>= 3.0.5, < 3.2)
-  nokogiri (>= 1.12.5)
-  pg (>= 0.18, < 2.0)
-  puma (~> 4.3, >= 4.3.8)
+  capybara
+  friendly_id
+  hotwire-rails
+  jbuilder
+  json
+  listen
+  nokogiri
+  pg
+  puma
   rack-cors
   rails (~> 6.1.4, >= 6.1.4.1)
   ransack!
   rubyzip
-  sass-rails (>= 6.0.0)
+  sass-rails
   selenium-webdriver
-  simple_form (>= 5.1.0)
-  slim-rails (>= 3.3.0)
+  simple_form
+  slim-rails
   spring
-  spring-watcher-listen (~> 2.0.0)
+  spring-watcher-listen
   tzinfo-data
   uglifier
-  web-console (>= 4.1.0)
-  webdrivers (>= 4.6.1)
-  webpacker (~> 4.3, >= 4.3.0)
+  web-console
+  webdrivers
+  webpacker
 
 RUBY VERSION
    ruby 3.0.2p107
