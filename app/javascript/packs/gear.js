@@ -34,10 +34,12 @@
       $('.g-desc').removeAttr('style');
     });
 
-    $adv = ('#ad-re').text().split(/\n/);
-    $('.a1').text($adv[1]);
-    $('.a2').text($adv[4]);
-    $('#ad-re').text('');
+    $('.g-sw-desc').each(function() {
+      $ap = $(this).find('#ap').text().split(/\n/);
+      $(this).find('.a1').text($ap[1]);
+      $(this).find('.a2').text($ap[4]);
+      $(this).find('#ap').text('');
+    })
 
     $('.c-stat .r-stat').find('p').each(function() {
       $zeroStat = $(this).text();
