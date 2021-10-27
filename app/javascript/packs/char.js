@@ -36,9 +36,10 @@
       $('.p-description').hide();
       $('.g-description').hide();
     });
-    $('.char').css('background-image', 'url("/images/media/heroes/' + $('title').text() + '/Loading Screen.png")');
+    // $('.char').css('background-image', 'url("/images/media/heroes/' + $('title').text() + '/Loading Screen.png")');
+    $('.char').css('background-image', 'url("/images/media/heroes/' + $('title').text() + '/Loading Screen.webp")');
     // $bg = {
-    //   'background-image': 'url("/images/media/background/bg' + Math.trunc(1 + Math.random() * 31) + '.png")',
+    //   'background-image': 'url("/images/media/background/bg' + Math.trunc(1 + Math.random() * 32) + '.png")',
     //   'min-height': '100vh',
     //   'backdrop-filter': 'blur(3px) saturate(0.3) grayscale(0.5) opacity(0.8)'
     // }
