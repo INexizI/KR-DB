@@ -182,7 +182,7 @@ select {
 
 .h-main {
   display: none;
-  width: 900px;
+  width: 1000px;
   margin: 0 auto;
   justify-content: center;
 
@@ -571,7 +571,8 @@ input {
 }
 
 .s-main {
-  width: 600px;
+  // width: 600px;
+  width: 450px;
   margin: 5px auto;
 
   .s-title {
@@ -589,6 +590,7 @@ input {
 
   .s-skills {
     display: flex;
+    // display: none;
     justify-content: center;
 
     .s-image {
@@ -811,7 +813,8 @@ input {
     flex-wrap: wrap;
     // width: 80%;
     width: auto;
-    max-width: 1200px;
+    // max-width: 1200px;
+    max-width: 1000px;
     margin: 0px auto;
     justify-content: center;
 
@@ -837,7 +840,7 @@ input {
       margin: 0 10px;
     }
     .g-ut {
-      margin: auto;
+      // margin: auto;
       padding: 5px;
 
       .g-un {
@@ -875,7 +878,7 @@ input {
     // }
     #g-uw > .g-un {
       // width: 135px;
-      width: 160px;
+      // width: 160px;
       margin: 0 auto;
       justify-content: center;
     }
@@ -1028,6 +1031,16 @@ h4 {
     grid-area: p1;
     width: 250px;
     padding: 10px 0 0 5px;
+    p {
+      display: inline-block;
+    }
+    img {
+      width: 24px;
+      height: 24px;
+      padding: 0 3px;
+      border-radius: 50%;
+      margin: 2px 0 -5px 0;
+    }
   }
   .p2 {
     grid-area: p2;

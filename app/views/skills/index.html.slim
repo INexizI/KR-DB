@@ -4,7 +4,8 @@ title Skills
   - @chars.order('name ASC').each do |c|
     .s-main
       .s-title
-        img src='/images/media/heroes/#{c.name}/portrait.png' id='char-icon' alt=c.name
+        img src='/images/media/heroes/#{c.name}/portrait.webp' id='char-icon' alt=c.name
+        / img src='/images/media/heroes/#{c.name}/portrait.png' id='char-icon' alt=c.name
         p = c.name
       .s-skills
         - @skills.where(char_id: c.id).order('skill_number ASC').each do |skill|
@@ -12,7 +13,8 @@ title Skills
           - if skill.parent_id.blank?
             div
               .s-image
-                img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.png' alt=skill.name
+                img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.webp' alt=skill.name
+                / img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.png' alt=skill.name
                 .s-desc
                   .p1
                     = skill.name
@@ -25,7 +27,8 @@ title Skills
                         | 0
                       - else
                         - skill.mana.times do
-                          = image_tag '/images/media/manaOrb.png', id: 'manaOrb'
+                          = image_tag '/images/media/manaOrb.webp', id: 'manaOrb'
+                          / = image_tag '/images/media/manaOrb.png', id: 'manaOrb'
                   - if !skill.cooldown.blank?
                     .p3
                       | Cooldown: 
@@ -37,7 +40,8 @@ title Skills
               - @skills.where(parent_id: skill.id).each do |skill|
                 - if !skill.parent_id.blank?
                   .s-image
-                    img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.png' alt=skill.name
+                    img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.webp' alt=skill.name
+                    / img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.png' alt=skill.name
                     .s-desc
                       .p1
                         = skill.name
@@ -50,7 +54,8 @@ title Skills
                             | 0
                           - else
                             - skill.mana.times do
-                              = image_tag '/images/media/manaOrb.png', id: 'manaOrb'
+                              = image_tag '/images/media/manaOrb.webp', id: 'manaOrb'
+                              / = image_tag '/images/media/manaOrb.png', id: 'manaOrb'
                       - if !skill.cooldown.blank?
                         .p3
                           | Cooldown: 
