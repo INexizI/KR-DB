@@ -26,10 +26,18 @@
 
 /public/packs
 /public/packs-test
+
 /node_modules
+
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
 
+dump*
+
 # ruby gems
 /vendor
+
+# service-worker
+/public/service-worker.js*
+/public/vendors~actioncable*
