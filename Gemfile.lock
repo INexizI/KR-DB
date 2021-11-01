@@ -247,11 +247,11 @@ DEPENDENCIES
   byebug
   capybara
   friendly_id
-  hotwire-rails (>= 0.1.3)
+  hotwire-rails
   jbuilder
   json
   listen
-  nokogiri
+  nokogiri (>= 1.12.5)
   pg
   puma
   rack-cors

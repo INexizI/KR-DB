@@ -1,6 +1,6 @@
 {
-  "short_name": "PWA",
-  "name": "Progressive Web App",
+  "short_name": "KRC",
+  "name": "KR Calculator",
   "icons": [
     {
       "src": "/images/manaOrb.webp",
@@ -16,8 +16,8 @@
     }
   ],
   "start_url": "/",
-  "background_color": "#3367D6",
+  "background_color": "#121212",
   "display": "standalone",
   "scope": "/",
-  "theme_color": "#3367D6"
+  "theme_color": "#121212"
 }

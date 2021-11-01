@@ -12,7 +12,12 @@ gem 'sass-rails'
 gem 'webpacker'
 gem 'jbuilder'
 gem 'json'
-gem 'hotwire-rails', '>= 0.1.3'
+# gem 'redis'
+# gem 'redis-namespace'
+# gem 'redis-rails', '>= 5.0.2'
+# gem 'sidekiq'
+gem 'hotwire-rails'
+# gem 'meta-tags'
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'slim-rails'
@@ -26,7 +31,7 @@ gem 'rack-cors'
 gem 'rubyzip'
 gem 'uglifier'
 
-gem 'nokogiri'
+gem 'nokogiri', '>= 1.12.5'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

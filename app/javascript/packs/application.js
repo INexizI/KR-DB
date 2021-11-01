@@ -4,6 +4,14 @@ import { Turbo } from "@hotwired/turbo-rails"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "controllers"
+// require("jquery-ui")
+require("packs/char")
+require("packs/gear")
+// require("packs/calc")
+require("packs/skill")
+require("packs/stat")
+require("packs/search")
+require("packs/jquery.easy-autocomplete.js")
 
 window.addEventListener('load', () => {
   navigator.serviceWorker.register('/service-worker.js').then(registration => {
@@ -24,15 +32,6 @@ window.addEventListener('load', () => {
     console.log('Service worker registration failed: ', registrationError);
   });
 });
-
-// require("jquery-ui")
-require("packs/char")
-require("packs/gear")
-// require("packs/calc")
-require("packs/skill")
-require("packs/stat")
-require("packs/search")
-require("packs/jquery.easy-autocomplete.js")
 
 // import 'src/stylesheets/application'
 // const images = require.context('../images', true)
