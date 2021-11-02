@@ -20,6 +20,13 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+
+  @media screen and (max-width: 1100px) {
+    overflow-y: auto !important;
+  }
+  @media screen and (max-width: 5000px) {
+    overflow-y: hidden;
+  }
 }
 
 input {
@@ -182,7 +189,7 @@ select {
 
 .h-main {
   display: none;
-  width: 1000px;
+  max-width: 1000px;
   margin: 0 auto;
   justify-content: center;
 
@@ -239,9 +246,30 @@ select {
 }
 
 .c-main {
+  @media screen and (max-width: 1000px) {
+    display: grid !important;
+    grid-template-areas: "s1 s3" "s2 s4";
+    .c-sub {
+      zoom: 75%;
+    }
+  }
+  .c-s1 {
+    grid-area: s1;
+  }
+  .c-s2 {
+    grid-area: s3;
+  }
+  .c-s3 {
+    grid-area: s2;
+    width: 285px;
+  }
+  .c-s4 {
+    grid-area: s4;
+    width: 320px;
+  }
   display: flex;
   margin: 0 auto;
-  padding: 5 15px;
+  padding: 5px 15px;
   flex-wrap: wrap;
   font-size: 18px;
   text-shadow: 0 0 10px white;
@@ -506,7 +534,9 @@ select {
 }
 
 #c-skill {
-  margin: auto;
+  // margin: auto;
+  display: grid;
+  justify-content: center;
 }
 
 input {
