@@ -250,7 +250,10 @@ select {
     display: grid !important;
     grid-template-areas: "s1 s3" "s2 s4";
     .c-sub {
-      zoom: 75%;
+      zoom: 85%;
+    }
+    .s-description, .g-description {
+      left: -580px !important;
     }
   }
   .c-s1 {

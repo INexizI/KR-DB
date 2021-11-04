@@ -1,6 +1,6 @@
 import Rails from "@rails/ujs"
 import Turbolinks from "turbolinks"
-import { Turbo } from "@hotwired/turbo-rails"
+// import { Turbo } from "@hotwired/turbo-rails"
 import * as ActiveStorage from "@rails/activestorage"
 import "channels"
 import "controllers"
@@ -36,7 +36,7 @@ window.addEventListener('load', () => {
 // import 'src/stylesheets/application'
 // const images = require.context('../images', true)
 
-window.Turbo = Turbo
+// window.Turbo = Turbo
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()

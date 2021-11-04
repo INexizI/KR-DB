@@ -14,27 +14,25 @@
         $left = -1;
       if ($(document).height() - $(this).offset().top < $(document).height() / 2)
         $top = -1;
-      $x = $left * 490;
-      $y = $top * 50;
+      $x = $left * 495;
+      $y = $top * 20;
       $cs = {
         'left': $x,
-        'top':$y,
-        'display': 'grid'
+        'top':$y
       }
       $('.p-description', this).css($cs);
       $('.g-description', this).css($cs);
-      $xSW = $left * 490;
-      $ySW = $top * 150;
+      $xSW = $left * 495;
+      $ySW = $top * 170;
       $csSW = {
         'left': $xSW,
-        'top':$ySW,
-        'display': 'grid'
+        'top':$ySW
       }
       $('.s-description', this).css($csSW);
     }).mouseleave(function() {
-      $('.s-description').hide();
-      $('.p-description').hide();
-      $('.g-description').hide();
+      $('.s-description').removeAttr('style');
+      $('.p-description').removeAttr('style');
+      $('.g-description').removeAttr('style');
     });
     // $('.char').css('background-image', 'url("/images/media/heroes/' + $('title').text() + '/Loading Screen.png")');
     $('.char').css('background-image', 'url("/images/media/heroes/' + $('title').text() + '/Loading Screen.webp")');

@@ -39,5 +39,6 @@ dump*
 /vendor
 
 # service-worker
+/public/actioncable*
 /public/service-worker.js*
 /public/vendors~actioncable*
