@@ -12,4 +12,5 @@ Rails.application.routes.draw do
   resources :runes, only: :index
 
   get :search, controller: :search
+  get 'offline', to: 'home#offline', as: :offline
 end

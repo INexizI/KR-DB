@@ -21,6 +21,8 @@
     "stimulus": "^3.0.1",
     "turbolinks": "^5.2.0",
     "webpacker-pwa": "^0.1.2",
+    "workbox-routing": "^6.3.0",
+    "workbox-strategies": "^6.3.0",
     "ws": "^8.2.3"
   },
   "version": "0.1.0",

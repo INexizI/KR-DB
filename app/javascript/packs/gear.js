@@ -5,7 +5,7 @@
         'display':'flex',
         'flex-wrap':'wrap'
       }
-      $(this).next('.g-main').slideToggle('fast').css($cssVal);
+      $(this).next('.g-main').fadeToggle('fast').css($cssVal);
     });
     $('.g-image').mouseenter(function() {
       $left = 0;

@@ -8,4 +8,8 @@ class HomeController < ApplicationController
     @skill = Skill.offset(rand(Skill.where('parent_id = ?', '').count)).first
     @stat = Stat.offset(rand(Stat.count)).first
   end
+
+  def offline
+    render 'offline', layout: false
+  end
 end
