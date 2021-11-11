@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/activerecord-hackery/ransack.git
-  revision: 4caf7c25b07e6c7271b02e46dc3a7985cca61162
+  revision: 25c5c9dfec216a5fafcd90b8893abcfe19460e50
   specs:
     ransack (2.4.2)
       activerecord (>= 5.2.4)
@@ -205,7 +205,7 @@ GEM
       actionpack (>= 4.0)
       activesupport (>= 4.0)
       sprockets (>= 3.0.0)
-    stimulus-rails (0.7.1)
+    stimulus-rails (0.7.2)
       rails (>= 6.0.0)
     temple (0.8.2)
     thor (1.1.0)

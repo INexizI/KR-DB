@@ -36,6 +36,7 @@
     });
     // $('.char').css('background-image', 'url("/images/media/heroes/' + $('title').text() + '/Loading Screen.png")');
     $('.char').css('background-image', 'url("/images/media/heroes/' + $('title').text() + '/Loading Screen.webp")');
+    $('.char').parent().css('overflow-y', 'hidden');
     // $bg = {
     //   'background-image': 'url("/images/media/background/bg' + Math.trunc(1 + Math.random() * 32) + '.png")',
     //   'min-height': '100vh',

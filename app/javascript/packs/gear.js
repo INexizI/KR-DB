@@ -11,7 +11,7 @@
       $left = 0;
       if ($(document).width() - $(this).offset().left < $(document).width() / 2)
       $left = -1;
-      $x = $left * 410;
+      $x = $left * 420;
       $cs = {
         'left': $x,
         'display': 'grid'
@@ -24,7 +24,7 @@
       $left = 0;
       if ($(document).width() - $(this).offset().left < $(document).width() / 2)
       $left = -1;
-      $x = $left * 672;
+      $x = $left * 420;
       $cs = {
         'left': $x,
         'display': 'grid'
