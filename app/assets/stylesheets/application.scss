@@ -842,14 +842,14 @@ input {
 
 .g-sub {
   // padding: 10px 0 100px 0;
-  padding: 20px 20px 500px;
+  padding: 20px;
 
   h3 {
     text-align: center;
   }
   .g-title {
     width: fit-content;
-    padding: 5px 0;
+    padding: 3px 0;
     margin: auto;
     cursor: default;
   }
@@ -929,7 +929,7 @@ input {
       justify-content: center;
     }
     .g-sw {
-      width: 800px;
+      // width: 800px;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -945,7 +945,7 @@ input {
         text-align: center;
         // margin-left: auto;
         // margin-top: 0;
-        margin: 0 auto;
+        margin: -3px auto;
 
         .p1 {
           grid-area: p1;
