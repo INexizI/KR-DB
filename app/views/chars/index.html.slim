@@ -4,7 +4,6 @@ title Hero
   .main
     .h-title
       img src='/images/media/classes/knight.webp' alt='Knight'
-      / img src='/images/media/classes/knight.png' alt='Knight'
       span Knight
     .h-main
       - @chars.where(role: 1).each do |char|
@@ -12,12 +11,10 @@ title Hero
           .h-avatar
             = link_to char, title: char.name do
               img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
-              / img src='/images/media/heroes/#{char.name}/portrait.png' alt=char.name
 
   .main
     .h-title
       img src='/images/media/classes/warrior.webp' alt='Warrior'
-      / img src='/images/media/classes/warrior.png' alt='Warrior'
       span Warrior
     .h-main
       - @chars.where(role: 2).each do |char|
@@ -25,12 +22,10 @@ title Hero
           .h-avatar
             = link_to char, title: char.name do
               img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
-              / img src='/images/media/heroes/#{char.name}/portrait.png' alt=char.name
 
   .main
     .h-title
       img src='/images/media/classes/assassin.webp' alt='Assassin'
-      / img src='/images/media/classes/assassin.png' alt='Assassin'
       span Assassin
     .h-main
       - @chars.where(role: 3).each do |char|
@@ -38,12 +33,10 @@ title Hero
           .h-avatar
             = link_to char, title: char.name do
               img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
-              / img src='/images/media/heroes/#{char.name}/portrait.png' alt=char.name
 
   .main
     .h-title
       img src='/images/media/classes/archer.webp' alt='Archer'
-      / img src='/images/media/classes/archer.png' alt='Archer'
       span Archer
     .h-main
       - @chars.where(role: 4).each do |char|
@@ -51,12 +44,10 @@ title Hero
           .h-avatar
             = link_to char, title: char.name do
               img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
-              / img src='/images/media/heroes/#{char.name}/portrait.png' alt=char.name
 
   .main
     .h-title
       img src='/images/media/classes/mechanic.webp' alt='Mechanic'
-      / img src='/images/media/classes/mechanic.png' alt='Mechanic'
       span Mechanic
     .h-main
       - @chars.where(role: 5).each do |char|
@@ -64,12 +55,10 @@ title Hero
           .h-avatar
             = link_to char, title: char.name do
               img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
-              / img src='/images/media/heroes/#{char.name}/portrait.png' alt=char.name
 
   .main
     .h-title
       img src='/images/media/classes/wizard.webp' alt='Wizard'
-      / img src='/images/media/classes/wizard.png' alt='Wizard'
       span Wizard
     .h-main
       - @chars.where(role: 6).each do |char|
@@ -77,12 +66,10 @@ title Hero
           .h-avatar
             = link_to char, title: char.name do
               img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
-              / img src='/images/media/heroes/#{char.name}/portrait.png' alt=char.name
 
   .main
     .h-title
       img src='/images/media/classes/priest.webp' alt='Priest'
-      / img src='/images/media/classes/priest.png' alt='Priest'
       span Priest
     .h-main
       - @chars.where(role: 7).each do |char|
@@ -90,88 +77,3 @@ title Hero
           .h-avatar
             = link_to char, title: char.name do
               img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
-              / img src='/images/media/heroes/#{char.name}/portrait.png' alt=char.name
-
-/ .cc
-  .main
-    .h-title
-      = image_tag '/images/media/classes/knight.png'
-      span Knight
-    .h-main
-      - @chars.each do |char|
-        - if char['role_id'] == "knight"
-          .h-char
-            .h-avatar
-              = link_to 'chars/' + char['slug'], title: char['name'] do
-                img src='/images/media/heroes/#{char['name']}/portrait.png'
-  .main
-    .h-title
-      = image_tag '/images/media/classes/warrior.png'
-      span Warrior
-    .h-main
-      - @chars.each do |char|
-        - if char['role_id'] == "warrior"
-          .h-char
-            .h-avatar
-              = link_to 'chars/' + char['slug'], title: char['name'] do
-                img src='/images/media/heroes/#{char['name']}/portrait.png'
-
-  .main
-    .h-title
-      = image_tag '/images/media/classes/assassin.png'
-      span Assassin
-    .h-main
-      - @chars.each do |char|
-        - if char['role_id'] == "assassin"
-          .h-char
-            .h-avatar
-              = link_to 'chars/' + char['slug'], title: char['name'] do
-                img src='/images/media/heroes/#{char['name']}/portrait.png'
-
-  .main
-    .h-title
-      = image_tag '/images/media/classes/archer.png'
-      span Archer
-    .h-main
-      - @chars.each do |char|
-        - if char['role_id'] == "archer"
-          .h-char
-            .h-avatar
-              = link_to 'chars/' + char['slug'], title: char['name'] do
-                img src='/images/media/heroes/#{char['name']}/portrait.png'
-
-  .main
-    .h-title
-      = image_tag '/images/media/classes/mechanic.png'
-      span Mechanic
-    .h-main
-      - @chars.each do |char|
-        - if char['role_id'] == "mechanic"
-          .h-char
-            .h-avatar
-              = link_to 'chars/' + char['slug'], title: char['name'] do
-                img src='/images/media/heroes/#{char['name']}/portrait.png'
-
-  .main
-    .h-title
-      = image_tag '/images/media/classes/wizard.png'
-      span Wizard
-    .h-main
-      - @chars.each do |char|
-        - if char['role_id'] == "wizard"
-          .h-char
-            .h-avatar
-              = link_to 'chars/' + char['slug'], title: char['name'] do
-                img src='/images/media/heroes/#{char['name']}/portrait.png'
-
-  .main
-    .h-title
-      = image_tag '/images/media/classes/priest.png'
-      span Priest
-    .h-main
-      - @chars.each do |char|
-        - if char['role_id'] == "priest"
-          .h-char
-            .h-avatar
-              = link_to 'chars/' + char['slug'], title: char['name'] do
-                img src='/images/media/heroes/#{char['name']}/portrait.png'

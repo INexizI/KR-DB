@@ -5,19 +5,19 @@ ruby '3.0.2'
 
 gem 'rails', '~> 6.1.4', '>= 6.1.4.1'
 gem 'pg'
-gem "puma"
+gem 'puma'
 gem 'bootsnap', require: false
 gem 'sass-rails'
 
 gem 'webpacker'
 gem 'jbuilder'
 gem 'json'
-# gem 'redis'
-# gem 'redis-namespace'
-# gem 'redis-rails', '>= 5.0.2'
-# gem 'sidekiq'
-gem 'hotwire-rails'
-# gem 'meta-tags'
+gem 'redis'
+gem 'redis-namespace'
+gem 'redis-rails', '>= 5.0.2'
+gem 'sidekiq'
+gem 'hotwire-rails', '>= 0.1.3'
+gem 'meta-tags'
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'slim-rails'
@@ -30,6 +30,8 @@ gem 'acts-as-taggable-on'
 gem 'rack-cors'
 gem 'rubyzip'
 gem 'uglifier'
+
+gem 'turbo-rails', '~> 0.8.3'
 
 gem 'nokogiri', '>= 1.12.5'
 
