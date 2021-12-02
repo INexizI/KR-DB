@@ -2,114 +2,129 @@ title Search
 
 .search-main
   .search-sub
-    h1 Hero
+    h1 Heroes
     - @chars.each do |char|
       .search-block
         p
           = link_to char, title: char.name do
-            img src='/images/media/heroes/#{char.name}/portrait.webp'
+            = image_tag '/images/media/heroes/' + char.name + '/portrait.webp', alt: ''
         p = char.name
   .search-sub
-    h1 Skill
+    h1 Skills
     - @skills.each do |skill|
       .search-block
+        p#help-description
+          = image_tag '/images/help.svg'
         p
-          - if (skill.parent_id.include? 'Advancement Phase')
-            img src="/images/media/heroes/#{skill.char.name}/sw.webp" title=skill.description
-          - else
-            img src="/images/media/heroes/#{skill.char.name}/s#{skill.skill_number}.webp" title=skill.description
+          = link_to skill.char, title: skill.char.name do
+            - if (skill.parent_id.include? 'Advancement Phase')
+              = image_tag '/images/media/heroes/' + skill.char.name + '/sw.webp', title: skill.description
+            - else
+              = image_tag '/images/media/heroes/' + skill.char.name + '/s' + skill.skill_number + '.webp', title: skill.description
         p = skill.name
   .search-sub
     h1 Perks
     - @perks.each do |perk|
       .search-block
+        p#help-description
+          = image_tag '/images/help.svg'
         p
           - if perk.perk_type == 'generic'
-            img src='/images/media/genericPerks/#{perk.name}.webp' title=perk.description
+              = image_tag '/images/media/genericPerks/' + perk.name + '.webp', title: perk.description
           - else
-            img src='/images/media/heroes/#{perk.tier}/#{perk.sequence}.webp' title=perk.description
+            = link_to '/chars/' + perk.tier.downcase, title: perk.tier do
+              = image_tag '/images/media/heroes/' + perk.tier + '/' + perk.sequence + '.webp', title: perk.description
         p
           - if perk.perk_type == 't5'
             = perk.tier + ' [' + perk.name.capitalize + ']'
           - else
             = perk.name
   .search-sub
-    h1 Gear
+    h1 Gears
     - @gears.each do |gear|
       .search-block
+        p#help-description
+          = image_tag '/images/help.svg'
         p
           - if !gear.char_id.blank? && gear.gear_type == '10-UW'
-            img src='/images/media/heroes/#{gear.char.name}/uw.webp' title=(gear.set + ' ' + gear.name)
+            = link_to gear.char, title: gear.char.name do
+              = image_tag '/images/media/heroes/' + gear.char.name.downcase + '/uw.webp', title: gear.name, alt: ''
           - elsif gear.char_id.blank? && gear.gear_type == '10-UW'
-            img src='/images/media/heroes/#{gear.role.name.downcase}.webp' title=(gear.set + ' ' + gear.name)
+            = link_to '/gears', title: gear.name do
+              = image_tag '/images/media/heroes/' + gear.role.name.downcase + '.webp', title: gear.name, alt: ''
           - elsif !gear.char_id.blank? && gear.gear_type == '9-UT'
-            img src='/images/media/heroes/#{gear.char.name}/ut#{gear.gear_skill}.webp' title=(gear.set + ' ' + gear.name)
+            = link_to gear.char, title: gear.char.name do
+              = image_tag '/images/media/heroes/' + gear.char.name.downcase + '/ut' + gear.gear_skill + '.webp', title: gear.name, alt: ''
           - elsif gear.char_id.blank? && gear.gear_type == '9-UT'
-            img src='/images/media/gears/#{gear.gear_type}/mana stone.webp' title=(gear.set + ' ' + gear.name)
-          - elsif gear.set == 'Opportune Fire'
+            = link_to '/gears', title: gear.name do
+              = image_tag '/images/media/gears/' + gear.gear_type + '/mana.webp', title: gear.name, alt: ''
+          - elsif gear.gear_type == 'art'
+            = link_to '/gears', title: gear.name do
+              = image_tag '/images/media/artifacts/' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+          - elsif gear.set != 'Legendary' && gear.set != 'Technomagic' && gear.tier != 'TM'
             - if gear.gear_type == '7-J'
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.name}/fire.webp' title=(gear.set + ' ' + gear.name)
+              = link_to '/gears', title: gear.name do
+                = image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.name + '/' + gear.set + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
             - else
-              img src='/images/media/gears/#{gear.gear_type}/fire.webp' title=(gear.set + ' ' + gear.name)
-          - elsif gear.set == 'Gritty Frost'
-            - if gear.gear_type == '7-J'
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.name}/frost.webp' title=(gear.set + ' ' + gear.name)
-            - else
-              img src='/images/media/gears/#{gear.gear_type}/frost.webp' title=(gear.set + ' ' + gear.name)
-          - elsif gear.set == 'Unrelenting Poison'
-            - if gear.gear_type == '7-J'
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.name}/poison.webp' title=(gear.set + ' ' + gear.name)
-            - else
-              img src='/images/media/gears/#{gear.gear_type}/poison.webp' title=(gear.set + ' ' + gear.name)
-          - elsif gear.set == 'Swift Darkness'
-            - if gear.gear_type == '7-J'
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.name}/darkness.webp' title=(gear.set + ' ' + gear.name)
-            - else
-              img src='/images/media/gears/#{gear.gear_type}/darkness.webp' title=(gear.set + ' ' + gear.name)
-          - elsif gear.set == 'Beast of Chaos'
-            - if gear.gear_type == '7-J'
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.name}/manti.webp' title=(gear.set + ' ' + gear.name)
-            - else
-              img src='/images/media/gears/#{gear.gear_type}/manti.webp' title=(gear.set + ' ' + gear.name)
-          - elsif gear.set == 'Lava'
-            - if gear.gear_type == '7-J'
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.name}/lava.webp' title=(gear.set + ' ' + gear.name)
-            - else
-              img src='/images/media/gears/#{gear.gear_type}/lava.webp' title=(gear.set + ' ' + gear.name)
+              = link_to '/gears', title: gear.name do
+                = image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.set + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
           - elsif gear.set == 'Legendary'
             - if gear.name == "Hell's Eyes"
-              img src='/images/media/gears/#{gear.gear_type}/Ring/legendary.webp' title=(gear.set + ' ' + gear.name)
+              = link_to '/gears', title: gear.name do
+                = image_tag '/images/media/gears/' + gear.gear_type + '/Ring/' + gear.set + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
             - elsif gear.name == "Fire Dragon's Blessing"
-              img src='/images/media/gears/#{gear.gear_type}/Earrings/legendary.webp' title=(gear.set + ' ' + gear.name)
+              = link_to '/gears', title: gear.name do
+                = image_tag '/images/media/gears/' + gear.gear_type + '/Earrings/' + gear.set + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
             - elsif gear.name == 'Price of Arrogance'
-              img src='/images/media/gears/#{gear.gear_type}/Necklace/legendary.webp' title=(gear.set + ' ' + gear.name)
+              = link_to '/gears', title: gear.name do
+                = image_tag '/images/media/gears/' + gear.gear_type + '/Necklace/' + gear.set + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
             - elsif gear.name == 'Fire Circle'
-              img src='/images/media/gears/#{gear.gear_type}/Bracelet/legendary.webp' title=(gear.set + ' ' + gear.name)
+              = link_to '/gears', title: gear.name do
+                = image_tag '/images/media/gears/' + gear.gear_type + '/Bracelet/' + gear.set + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
             - else
-              img src='/images/media/gears/#{gear.gear_type}/legendary.webp' title=(gear.set + ' ' + gear.name)
-          - elsif gear.set == 'Hero Suppression'
+              = link_to '/gears', title: gear.name do
+                = image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.set + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+          - elsif gear.set == 'Technomagic'
             - if gear.gear_type == '7-J'
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.name}/suppression.webp' title=(gear.set + ' ' + gear.name)
+              - if gear.name == 'Ring of Amplification'
+                = link_to '/gears', title: gear.name do
+                  = image_tag '/images/media/gears/' + gear.gear_type + '/Ring/' + gear.set + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+              - elsif gear.name == 'Earrings of Amplification'
+                = link_to '/gears', title: gear.name do
+                  = image_tag '/images/media/gears/' + gear.gear_type + '/Earrings/' + gear.set + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
             - else
-              img src='/images/media/gears/#{gear.gear_type}/suppression.webp' title=(gear.set + ' ' + gear.name)
-          - elsif gear.set == 'Hero Protection'
+              = link_to '/gears', title: gear.name do
+                = image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.set + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+          - elsif gear.tier == 'TM'
             - if gear.gear_type == '7-J'
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.name}/protection.webp' title=(gear.set + ' ' + gear.name)
-            - else
-              img src='/images/media/gears/#{gear.gear_type}/protection.webp' title=(gear.set + ' ' + gear.name)
-          - elsif gear.set == 'Dark Legion'
-            - if gear.gear_type == '7-J'
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.name}/dark legion.webp' title=(gear.set + ' ' + gear.name)
-            - else
-              img src='/images/media/gears/#{gear.gear_type}/dark legion.webp' title=(gear.set + ' ' + gear.name)
-          - elsif gear.name == "Hell's Eyes"
-            img src='/images/media/gears/#{gear.gear_type}/Ring/legendary.webp' title=(gear.set + ' ' + gear.name)
-          - elsif gear.name == "Fire Dragon's Blessing"
-            img src='/images/media/gears/#{gear.gear_type}/Earrings/legendary.webp' title=(gear.set + ' ' + gear.name)
-          - elsif gear.name == 'Price of Arrogance'
-            img src='/images/media/gears/#{gear.gear_type}/Necklace/legendary.webp' title=(gear.set + ' ' + gear.name)
-          - elsif gear.name == 'Fire Circle'
-            img src='/images/media/gears/#{gear.gear_type}/Bracelet/legendary.webp' title=(gear.set + ' ' + gear.name)
-          - elsif gear.gear_type == 'art'
-            img src='/images/media/artifacts/#{gear.name}.webp' title=(gear.set + ' ' + gear.name)
+              - if gear.set == 'Reclaimed'
+                = link_to '/gears', title: gear.name do
+                  = image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Reclaimed Perseverance ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+                  = link_to '/gears', title: gear.name do
+                =   image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Reclaimed Hope ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+                  = link_to '/gears', title: gear.name do
+                =   image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Reclaimed Authority ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+              - else
+                = link_to '/gears', title: gear.name do
+                  = image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Perseverance ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+                  = link_to '/gears', title: gear.name do
+                =   image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Hope ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+                  = link_to '/gears', title: gear.name do
+                =   image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Authority ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+            -else
+              - if gear.set == 'Reclaimed'
+                = link_to '/gears', title: gear.name do
+                  = image_tag '/images/media/gears/' + gear.gear_type + '/Reclaimed Perseverance ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+                  = link_to '/gears', title: gear.name do
+                =   image_tag '/images/media/gears/' + gear.gear_type + '/Reclaimed Hope ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+                  = link_to '/gears', title: gear.name do
+                =   image_tag '/images/media/gears/' + gear.gear_type + '/Reclaimed Authority ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+              - else
+                = link_to '/gears', title: gear.name do
+                  = image_tag '/images/media/gears/' + gear.gear_type + '/Perseverance ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+                  = link_to '/gears', title: gear.name do
+                =   image_tag '/images/media/gears/' + gear.gear_type + '/Hope ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+                  = link_to '/gears', title: gear.name do
+                =   image_tag '/images/media/gears/' + gear.gear_type + '/Authority ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+
         p = gear.name

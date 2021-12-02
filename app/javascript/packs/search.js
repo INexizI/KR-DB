@@ -37,5 +37,15 @@
       }
     };
     $("#srch").easyAutocomplete($options);
+
+    function item_description() {
+      // Find Item Desc
+      // Show Item Desc
+    };
+    $('#help-description').on('mousedown', function() {
+      item_description();
+    }).on('mouseup mouseleave', function() {
+      // Hide Item Desc
+    });
   });
 }).call(this);

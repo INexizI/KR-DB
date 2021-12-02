@@ -10,12 +10,7 @@ class SearchController < ApplicationController
 
     respond_to do |format|
       format.html {}
-      format.json {
-        # @chars = @chars.limit(10)
-        # @perks = @perks_desc.limit(10)
-        # @gears = @gears.limit(10)
-        # @skills = @skills.limit(10)
-      }
+      format.json {}
     end
   end
 end
