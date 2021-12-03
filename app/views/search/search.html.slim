@@ -18,10 +18,13 @@ title Search
         p
           = link_to skill.char, title: skill.char.name do
             - if (skill.parent_id.include? 'Advancement Phase')
-              = image_tag '/images/media/heroes/' + skill.char.name + '/sw.webp', title: skill.description
+              = image_tag '/images/media/heroes/' + skill.char.name + '/sw.webp', alt: skill.name
             - else
-              = image_tag '/images/media/heroes/' + skill.char.name + '/s' + skill.skill_number + '.webp', title: skill.description
+              = image_tag '/images/media/heroes/' + skill.char.name + '/s' + skill.skill_number + '.webp', alt: skill.name
         p = skill.name
+      #description
+        p
+          = skill.description
   .search-sub
     h1 Perks
     - @perks.each do |perk|

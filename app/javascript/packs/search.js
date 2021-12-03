@@ -39,13 +39,11 @@
     $("#srch").easyAutocomplete($options);
 
     function item_description() {
-      // Find Item Desc
-      // Show Item Desc
     };
     $('#help-description').on('mousedown', function() {
-      item_description();
+      $(this).parent().next().show();
     }).on('mouseup mouseleave', function() {
-      // Hide Item Desc
+      $('#help-description').parent().next().hide();
     });
   });
 }).call(this);

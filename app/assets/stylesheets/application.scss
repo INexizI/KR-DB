@@ -1809,6 +1809,7 @@ h4 {
     width: 250px;
 
     h1 {
+      z-index: 1;
       width: 250px;
       position: absolute;
       background: rgb(117, 117, 117);
@@ -1820,7 +1821,7 @@ h4 {
       padding: 5px 0;
       // font-size: 1.5em;
       text-align: center;
-      margin: 5px 0;
+      margin: 5px 0 0 0;
       border-radius: 10px;
       // font-family: monospace;
       background: rgb(75, 75, 75);
@@ -1836,6 +1837,7 @@ h4 {
       #help-description {
         width: 0;
         height: 0;
+        z-index: 2;
 
         img {
           position: relative;
@@ -1843,6 +1845,20 @@ h4 {
           height: 20px;
           left: 225px;
         }
+      }
+    }
+    #description {
+      height: 0;
+      display: none;
+
+      p {
+        position: relative;
+        bottom: 60px;
+        padding: 3px;
+        border: 1px solid;
+        border-radius: 10px;
+        background: rgb(210, 210, 210);
+        z-index: 3;
       }
     }
     a {
