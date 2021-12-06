@@ -14,7 +14,7 @@ title Search
     - @skills.each do |skill|
       .search-block
         p#help-description
-          = image_tag '/images/help.svg'
+          = image_tag '/images/help.svg', id: 's' + skill.id.to_s
         p
           = link_to skill.char, title: skill.char.name do
             - if (skill.parent_id.include? 'Advancement Phase')
@@ -22,15 +22,17 @@ title Search
             - else
               = image_tag '/images/media/heroes/' + skill.char.name + '/s' + skill.skill_number + '.webp', alt: skill.name
         p = skill.name
-      #description
-        p
+      .description
+        p id='s#{skill.id}'
+          = skill.char.name
+          br
           = skill.description
   .search-sub
     h1 Perks
     - @perks.each do |perk|
       .search-block
         p#help-description
-          = image_tag '/images/help.svg'
+          = image_tag '/images/help.svg', id: 'p' + perk.id.to_s
         p
           - if perk.perk_type == 'generic'
               = image_tag '/images/media/genericPerks/' + perk.name + '.webp', title: perk.description
@@ -42,12 +44,17 @@ title Search
             = perk.tier + ' [' + perk.name.capitalize + ']'
           - else
             = perk.name
+      .description
+        p id='p#{perk.id}'
+          = perk.tier
+          br
+          = perk.description
   .search-sub
     h1 Gears
     - @gears.each do |gear|
       .search-block
         p#help-description
-          = image_tag '/images/help.svg'
+          = image_tag '/images/help.svg', id: 'g' + gear.id.to_s
         p
           - if !gear.char_id.blank? && gear.gear_type == '10-UW'
             = link_to gear.char, title: gear.char.name do
@@ -131,3 +138,6 @@ title Search
                 =   image_tag '/images/media/gears/' + gear.gear_type + '/Authority ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
 
         p = gear.name
+      .description
+        p id='g#{gear.id}'
+          = gear.description

@@ -38,12 +38,11 @@
     };
     $("#srch").easyAutocomplete($options);
 
-    function item_description() {
-    };
-    $('#help-description').on('mousedown', function() {
-      $(this).parent().next().show();
+    $('img').on('mousedown', function() {
+      $di = $(this).attr('id');
+      $('p#' + $di).parent().show();
     }).on('mouseup mouseleave', function() {
-      $('#help-description').parent().next().hide();
+      $('.description').hide();
     });
   });
 }).call(this);
