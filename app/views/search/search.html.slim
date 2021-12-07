@@ -51,7 +51,7 @@ title Search
           = perk.description
   .search-sub
     h1 Gears
-    - @gears.each do |gear|
+    - @gears.where.not(tier: '', gear_type: '').each do |gear|
       .search-block
         p#help-description
           = image_tag '/images/help.svg', id: 'g' + gear.id.to_s
