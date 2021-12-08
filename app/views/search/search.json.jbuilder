@@ -5,33 +5,65 @@ json.chars do
   end
 end
 
-json.perks do
-  json.array!(@perks) do |perk|
-    json.name perk.name
-    json.description perk.description
-    # json.url perk_path(perk)
-    json.url 'chars/' + perk.tier.downcase
+json.skills do
+  json.array!(@skills_n) do |skill|
+    json.name skill.name
+    json.description skill.description
+    json.url 'chars/' + skill.char.slug
+  end
+  json.array!(@skills_d) do |skill|
+    json.name skill.name
+    json.description skill.description
+    json.url 'chars/' + skill.char.slug
   end
 end
 
-json.gears do
-  json.array!(@gears) do |gear|
-    json.name gear.name
-    json.description gear.description
-    # json.url gear_path(gear)
-    if gear.id == nil
-      json.url 'gears/'
+json.perks do
+  json.array!(@perks_n) do |perk|
+    if perk.perk_type == 't5'
+      json.name perk.tier + ' [' + perk.name.capitalize + ']'
     else
-      json.url 'chars/' + gear.explanation.downcase
+      json.name perk.name
+    end
+    json.description perk.description
+    if perk.perk_type == 'generic'
+      json.url 'perks/'
+    else
+      json.url 'chars/' + perk.char.slug
+    end
+  end
+  json.array!(@perks_d) do |perk|
+    if perk.perk_type == 't5'
+      json.name perk.tier + ' [' + perk.name.capitalize + ']'
+    else
+      json.name perk.name
+    end
+    json.description perk.description
+    if perk.perk_type == 'generic'
+      json.url 'perks/'
+    else
+      json.url 'chars/' + perk.char.slug
     end
   end
 end
 
-json.skills do
-  json.array!(@skills) do |skill|
-    json.name skill.name
-    json.description skill.description
-    # json.url skill_path(skill)
-    json.url 'chars/' + skill.char.name.downcase
+json.gears do
+  json.array!(@gears_n) do |gear|
+    json.name gear.name
+    json.description gear.description
+    if gear.char_id == nil
+      json.url 'gears/'
+    else
+      json.url 'chars/' + gear.char.slug
+    end
+  end
+  json.array!(@gears_d) do |gear|
+    json.name gear.name
+    json.description gear.description
+    if gear.char_id == nil
+      json.url 'gears/'
+    else
+      json.url 'chars/' + gear.char.slug
+    end
   end
 end

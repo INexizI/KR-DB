@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_03_204444) do
+ActiveRecord::Schema.define(version: 2021_12_08_131450) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -66,7 +66,7 @@ ActiveRecord::Schema.define(version: 2021_10_03_204444) do
     t.bigint "stat_id"
     t.bigint "role_id"
     t.string "gear_skill"
-    t.string "description_2"
+    t.string "explanation"
     t.index ["char_id"], name: "index_gears_on_char_id"
     t.index ["role_id"], name: "index_gears_on_role_id"
     t.index ["stat_id"], name: "index_gears_on_stat_id"
@@ -90,6 +90,8 @@ ActiveRecord::Schema.define(version: 2021_10_03_204444) do
     t.datetime "updated_at", precision: 6, null: false
     t.string "sequence"
     t.string "perk_type"
+    t.bigint "char_id"
+    t.index ["char_id"], name: "index_perks_on_char_id"
   end
 
   create_table "roles", force: :cascade do |t|
@@ -165,6 +167,7 @@ ActiveRecord::Schema.define(version: 2021_10_03_204444) do
   add_foreign_key "gears", "chars"
   add_foreign_key "gears", "roles"
   add_foreign_key "gears", "stats"
+  add_foreign_key "perks", "chars"
   add_foreign_key "skills", "chars"
   add_foreign_key "stats", "roles"
   add_foreign_key "taggings", "tags"

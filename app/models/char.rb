@@ -3,8 +3,9 @@ class Char < ApplicationRecord
   friendly_id :name, use: %i[slugged finders]
 
   belongs_to :role
-  has_many :gears
   has_many :skills
+  has_many :perks
+  has_many :gears
 
   default_scope {order('name ASC')}
 end
