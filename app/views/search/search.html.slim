@@ -110,32 +110,32 @@ title Search
               - if gear.set == 'Reclaimed'
                 = link_to '/gears', title: gear.name do
                   = image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Reclaimed Perseverance ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
-                  = link_to '/gears', title: gear.name do
-                =   image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Reclaimed Hope ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
-                  = link_to '/gears', title: gear.name do
-                =   image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Reclaimed Authority ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+                = link_to '/gears', title: gear.name do
+                  = image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Reclaimed Hope ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+                = link_to '/gears', title: gear.name do
+                  = image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Reclaimed Authority ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
               - else
                 = link_to '/gears', title: gear.name do
                   = image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Perseverance ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
-                  = link_to '/gears', title: gear.name do
-                =   image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Hope ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
-                  = link_to '/gears', title: gear.name do
-                =   image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Authority ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
-            -else
+                = link_to '/gears', title: gear.name do
+                  = image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Hope ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+                = link_to '/gears', title: gear.name do
+                  = image_tag '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Authority ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+            - else
               - if gear.set == 'Reclaimed'
                 = link_to '/gears', title: gear.name do
                   = image_tag '/images/media/gears/' + gear.gear_type + '/Reclaimed Perseverance ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
-                  = link_to '/gears', title: gear.name do
-                =   image_tag '/images/media/gears/' + gear.gear_type + '/Reclaimed Hope ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
-                  = link_to '/gears', title: gear.name do
-                =   image_tag '/images/media/gears/' + gear.gear_type + '/Reclaimed Authority ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+                = link_to '/gears', title: gear.name do
+                  = image_tag '/images/media/gears/' + gear.gear_type + '/Reclaimed Hope ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+                = link_to '/gears', title: gear.name do
+                  = image_tag '/images/media/gears/' + gear.gear_type + '/Reclaimed Authority ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
               - else
                 = link_to '/gears', title: gear.name do
                   = image_tag '/images/media/gears/' + gear.gear_type + '/Perseverance ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
-                  = link_to '/gears', title: gear.name do
-                =   image_tag '/images/media/gears/' + gear.gear_type + '/Hope ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
-                  = link_to '/gears', title: gear.name do
-                =   image_tag '/images/media/gears/' + gear.gear_type + '/Authority ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+                = link_to '/gears', title: gear.name do
+                  = image_tag '/images/media/gears/' + gear.gear_type + '/Hope ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
+                = link_to '/gears', title: gear.name do
+                  = image_tag '/images/media/gears/' + gear.gear_type + '/Authority ' + gear.name + '.webp', title: (gear.set + ' ' + gear.name), alt: ''
 
         p = gear.name
       .description

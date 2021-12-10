@@ -1127,6 +1127,7 @@ var EasyAutocomplete = (function(scope) {
 										var j = i,
 											itemCounter = counter,
 											elementsValue = listBuilders[builderIndex].getValue(listData[j]);
+											itemImg = listData[j].pic;
 
 										$item.find(" > div")
 											.on("click", function() {
@@ -1149,7 +1150,8 @@ var EasyAutocomplete = (function(scope) {
 											.mouseout(function() {
 												config.get("list").onMouseOutEvent();
 											})
-											.html(template.build(highlight(elementsValue, phrase), listData[j]));
+											.html(template.build(highlight(elementsValue, phrase), listData[j]))
+											.prepend('<img src="' + itemImg + '">');
 									})();
 
 									$listContainer.append($item);

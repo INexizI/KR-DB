@@ -1752,10 +1752,18 @@ h4 {
 }
 
 .easy-autocomplete-container ul li, .easy-autocomplete-container ul .eac-category {
-  display: block;
+  // display: block;
+  display: flex;
   font-size: 15px;
   font-weight: normal;
   padding: 2px 25px;
+
+  img {
+    width: 20px;
+    height: 20px;
+    padding-right: 5px;
+    vertical-align: -4px;
+  }
 }
 
 .easy-autocomplete-container ul li:last-child {
@@ -1788,6 +1796,11 @@ h4 {
   font-size: 1em;
   font-style: italic;
   font-variant: petite-caps;
+}
+
+.eac-item {
+  min-width: 200px;
+  min-height: 25px;
 }
 
 .eac-icon {

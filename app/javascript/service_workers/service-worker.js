@@ -1,12 +1,12 @@
-// import {registerRoute} from 'workbox-routing';
-// import {StaleWhileRevalidate} from 'workbox-strategies';
-//
-// registerRoute(
-//   ({request}) => true,
-//   new StaleWhileRevalidate({
-//     cacheName: 'static-resources',
-//   })
-// );
+import {registerRoute} from 'workbox-routing';
+import {CacheFirst} from 'workbox-strategies';
+
+registerRoute(
+  ({request}) => true,
+  new CacheFirst({
+    cacheName: 'static-resources',
+  })
+);
 
 const OFFLINE_VERSION = 1;
 const CACHE_NAME = 'offline';
