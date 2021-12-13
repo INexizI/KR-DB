@@ -1733,7 +1733,7 @@ h4 {
 .easy-autocomplete-container {
   color: rgb(185, 185, 185);
   background: rgb(75, 75, 75);
-  border: 0.1px solid rgb(70, 70, 70);
+  // border: 0.1px solid rgb(70, 70, 70);
   border-bottom: none;
   border-top: none;
   position: relative;
@@ -1741,6 +1741,8 @@ h4 {
   // bottom: -7px;
   // width: 100%;
   // z-index: 2;
+  max-height: 500px;
+  overflow: auto;
 }
 
 .easy-autocomplete-container ul {
@@ -1771,7 +1773,7 @@ h4 {
 
 .easy-autocomplete-container ul li.selected {
   background: none repeat scroll 0 0 rgb(200, 200, 200);
-  border: 0.1px solid rgb(70, 70, 70);
+  // border: 0.1px solid rgb(70, 70, 70);
   color: rgb(0, 0, 0);
   cursor: pointer;
 }

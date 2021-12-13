@@ -15,7 +15,7 @@ json.skills do
       json.pic '/images/media/heroes/' + skill.char.name + '/s' + skill.skill_number + '.webp'
     end
     json.description skill.description
-    json.url 'chars/' + skill.char.slug
+    json.url '/chars/' + skill.char.slug
   end
 end
 
@@ -33,9 +33,9 @@ json.perks do
     end
     json.description perk.description
     if perk.perk_type == 'generic'
-      json.url 'perks/'
+      json.url '/perks/'
     else
-      json.url 'chars/' + perk.char.slug
+      json.url '/chars/' + perk.char.slug
     end
   end
 end
@@ -107,9 +107,9 @@ json.gears do
     end
     json.description gear.description
     if gear.char_id == nil
-      json.url 'gears/'
+      json.url '/gears/'
     else
-      json.url 'chars/' + gear.char.slug
+      json.url '/chars/' + gear.char.slug
     end
   end
 end
