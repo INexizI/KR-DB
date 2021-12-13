@@ -21,13 +21,17 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  // @media screen and (max-width: 1100px) {
-  //   overflow-y: auto !important;
-  // }
-  // @media screen and (max-width: 5000px) {
-  //   overflow-y: hidden;
-  // }
-  @media screen and (max-width: 1000px) {
+  @media screen and (max-width: 5000px) {
+    overflow-y: hidden;
+  }
+  @media screen and (max-width: 1100px) {
+    overflow-y: auto !important;
+    .inner_links, .back { display: none; }
+    .inner { margin-bottom: 1.5em;
+      .input_search { width: -webkit-fill-available !important;
+        input { text-align: center; }
+      }
+    }
     .search-main { flex-wrap: wrap; }
     .search-sub, h1 { width: 500px !important; }
   }
@@ -66,12 +70,14 @@ select {
 
   .input_search {
     position: fixed;
-    width: 250px;
+    // width: 250px;
+    width: 300px;
     z-index: 1;
     right: 0;
     top: 0;
 
     input {
+      z-index: 1;
       padding: 5px;
       text-indent: 20px;
       background-size: 15px;
@@ -1829,7 +1835,7 @@ h4 {
     width: 250px;
 
     h1 {
-      z-index: 1;
+      // z-index: 1;
       width: 250px;
       position: absolute;
       background: rgb(117, 117, 117);

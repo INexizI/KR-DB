@@ -5,4 +5,4 @@
 
   .input_search
     = form_with url: search_path, local: true, method: :get do |f|
-      = f.text_field :q, placeholder: "Search", data: { behavior: "autocomplete" }, id: "srch"
+      = f.text_field :q, placeholder: "Search by name or description", data: { behavior: "autocomplete" }, id: "srch"
