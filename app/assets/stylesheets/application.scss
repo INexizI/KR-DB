@@ -21,9 +21,9 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
 
-  @media screen and (max-width: 5000px) {
-    overflow-y: hidden;
-  }
+  // @media screen and (max-width: 5000px) {
+  //   overflow-y: hidden;
+  // }
   @media screen and (max-width: 1100px) {
     overflow-y: auto !important;
     .inner_links, .back { display: none; }
@@ -34,6 +34,7 @@ body {
     }
     .search-main { flex-wrap: wrap; }
     .search-sub, h1 { width: 500px !important; }
+    .easy-autocomplete-container { max-height: 460px !important; }
   }
 }
 
@@ -955,7 +956,7 @@ input {
         text-align: center;
         // margin-left: auto;
         // margin-top: 0;
-        margin: -3px auto;
+        margin: 0 auto;
 
         .p1 {
           grid-area: p1;

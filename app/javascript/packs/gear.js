@@ -10,7 +10,7 @@
     $('.g-image').mouseenter(function() {
       $left = 0;
       if ($(document).width() - $(this).offset().left < $(document).width() / 2)
-      $left = -1;
+        $left = -1;
       $x = $left * 420;
       $cs = {
         'left': $x,
@@ -22,11 +22,16 @@
     });
     $('.g-sw-desc').mouseenter(function() {
       $left = 0;
+      $top = 0;
       if ($(document).width() - $(this).offset().left < $(document).width() / 2)
-      $left = -1;
+        $left = -1;
+      if ($(document).height() - $(this).offset().top < $(document).height() / 2)
+        $top = -1;
       $x = $left * 420;
+      $y = $top * ($(this).find('.g-desc').height() + 60);
       $cs = {
         'left': $x,
+        'top': $y,
         'display': 'grid'
       }
       $('.g-desc', this).css($cs);
