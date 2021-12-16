@@ -28,6 +28,7 @@ window.addEventListener('load', () => {
 
 require("packs/char")
 require("packs/gear")
+require("packs/rune")
 require("packs/skill")
 require("packs/stat")
 require("packs/search")
