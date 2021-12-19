@@ -26,13 +26,14 @@ window.addEventListener('load', () => {
   });
 });
 
-require("packs/char")
-require("packs/gear")
-require("packs/rune")
-require("packs/skill")
-require("packs/stat")
-require("packs/search")
+// require("packs/char")
+// require("packs/gear")
+// require("packs/rune")
+// require("packs/skill")
+// require("packs/stat")
+require("packs/sup")
 require("packs/jquery.easy-autocomplete.js")
+require("packs/search")
 
 // import 'src/stylesheets/application'
 // const images = require.context('../images', true)

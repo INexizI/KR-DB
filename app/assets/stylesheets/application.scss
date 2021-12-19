@@ -357,13 +357,13 @@ select {
       width: 15px;
     }
     .p-description {
-      width: 415px;
+      width: 500px;
       border: 1px solid;
-      border-radius: 10px 10px 10px 10px;
+      border-radius: 10px;
       background: rgba(210, 210, 210, 1);
       display: none;
       position: relative;
-      margin: -50px 60px;
+      // margin: -50px 60px;
       padding: 0px 5px;
       font-size: medium;
 
@@ -464,7 +464,7 @@ select {
   background: rgba(210, 210, 210, 1);
   display: none;
   position: relative;
-  margin: -50px 60px;
+  // margin: -50px 60px;
   padding: 0px 5px;
   font-size: medium;
 
@@ -1043,7 +1043,7 @@ h4 {
   background: rgba(210, 210, 210, 1);
   display: none;
   position: relative;
-  margin: -50px 60px;
+  // margin: -50px 60px;
   padding: 0px 5px;
   font-size: medium;
 

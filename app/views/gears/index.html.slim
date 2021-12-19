@@ -2,7 +2,7 @@ title Gear
 
 .g-sub
   .g-title T8 Sets
-  .g-main
+  .g-main.mainB
     .g-gear
       - @gears.order(id: 'ASC').where.not(set: '').where(tier: 'T8').each do |gear|
         .g-image
@@ -39,7 +39,7 @@ title Gear
               p = gear.explanation
 
   .g-title TM
-  .g-main
+  .g-main.mainB
     .g-gear-tm
       - @gears.order(explanation: 'ASC').where(tier: 'TM', set: 'Reclaimed').each do |gear|
         .g-image
@@ -150,7 +150,7 @@ title Gear
                 p = g.description
 
   .g-title Mana Stone
-  .g-main
+  .g-main.mainB
     .g-gear
       - @gears.where(tier: 'T8', gear_type: '9-UT').each do |gear|
         .g-image
@@ -168,7 +168,7 @@ title Gear
             .p4
 
   .g-title Unique Treasure
-  .g-main
+  .g-main.mainB
     - @chars.order(name: 'ASC').each do |c|
       .g-ut
         .g-name
@@ -191,7 +191,7 @@ title Gear
                   p = gear.description
 
   .g-title Unique Weapon
-  .g-main
+  .g-main.mainB
     - @chars.order(name: 'ASC').each do |c|
       .g-ut#g-uw
         / .g-name
@@ -218,7 +218,7 @@ title Gear
                   p = gear.description
 
   .g-title Class Unique Weapon
-  .g-main.cl
+  .g-main.mainB.cl
     - @roles.order(id: 'ASC').each do |r|
       .g-ut#cl
         p
@@ -239,7 +239,7 @@ title Gear
                   p = gear.description
 
   .g-title Soul Weapon
-  .g-main
+  .g-main.mainB
     .g-sw
       - @chars.order(name: 'ASC').each do |c|
         .g-ut

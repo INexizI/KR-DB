@@ -12,7 +12,7 @@ title Skills
           / - if skill.parent_id == 'NULL'
           - if skill.parent_id.blank?
             div
-              .s-image
+              .s-image.dscr
                 img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.webp' alt=skill.name
                 / img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.png' alt=skill.name
                 .s-desc
@@ -39,7 +39,7 @@ title Skills
 
               - @skills.where(parent_id: skill.id).each do |skill|
                 - if !skill.parent_id.blank?
-                  .s-image
+                  .s-image.dscr
                     img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.webp' alt=skill.name
                     / img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.png' alt=skill.name
                     .s-desc
