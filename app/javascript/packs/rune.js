@@ -5,10 +5,10 @@
       if ($(document).height() - $(this).offset().top < $(document).height() / 2)
         $top = -1;
       $y = $top * ($(this).find('.r-description').height() + 12) * 2;
-      $cs = {
+      $css = {
         'top': $y
       }
-      $('.r-description', this).css($cs);
+      $('.r-description', this).css($css);
     }).mouseleave(function() {
       $('.r-description').removeAttr('style');
     });

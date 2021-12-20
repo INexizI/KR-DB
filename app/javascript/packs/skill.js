@@ -9,12 +9,12 @@
         $top = -1;
       $x = $left * 308;
       $y = $top * ($(this).find('.s-desc').height() + 60)
-      $cs = {
+      $css = {
         'left': $x,
         'top': $y,
         'display': 'grid'
       }
-      $('.s-desc', this).css($cs);
+      $('.s-desc', this).css($css);
     }).mouseleave(function() {
       $('.s-desc').removeAttr('style');
     });

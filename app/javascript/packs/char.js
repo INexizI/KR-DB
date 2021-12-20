@@ -16,19 +16,19 @@
         $top = -1;
       $x = $left * 495;
       $y = $top * 20;
-      $cs = {
+      $css = {
         'left': $x,
-        'top':$y
+        'top': $y
       }
-      $('.p-description', this).css($cs);
-      $('.g-description', this).css($cs);
+      $('.p-description', this).css($css);
+      $('.g-description', this).css($css);
       $xSW = $left * 495;
       $ySW = $top * 170;
-      $csSW = {
+      $cssSW = {
         'left': $xSW,
-        'top':$ySW
+        'top': $ySW
       }
-      $('.s-description', this).css($csSW);
+      $('.s-description', this).css($cssSW);
     }).mouseleave(function() {
       $('.s-description').removeAttr('style');
       $('.p-description').removeAttr('style');

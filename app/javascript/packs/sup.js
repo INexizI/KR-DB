@@ -21,56 +21,9 @@
         'left': x,
         'top': y
       }
-      $('.s-description, .p-description, .g-description, .s-desc, .p-desc, .g-desc', this).css($css);
+      $('.s-description, .p-description, .g-description, .r-description, .s-desc, .p-desc, .g-desc', this).css($css);
     }).mouseleave(function() {
-      $('.s-description, .p-description, .g-description, .s-desc, .p-desc, .g-desc').removeAttr('style');
-    });
-
-    /*  gear.js  */
-    $('.g-image').mouseenter(function() {
-      $left = 0;
-      if ($(document).width() - $(this).offset().left < $(document).width() / 2)
-        $left = -1;
-      x = $left * 420;
-      $css = {
-        'left': x,
-        'display': 'grid'
-      }
-      $('.g-desc', this).css($css);
-    }).mouseleave(function() {
-      $('.g-desc').removeAttr('style');
-    });
-    $('.g-sw-desc').mouseenter(function() {
-      $left = 0;
-      $top = 0;
-      if ($(document).width() - $(this).offset().left < $(document).width() / 2)
-        $left = -1;
-      if ($(document).height() - $(this).offset().top < $(document).height() / 2)
-        $top = -1;
-      x = $left * 420;
-      y = $top * ($(this).find('.g-desc').height() + 60);
-      $css = {
-        'left': x,
-        'top': y,
-        'display': 'grid'
-      }
-      $('.g-desc', this).css($css);
-    }).mouseleave(function() {
-      $('.g-desc').removeAttr('style');
-    });
-
-    /*  rune.js  */
-    $('.r-rune').mouseenter(function() {
-      $top = 0;
-      if ($(document).height() - $(this).offset().top < $(document).height() / 2)
-        $top = -1;
-      y = $top * ($(this).find('.r-description').height() + 12) * 2;
-      $css = {
-        'top': y
-      }
-      $('.r-description', this).css($css);
-    }).mouseleave(function() {
-      $('.r-description').removeAttr('style');
+      $('.s-description, .p-description, .g-description, .r-description, .s-desc, .p-desc, .g-desc').removeAttr('style');
     });
 
     /* hero background image */

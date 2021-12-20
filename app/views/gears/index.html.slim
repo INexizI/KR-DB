@@ -5,7 +5,7 @@ title Gear
   .g-main.mainB
     .g-gear
       - @gears.order(id: 'ASC').where.not(set: '').where(tier: 'T8').each do |gear|
-        .g-image
+        .g-image.dscr
           - if gear.gear_type == '7-J'
             - if gear.name == "Hell's Eyes"
               img src='/images/media/gears/#{gear.gear_type}/Ring/#{gear.set}.webp'
@@ -42,7 +42,7 @@ title Gear
   .g-main.mainB
     .g-gear-tm
       - @gears.order(explanation: 'ASC').where(tier: 'TM', set: 'Reclaimed').each do |gear|
-        .g-image
+        .g-image.dscr
           - if gear.gear_type == '7-J'
             img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} Perseverance #{gear.name}.webp'
           - else
@@ -60,7 +60,7 @@ title Gear
                 p = g.description
     .g-gear-tm
       - @gears.order(explanation: 'ASC').where(tier: 'TM', set: '').each do |gear|
-        .g-image
+        .g-image.dscr
           - if gear.gear_type == '7-J'
             img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Perseverance #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
           - else
@@ -78,7 +78,7 @@ title Gear
                 p = g.description
     .g-gear-tm
       - @gears.order(explanation: 'ASC').where(tier: 'TM', set: 'Reclaimed').each do |gear|
-        .g-image
+        .g-image.dscr
           - if gear.gear_type == '7-J'
             img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} Hope #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
           - else
@@ -96,7 +96,7 @@ title Gear
                 p = g.description
     .g-gear-tm
       - @gears.order(explanation: 'ASC').where(tier: 'TM', set: '').each do |gear|
-        .g-image
+        .g-image.dscr
           - if gear.gear_type == '7-J'
             img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Hope #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
           - else
@@ -114,7 +114,7 @@ title Gear
                 p = g.description
     .g-gear-tm
       - @gears.order(explanation: 'ASC').where(tier: 'TM', set: 'Reclaimed').each do |gear|
-        .g-image
+        .g-image.dscr
           - if gear.gear_type == '7-J'
             img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} Authority #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
           - else
@@ -132,7 +132,7 @@ title Gear
                 p = g.description
     .g-gear-tm
       - @gears.order(explanation: 'ASC').where(tier: 'TM', set: '').each do |gear|
-        .g-image
+        .g-image.dscr
           - if gear.gear_type == '7-J'
             img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Authority #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
           - else
@@ -153,7 +153,7 @@ title Gear
   .g-main.mainB
     .g-gear
       - @gears.where(tier: 'T8', gear_type: '9-UT').each do |gear|
-        .g-image
+        .g-image.dscr
           img src='/images/media/gears/#{gear.gear_type}/mana.webp'
           .g-desc
             .p1
@@ -177,7 +177,7 @@ title Gear
             = c.name
         .g-un
           - @gears.where(char: c, gear_type: '9-UT').each do |gear|
-            .g-image
+            .g-image.dscr
               img src='/images/media/heroes/#{c.name}/ut#{gear.gear_skill}.webp'
               .g-desc
                 .p1
@@ -200,7 +200,7 @@ title Gear
             = c.name
         .g-un
           - @gears.where(char: c, gear_type: '10-UW').each do |gear|
-            .g-image
+            .g-image.dscr
               img src='/images/media/heroes/#{c.name}/uw.webp'
               .g-desc
                 .p1
@@ -225,7 +225,7 @@ title Gear
           = r.name
         .g-un
           - @gears.where(role: r, gear_type: '10-UW').each do |gear|
-            .g-image
+            .g-image.dscr
               img src='/images/media/heroes/#{r.name.downcase}.webp'
               .g-desc
                 .p1
@@ -245,7 +245,7 @@ title Gear
         .g-ut
           .g-un
             - @skills.where(char: c).where.not('length(parent_id) < 4').each do |skill|
-              .g-sw-desc
+              .g-sw-desc.dscr
                 img src='/images/media/heroes/#{c.name}/sw.webp'
                 .g-desc
                   .p1

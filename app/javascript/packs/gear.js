@@ -12,11 +12,11 @@
       if ($(document).width() - $(this).offset().left < $(document).width() / 2)
         $left = -1;
       $x = $left * 420;
-      $cs = {
+      $css = {
         'left': $x,
         'display': 'grid'
       }
-      $('.g-desc', this).css($cs);
+      $('.g-desc', this).css($css);
     }).mouseleave(function() {
       $('.g-desc').removeAttr('style');
     });
@@ -29,12 +29,12 @@
         $top = -1;
       $x = $left * 420;
       $y = $top * ($(this).find('.g-desc').height() + 60);
-      $cs = {
+      $css = {
         'left': $x,
         'top': $y,
         'display': 'grid'
       }
-      $('.g-desc', this).css($cs);
+      $('.g-desc', this).css($css);
     }).mouseleave(function() {
       $('.g-desc').removeAttr('style');
     });
