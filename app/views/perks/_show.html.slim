@@ -1,9 +1,6 @@
 - if @perk.perk_type == 'hero'
   = image_tag '/images/media/heroes/' + @perk.tier.downcase + '/' + @perk.sequence + '.webp', title: @perk.tier + ' - ' + @perk.name
-  / = image_tag '/images/media/heroes/' + @perk.tier.downcase + '/' + @perk.sequence + '.png', title: @perk.tier + ' - ' + @perk.name
 - elsif @perk.perk_type == 'generic'
   = image_tag '/images/media/genericPerks/' + @perk.name + '.webp', title: @perk.name
-  / = image_tag '/images/media/genericPerks/' + @perk.name + '.png', title: @perk.name
 - else
   = image_tag '/images/media/heroes/' + @perk.tier.downcase + '/' + @perk.name + '.webp', title: @perk.tier + ' T5 ' + @perk.name.capitalize
-  / = image_tag '/images/media/heroes/' + @perk.tier.downcase + '/' + @perk.name + '.png', title: @perk.tier + ' T5 ' + @perk.name.capitalize

@@ -1,6 +1,5 @@
 (function() {
   $(document).on("turbolinks:load", function() {
-    /*  char.js  */
     $('.h-title, .g-title').click(function() {
       var cssVal = {
         'display': 'flex',
