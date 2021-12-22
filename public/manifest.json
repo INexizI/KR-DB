@@ -3,14 +3,26 @@
   "name": "KR Calculator",
   "icons": [
     {
-      "src": "/images/manaOrb.webp",
+      "src": "/images/manaOrbS.webp",
       "sizes": "25x25",
       "type": "image/webp",
       "purpose": "any"
     },
     {
-      "src": "/images/manaOrb.png",
+      "src": "/images/manaOrbM.webp",
       "sizes": "144x144",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/manaOrbL.webp",
+      "sizes": "512x512",
+      "type": "image/webp",
+      "purpose": "any"
+    },
+    {
+      "src": "/images/manaOrb.png",
+      "sizes": "512x512",
       "type": "image/png",
       "purpose": "any"
     }

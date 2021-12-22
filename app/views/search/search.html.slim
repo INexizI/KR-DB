@@ -14,7 +14,7 @@ title Search
     - @skills.each do |skill|
       .search-block
         p#help-description
-          = image_tag '/images/help.svg', id: 's' + skill.id.to_s
+          = image_tag '/images/help.svg', id: 's' + skill.id.to_s, alt: ''
         p
           = link_to skill.char, title: skill.char.name do
             - if (skill.parent_id.include? 'Advancement Phase')
@@ -32,7 +32,7 @@ title Search
     - @perks.each do |perk|
       .search-block
         p#help-description
-          = image_tag '/images/help.svg', id: 'p' + perk.id.to_s
+          = image_tag '/images/help.svg', id: 'p' + perk.id.to_s, alt: ''
         p
           - if perk.perk_type == 'generic'
               = image_tag '/images/media/genericPerks/' + perk.name + '.webp', title: perk.description
@@ -54,7 +54,7 @@ title Search
     - @gears.where.not(tier: '', gear_type: '').each do |gear|
       .search-block
         p#help-description
-          = image_tag '/images/help.svg', id: 'g' + gear.id.to_s
+          = image_tag '/images/help.svg', id: 'g' + gear.id.to_s, alt: ''
         p
           - if !gear.char_id.blank? && gear.gear_type == '10-UW'
             = link_to gear.char, title: gear.char.name do
