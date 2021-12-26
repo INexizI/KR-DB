@@ -10,7 +10,7 @@ gem 'bootsnap', require: false
 gem 'sass-rails'
 
 gem 'webpacker'
-gem 'jbuilder'
+gem 'jbuilder', '>= 2.11.5'
 gem 'json'
 gem 'redis'
 gem 'redis-namespace'
