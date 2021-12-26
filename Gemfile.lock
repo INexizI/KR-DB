@@ -1,8 +1,8 @@
 GIT
   remote: https://github.com/activerecord-hackery/ransack.git
-  revision: 25c5c9dfec216a5fafcd90b8893abcfe19460e50
+  revision: 49a43fc9519408e47a4844d3cdbeb2838687041a
   specs:
-    ransack (2.4.2)
+    ransack (2.5.0)
       activerecord (>= 5.2.4)
       activesupport (>= 5.2.4)
       i18n
@@ -105,7 +105,8 @@ GEM
       turbo-rails
     i18n (1.8.11)
       concurrent-ruby (~> 1.0)
-    jbuilder (2.11.4)
+    jbuilder (2.11.5)
+      actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     json (2.6.1)
     listen (3.7.0)
