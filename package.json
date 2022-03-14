@@ -14,7 +14,7 @@
     "glob-parent": "6.0.2",
     "jquery": "^3.6.0",
     "jquery-ui": "^1.13.1",
-    "node-forge": "^1.1.0",
+    "node-forge": "^1.2.1",
     "normalize-url": "7.0.3",
     "nth-check": "^2.0.1",
     "postcss": "8.4.5",
