@@ -10,21 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_08_131450) do
-
+ActiveRecord::Schema[7.0].define(version: 2021_12_08_131450) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "calcs", force: :cascade do |t|
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "chars", force: :cascade do |t|
     t.string "name"
     t.string "description"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "slug"
     t.string "type_dmg"
     t.bigint "role_id"
@@ -37,8 +36,8 @@ ActiveRecord::Schema.define(version: 2021_12_08_131450) do
     t.string "name"
     t.string "tier"
     t.string "type"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.bigint "stat_id"
     t.index ["stat_id"], name: "index_enchants_on_stat_id"
   end
@@ -59,14 +58,14 @@ ActiveRecord::Schema.define(version: 2021_12_08_131450) do
     t.string "description"
     t.string "tier"
     t.string "set"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "gear_type"
     t.bigint "char_id"
     t.bigint "stat_id"
     t.bigint "role_id"
     t.string "gear_skill"
-    t.string "explanation"
+    t.string "description_2"
     t.index ["char_id"], name: "index_gears_on_char_id"
     t.index ["role_id"], name: "index_gears_on_role_id"
     t.index ["stat_id"], name: "index_gears_on_stat_id"
@@ -75,10 +74,10 @@ ActiveRecord::Schema.define(version: 2021_12_08_131450) do
   create_table "links", force: :cascade do |t|
     t.string "title"
     t.string "text"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "slug"
-    t.datetime "date_expired"
+    t.datetime "date_expired", precision: nil
     t.index ["slug"], name: "index_links_on_slug", unique: true
   end
 
@@ -86,8 +85,8 @@ ActiveRecord::Schema.define(version: 2021_12_08_131450) do
     t.string "name"
     t.string "description"
     t.string "tier"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "sequence"
     t.string "perk_type"
     t.bigint "char_id"
@@ -96,8 +95,8 @@ ActiveRecord::Schema.define(version: 2021_12_08_131450) do
 
   create_table "roles", force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.string "slug"
     t.index ["slug"], name: "index_roles_on_slug", unique: true
   end
@@ -107,16 +106,16 @@ ActiveRecord::Schema.define(version: 2021_12_08_131450) do
     t.string "value", default: "{}"
     t.string "type_gear"
     t.string "tier"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "skills", force: :cascade do |t|
     t.string "name"
     t.string "description"
     t.integer "mana"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.bigint "char_id"
     t.integer "cooldown"
     t.string "skill_number"
@@ -127,8 +126,8 @@ ActiveRecord::Schema.define(version: 2021_12_08_131450) do
   create_table "stats", force: :cascade do |t|
     t.string "name"
     t.integer "value"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
     t.bigint "role_id"
     t.string "stat_type"
     t.integer "notice"
@@ -142,7 +141,7 @@ ActiveRecord::Schema.define(version: 2021_12_08_131450) do
     t.string "tagger_type"
     t.integer "tagger_id"
     t.string "context", limit: 128
-    t.datetime "created_at"
+    t.datetime "created_at", precision: nil
     t.index ["context"], name: "index_taggings_on_context"
     t.index ["tag_id", "taggable_id", "taggable_type", "context", "tagger_id", "tagger_type"], name: "taggings_idx", unique: true
     t.index ["tag_id"], name: "index_taggings_on_tag_id"
@@ -156,8 +155,8 @@ ActiveRecord::Schema.define(version: 2021_12_08_131450) do
 
   create_table "tags", id: :serial, force: :cascade do |t|
     t.string "name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.datetime "created_at", precision: nil
+    t.datetime "updated_at", precision: nil
     t.integer "taggings_count", default: 0
     t.index ["name"], name: "index_tags_on_name", unique: true
   end

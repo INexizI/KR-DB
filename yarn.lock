@@ -900,13 +900,13 @@
   resolved "https://registry.yarnpkg.com/@hotwired/stimulus/-/stimulus-3.0.1.tgz#141f15645acaa3b133b7c247cad58ae252ffae85"
   integrity sha512-oHsJhgY2cip+K2ED7vKUNd2P+BEswVhrCYcJ802DSsblJFv7mPFVk3cQKvm2vHgHeDVdnj7oOKrBbzp1u8D+KA==
 
-"@hotwired/turbo-rails@^7.1.0":
-  version "7.1.0"
-  resolved "https://registry.yarnpkg.com/@hotwired/turbo-rails/-/turbo-rails-7.1.0.tgz#63df3f0e11aea7c451983266c80ad8896f310952"
-  integrity sha512-eB/PTZQYl7dPm51AfBwm0sBpohJ7eir/JmuOfwJG297lEEA8sFcvpxVON/87Ne97OyAOcORZtLpX0KB+t9afyw==
+"@hotwired/turbo-rails@^7.1.1":
+  version "7.1.1"
+  resolved "https://registry.yarnpkg.com/@hotwired/turbo-rails/-/turbo-rails-7.1.1.tgz#35c03b92b5c86f0137ed08bef843d955ec9bbe83"
+  integrity sha512-ZXpxUjCfkdbuXfoGrsFK80qsVzACs8xCfie9rt2jMTSN6o1olXVA0Nrk8u02yNEwSiVJm/4QSOa8cUcMj6VQjg==
   dependencies:
     "@hotwired/turbo" "^7.1.0"
-    "@rails/actioncable" "^6.0.0"
+    "@rails/actioncable" "^7.0"
 
 "@hotwired/turbo@^7.1.0":
   version "7.1.0"
@@ -955,15 +955,10 @@
     mkdirp "^1.0.4"
     rimraf "^3.0.2"
 
-"@rails/actioncable@^6.0.0":
-  version "6.1.4"
-  resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-6.1.4.tgz#c3c5a9f8302c429af9722b6c50ab48049016d2a3"
-  integrity sha512-0LmSKJTuo2dL6BQ+9xxLnS9lbkyfz2mBGeBnQ2J7o9Bn0l0q+ZC6VuoZMZZXPvABI4QT7Nfknv5WhfKYL+boew==
-
-"@rails/actioncable@^7.0.0":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.0.1.tgz#8f383b672e142d009f89b725d49b0832d99da74a"
-  integrity sha512-lbGc1z2RXdiWZJE/8o2GSe2gek82EoKd2YvjRrqV//0J3/JImONUYwZ2XPmS1R9R2oth1XlIG0YidqdeTty0TA==
+"@rails/actioncable@^7.0", "@rails/actioncable@^7.0.1":
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/@rails/actioncable/-/actioncable-7.0.2.tgz#69a6d999f4087e0537dd38fe0963db1f4305d650"
+  integrity sha512-G26maXW1Kx0LxQdmNNuNjQlRO/QlXNr3QfuwKiOKb5FZQGYe2OwtHTGXBAjSoiu4dW36XYMT/+L1Wo1Yov4ZXA==
 
 "@rails/activestorage@^7.0.0":
   version "7.0.1"
@@ -977,10 +972,10 @@
   resolved "https://registry.yarnpkg.com/@rails/request.js/-/request.js-0.0.6.tgz#5f0347a9f363e50ec45118c7134080490cda81d8"
   integrity sha512-dfFWaQXitYJ4kxrgGJNhDNXX54/v10YgoJqBMVe6lhqs6a4N9WD7goZJEvwin82TtK8MqUNhwfyisgKwM6dMdg==
 
-"@rails/ujs@^7.0.0":
-  version "7.0.1"
-  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-7.0.1.tgz#cb515d52c85be107908dd00822042f04e52cdea7"
-  integrity sha512-ZUkgsbz5KFLfBwjIQ2D/kvyq+2w5BuNnkUJf3940VVJxov9GECu6n2BSXUTmyNAx+R6JQdibzXBuR7nz3crZYw==
+"@rails/ujs@^7.0.1":
+  version "7.0.2"
+  resolved "https://registry.yarnpkg.com/@rails/ujs/-/ujs-7.0.2.tgz#6e0f843fb810b23ce1c33457b27e0accce6755e4"
+  integrity sha512-eAn41MQI6z9Yj4RVAIL9qzYorHRM22hPJp9MR86ra62UmcAsI3HEkIgeguN2qWJRxUbztLer+T4fycmTqB/Osw==
 
 "@rails/webpacker@^5.4.3":
   version "5.4.3"
@@ -4050,10 +4045,10 @@ jest-worker@^26.5.0:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-jquery-ui@^1.13.0:
-  version "1.13.0"
-  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.13.0.tgz#ab5ac65f37ca093c51b3478c4097f55bbc008f36"
-  integrity sha512-Osf7ECXNTYHtKBkn9xzbIf9kifNrBhfywFEKxOeB/OVctVmLlouV9mfc2qXCp6uyO4Pn72PXKOnj09qXetopCw==
+jquery-ui@^1.13.1:
+  version "1.13.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.13.1.tgz#d0b7a42e73a04c31bb5706adf86f6f8942f64eaa"
+  integrity sha512-2VlU59N5P4HaumDK1Z3XEVjSvegFbEOQRgpHUBaB2Ak98Axl3hFhJ6RFcNQNuk9SfL6WxIbuLst8dW/U56NSiA==
   dependencies:
     jquery ">=1.8.0 <4.0.0"
 
@@ -4585,7 +4580,7 @@ nice-try@^1.0.4:
   resolved "https://registry.yarnpkg.com/nice-try/-/nice-try-1.0.5.tgz#a3378a7696ce7d223e88fc9b764bd7ef1089e366"
   integrity sha512-1nh45deeb5olNY7eX82BkPO7SSxR5SSYJiPTrTdFUVYwAl8CKMA5N9PjTYkHiRjisVcxcQ1HXdLhx2qxxJzLNQ==
 
-node-forge@^1.0.0, node-forge@^1.2.0:
+node-forge@^1.2.0, node-forge@^1.2.1:
   version "1.2.1"
   resolved "https://registry.yarnpkg.com/node-forge/-/node-forge-1.2.1.tgz#82794919071ef2eb5c509293325cec8afd0fd53c"
   integrity sha512-Fcvtbb+zBcZXbTTVwqGA5W+MKBj56UjVRevvchv5XrcyXbmNdesfZL37nlcWOfpgHhgmxApw3tQbTr4CqNmX4w==
@@ -4651,10 +4646,10 @@ normalize-url@1.9.1:
     query-string "^4.1.0"
     sort-keys "^1.0.0"
 
-normalize-url@7.0.2:
-  version "7.0.2"
-  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-7.0.2.tgz#3f250c964484715e6bfbcdfa2524ad76c57e1297"
-  integrity sha512-HC9c6eHqxmiR6sL9DKt9ttLkiLaI1jytdkJMGAEvkLAAdlOi99kR7UMWWWRrwjucuFabaau4ZuvP1Zv+6PpDjA==
+normalize-url@7.0.3:
+  version "7.0.3"
+  resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-7.0.3.tgz#12e56889f7a54b2d5b09616f36c442a9063f61af"
+  integrity sha512-RiCOdwdPnzvwcBFJE4iI1ss3dMVRIrEzFpn8ftje6iBfzBInqlnRrNhxcLwBEKjPPXQKzm1Ptlxtaiv9wdcj5w==
 
 normalize-url@^3.0.0:
   version "3.3.0"
@@ -7264,10 +7259,10 @@ ws@^8.1.0:
   resolved "https://registry.yarnpkg.com/ws/-/ws-8.2.3.tgz#63a56456db1b04367d0b721a0b80cae6d8becbba"
   integrity sha512-wBuoj1BDpC6ZQ1B7DWQBYVLphPWkm8i9Y0/3YdHjHKHiohOJ1ws+3OccDWtH+PoC9DZD5WOTrJvNbWvjS6JWaA==
 
-ws@^8.4.0:
-  version "8.4.2"
-  resolved "https://registry.yarnpkg.com/ws/-/ws-8.4.2.tgz#18e749868d8439f2268368829042894b6907aa0b"
-  integrity sha512-Kbk4Nxyq7/ZWqr/tarI9yIt/+iNNFOjBXEWgTb4ydaNHBNGgvf2QHbS9fdfsndfjFlFwEd4Al+mw83YkaD10ZA==
+ws@^8.5.0:
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-8.5.0.tgz#bfb4be96600757fe5382de12c670dab984a1ed4f"
+  integrity sha512-BWX0SWVgLPzYwF8lTzEy1egjhS4S4OEAHfsO8o65WOVsrnSRGaSiUaa9e0ggGlkMTtBlmOpEXiie9RUcBO86qg==
 
 xtend@^4.0.0, xtend@~4.0.1:
   version "4.0.2"
