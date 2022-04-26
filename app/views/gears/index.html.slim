@@ -36,12 +36,11 @@ title Gear
             .p4
               hr
               p = gear.description
-              p = gear.explanation
 
   .g-title TM
   .g-main.mainB
     .g-gear-tm
-      - @gears.order(explanation: 'ASC').where(tier: 'TM', set: 'Reclaimed').each do |gear|
+      - @gears.where(tier: 'TM', set: 'Reclaimed').each do |gear|
         .g-image.dscr
           - if gear.gear_type == '7-J'
             img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} Perseverance #{gear.name}.webp'
@@ -59,7 +58,7 @@ title Gear
               - @gears.where(name: gear.name, set: 'Perseverance').each do |g|
                 p = g.description
     .g-gear-tm
-      - @gears.order(explanation: 'ASC').where(tier: 'TM', set: '').each do |gear|
+      - @gears.where(tier: 'TM', set: '').each do |gear|
         .g-image.dscr
           - if gear.gear_type == '7-J'
             img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Perseverance #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
@@ -77,7 +76,7 @@ title Gear
               - @gears.where(name: gear.name, set: 'Perseverance').each do |g|
                 p = g.description
     .g-gear-tm
-      - @gears.order(explanation: 'ASC').where(tier: 'TM', set: 'Reclaimed').each do |gear|
+      - @gears.where(tier: 'TM', set: 'Reclaimed').each do |gear|
         .g-image.dscr
           - if gear.gear_type == '7-J'
             img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} Hope #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
@@ -95,7 +94,7 @@ title Gear
               - @gears.where(name: gear.name, set: 'Hope').each do |g|
                 p = g.description
     .g-gear-tm
-      - @gears.order(explanation: 'ASC').where(tier: 'TM', set: '').each do |gear|
+      - @gears.where(tier: 'TM', set: '').each do |gear|
         .g-image.dscr
           - if gear.gear_type == '7-J'
             img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Hope #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
@@ -113,7 +112,7 @@ title Gear
               - @gears.where(name: gear.name, set: 'Hope').each do |g|
                 p = g.description
     .g-gear-tm
-      - @gears.order(explanation: 'ASC').where(tier: 'TM', set: 'Reclaimed').each do |gear|
+      - @gears.where(tier: 'TM', set: 'Reclaimed').each do |gear|
         .g-image.dscr
           - if gear.gear_type == '7-J'
             img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} Authority #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
@@ -131,7 +130,7 @@ title Gear
               - @gears.where(name: gear.name, set: 'Authority').each do |g|
                 p = g.description
     .g-gear-tm
-      - @gears.order(explanation: 'ASC').where(tier: 'TM', set: '').each do |gear|
+      - @gears.where(tier: 'TM', set: '').each do |gear|
         .g-image.dscr
           - if gear.gear_type == '7-J'
             img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Authority #{gear.name}.webp' title=(gear.set + ' ' + gear.name)

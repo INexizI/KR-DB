@@ -38,6 +38,8 @@ gem 'nokogiri', '~> 1.13', '>= 1.13.4'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'brakeman'
+  gem 'rspec-rails', '~> 6.0.0.rc1'
+  gem 'rails-controller-testing'
 end
 
 group :development do
@@ -51,6 +53,7 @@ group :test do
   gem 'capybara'
   gem 'selenium-webdriver'
   gem 'webdrivers'
+  gem 'shoulda-matchers'
 end
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

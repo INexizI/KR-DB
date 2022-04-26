@@ -6,5 +6,8 @@ class Role < ApplicationRecord
   has_many :gears
   has_many :stats, class_name: 'Stat'
 
+  validates :name, length: { minimum: 3 }, presence: true
+  validates_uniqueness_of :slug, case_insensitive: true
+
   scope :chars_by_name, -> { chars.order(name: :asc) }
 end

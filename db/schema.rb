@@ -71,16 +71,6 @@ ActiveRecord::Schema[7.0].define(version: 2021_12_08_131450) do
     t.index ["stat_id"], name: "index_gears_on_stat_id"
   end
 
-  create_table "links", force: :cascade do |t|
-    t.string "title"
-    t.string "text"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.string "slug"
-    t.datetime "date_expired", precision: nil
-    t.index ["slug"], name: "index_links_on_slug", unique: true
-  end
-
   create_table "perks", force: :cascade do |t|
     t.string "name"
     t.string "description"
@@ -103,7 +93,7 @@ ActiveRecord::Schema[7.0].define(version: 2021_12_08_131450) do
 
   create_table "runes", force: :cascade do |t|
     t.string "name"
-    t.string "value", default: "{}"
+    t.string "value"
     t.string "type_gear"
     t.string "tier"
     t.datetime "created_at", null: false

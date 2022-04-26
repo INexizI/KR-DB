@@ -12,4 +12,11 @@ production:
   url:
 
 test:
-  <<: *defaults
+  adapter: postgresql
+  encoding: utf8
+  database: <%= Rails.application.secrets.DB_DATABASE_TEST %>
+  username: <%= Rails.application.secrets.DB_USERNAME_TEST %>
+  password: <%= Rails.application.secrets.DB_PASSWORD_TEST %>
+  host: <%= Rails.application.secrets.DB_HOST_TEST %>
+  pool: 5
+  timeout: 5000

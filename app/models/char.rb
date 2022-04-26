@@ -7,5 +7,11 @@ class Char < ApplicationRecord
   has_many :perks
   has_many :gears
 
-  default_scope {order('name ASC')}
+  validates :name, length: { minimum: 3 }, presence: true
+  validates :description, length: { maximum: 3000 }, presence: true
+  validates :type_dmg, presence: true
+  validates :position, presence: true
+  validates_uniqueness_of :slug, case_insensitive: true
+
+  default_scope { order('name ASC') }
 end

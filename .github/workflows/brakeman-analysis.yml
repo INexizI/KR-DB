@@ -1,0 +1,38 @@
+name: Brakeman Scan
+
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+  schedule:
+    - cron: '32 16 * * 0'
+
+jobs:
+  brakeman-scan:
+    name: Brakeman Scan
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: Setup Ruby
+      uses: actions/setup-ruby@v1
+      with:
+        ruby-version: '3.0'
+
+    - name: Setup Brakeman
+      env:
+        BRAKEMAN_VERSION: '4.10'
+      run: |
+        gem install brakeman --version $BRAKEMAN_VERSION
+
+    - name: Scan
+      continue-on-error: true
+      run: |
+        brakeman -f sarif -o output.sarif.json .
+
+    - name: Upload SARIF
+      uses: github/codeql-action/upload-sarif@v1
+      with:
+        sarif_file: output.sarif.json
