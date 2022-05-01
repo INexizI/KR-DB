@@ -10,6 +10,7 @@ gem 'bootsnap', require: false
 gem 'sass-rails', '>= 6.0.0'
 
 gem 'webpacker', '>= 5.4.3'
+gem 'jsbundling-rails'
 gem 'jbuilder', '>= 2.11.5'
 gem 'json'
 gem 'redis'
@@ -45,8 +46,8 @@ end
 group :development do
   gem 'web-console', '>= 4.2.0'
   gem 'listen'
-  gem 'spring'
-  gem 'spring-watcher-listen'
+  # gem 'spring'
+  # gem 'spring-watcher-listen'
 end
 
 group :test do

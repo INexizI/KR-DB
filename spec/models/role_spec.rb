@@ -16,9 +16,9 @@ RSpec.describe Role, type: :model do
     it { should validate_uniqueness_of(:slug) }
   end
 
-  describe 'scope' do
-    it 'applies a default scope to collections by name ascending' do
-      expect(Char.all.to_sql).to eq Char.all.order('name ASC').to_sql
-    end
-  end
+  # describe 'scope' do
+  #   it 'applies a default scope to collections by name ascending' do
+  #     expect(Char.all.to_sql).to eq Char.all.order('name ASC').to_sql
+  #   end
+  # end
 end

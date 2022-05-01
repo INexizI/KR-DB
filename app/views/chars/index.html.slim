@@ -1,79 +1,58 @@
 title Hero
 
-.cc
-  .main
-    .h-title
-      img src='/images/media/classes/knight.webp' alt='Knight'
-      span Knight
-    .h-main.mainB
-      - @chars.where(role: 1).each do |char|
-        .h-char
-          .h-avatar
-            = link_to char, title: char.name do
-              img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
+.main
+  .h-title
+    img src='/images/media/classes/knight.webp' alt='Knight'
+    span Knight
+  .h-heroes
+    - @chars.where(role: 1).each do |char|
+      = link_to char, title: char.name do
+        img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
 
-  .main
-    .h-title
-      img src='/images/media/classes/warrior.webp' alt='Warrior'
-      span Warrior
-    .h-main.mainB
-      - @chars.where(role: 2).each do |char|
-        .h-char
-          .h-avatar
-            = link_to char, title: char.name do
-              img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
+  .h-title
+    img src='/images/media/classes/warrior.webp' alt='Warrior'
+    span Warrior
+  .h-heroes
+    - @chars.where(role: 2).each do |char|
+      = link_to char, title: char.name do
+        img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
 
-  .main
-    .h-title
-      img src='/images/media/classes/assassin.webp' alt='Assassin'
-      span Assassin
-    .h-main.mainB
-      - @chars.where(role: 3).each do |char|
-        .h-char
-          .h-avatar
-            = link_to char, title: char.name do
-              img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
+  .h-title
+    img src='/images/media/classes/assassin.webp' alt='Assassin'
+    span Assassin
+  .h-heroes
+    - @chars.where(role: 3).each do |char|
+      = link_to char, title: char.name do
+        img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
 
-  .main
-    .h-title
-      img src='/images/media/classes/archer.webp' alt='Archer'
-      span Archer
-    .h-main.mainB
-      - @chars.where(role: 4).each do |char|
-        .h-char
-          .h-avatar
-            = link_to char, title: char.name do
-              img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
+  .h-title
+    img src='/images/media/classes/archer.webp' alt='Archer'
+    span Archer
+  .h-heroes
+    - @chars.where(role: 4).each do |char|
+      = link_to char, title: char.name do
+        img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
 
-  .main
-    .h-title
-      img src='/images/media/classes/mechanic.webp' alt='Mechanic'
-      span Mechanic
-    .h-main.mainB
-      - @chars.where(role: 5).each do |char|
-        .h-char
-          .h-avatar
-            = link_to char, title: char.name do
-              img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
+  .h-title
+    img src='/images/media/classes/mechanic.webp' alt='Mechanic'
+    span Mechanic
+  .h-heroes
+    - @chars.where(role: 5).each do |char|
+      = link_to char, title: char.name do
+        img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
 
-  .main
-    .h-title
-      img src='/images/media/classes/wizard.webp' alt='Wizard'
-      span Wizard
-    .h-main.mainB
-      - @chars.where(role: 6).each do |char|
-        .h-char
-          .h-avatar
-            = link_to char, title: char.name do
-              img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
+  .h-title
+    img src='/images/media/classes/wizard.webp' alt='Wizard'
+    span Wizard
+  .h-heroes
+    - @chars.where(role: 6).each do |char|
+      = link_to char, title: char.name do
+        img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
 
-  .main
-    .h-title
-      img src='/images/media/classes/priest.webp' alt='Priest'
-      span Priest
-    .h-main.mainB
-      - @chars.where(role: 7).each do |char|
-        .h-char
-          .h-avatar
-            = link_to char, title: char.name do
-              img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
+  .h-title
+    img src='/images/media/classes/priest.webp' alt='Priest'
+    span Priest
+  .h-heroes
+    - @chars.where(role: 7).each do |char|
+      = link_to char, title: char.name do
+        img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name

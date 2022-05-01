@@ -1,7 +1,7 @@
 (function() {
   $(document).on("turbolinks:load", function() {
-    $('.h-title, .g-title').click(function() {
-      $(this).next('.mainB').fadeToggle('fast').css({'display': 'flex', 'flex-wrap': 'wrap'});
+    $('.h-title').click(function() {
+      $(this).next('.h-heroes').fadeToggle('fast').css({'display': 'flex', 'flex-wrap': 'wrap'});
     });
     $('.dscr').mouseenter(function() {
       ($(document).width() - $(this).offset().left < $(document).width() / 2) ? $left = -1 : $left = 0;

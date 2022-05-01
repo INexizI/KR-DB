@@ -8,10 +8,8 @@ title Runes
         .r-rune.dscr
           - if rune.name == 'MP Recovery/Attack'
             img src='/images/media/runes/MPRA.webp' title=rune.name alt=rune.name
-            / img src='/images/media/runes/MPRA.png' title=rune.name alt=rune.name
           - else
             img src='/images/media/runes/#{rune.name}.webp' title=rune.name alt=rune.name
-            / img src='/images/media/runes/#{rune.name}.png' title=rune.name alt=rune.name
           .r-description
             .p1 #{rune.name}
             .p2
@@ -24,7 +22,6 @@ title Runes
       - @runes.where(tier: 'Legendary', type_gear: 'armor').each do |rune|
         .r-rune.dscr
           img src='/images/media/runes/#{rune.name}.webp' title=rune.name alt=rune.name
-          / img src='/images/media/runes/#{rune.name}.png' title=rune.name alt=rune.name
           .r-description
             .p1 #{rune.name}
             .p2
@@ -38,10 +35,8 @@ title Runes
         .r-rune.dscr
           - if rune.name == 'MP Recovery/DMG'
             img src='/images/media/runes/MPRD.webp' title=rune.name alt=rune.name
-            / img src='/images/media/runes/MPRD.png' title=rune.name alt=rune.name
           - else
             img src='/images/media/runes/#{rune.name}.webp' title=rune.name alt=rune.name
-            / img src='/images/media/runes/#{rune.name}.png' title=rune.name alt=rune.name
           .r-description
             .p1 #{rune.name}
             .p2
@@ -54,7 +49,6 @@ title Runes
       - @runes.where(type_gear: 'all').each do |rune|
         .r-rune.dscr
           img src='/images/media/runes/Velkazar/#{rune.id}.webp' title=rune.name alt=rune.name
-          / img src='/images/media/runes/Velkazar/#{rune.id}.png' title=rune.name alt=rune.name
           .r-description
             .p1 #{rune.name}
             .p2

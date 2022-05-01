@@ -13,5 +13,5 @@ class Char < ApplicationRecord
   validates :position, presence: true
   validates_uniqueness_of :slug, case_insensitive: true
 
-  default_scope { order('name ASC') }
+  # default_scope { order('name ASC') }
 end
