@@ -1,56 +1,47 @@
+h4 Skills
 .c-skill
-  h4 Skills
-  .c-sk
-    - @skills.where(char: @char).order('skill_number ASC').each do |skill|
-      - if skill.parent_id.blank?
-        div
-          .c-perk-img.dscr
-            img src='/images/media/heroes/#{@char.name}/s#{skill.skill_number}.webp' alt=skill.name
-            / img src='/images/media/heroes/#{@char.name}/s#{skill.skill_number}.png' alt=skill.name
-            .s-description
-              .p1
-                = skill.name
-              .p2
-                - if skill.mana.blank?
-                  | Passive
+  - @skills.where(char: @char).order('skill_number ASC').each do |skill|
+    - if skill.parent_id.blank?
+      div
+        .c-img
+          img src='/images/media/heroes/#{@char.name}/s#{skill.skill_number}.webp' alt=skill.name
+          .c-description
+            .p1
+              p #{skill.name}
+            .p2
+              - if skill.mana.blank?
+                span Passive
+              - else
+                - if skill.mana == 0
+                  span Mana cost: #{skill.mana}
                 - else
-                  | Mana cost: 
-                  - if skill.mana == 0
-                    | 0
-                  - else
-                    - skill.mana.times do
-                      = image_tag '/images/media/manaOrb.webp', id: 'manaOrb'
-                      / = image_tag '/images/media/manaOrb.png', id: 'manaOrb'
-              - if !skill.cooldown.blank?
-                .p3
-                  | Cooldown: 
-                  = skill.cooldown
-              .p4
-                hr
-                = skill.description
-          - @skills.where(parent_id: skill.id).each do |skill|
-            - if !skill.parent_id.blank?
-              .c-perk-img.dscr
-                img src='/images/media/heroes/#{@char.name}/s#{skill.skill_number}.webp' alt=skill.name
-                / img src='/images/media/heroes/#{@char.name}/s#{skill.skill_number}.png' alt=skill.name
-                .s-description
+                  - skill.mana.times do
+                    = image_tag '/images/media/manaOrb.webp'
+            - if !skill.cooldown.blank?
+              .p3
+                p Cooldown: #{skill.cooldown}
+            .p4
+              hr
+              p #{skill.description}
+        - @skills.where(parent_id: skill.id).each do |skill|
+          - if !skill.parent_id.blank?
+            .c-img
+              img src='/images/media/heroes/#{@char.name}/s#{skill.skill_number}.webp' alt=skill.name
+              .c-description
                   .p1
-                    = skill.name
+                    p #{skill.name}
                   .p2
                     - if skill.mana.blank?
-                      | Passive
+                      span Passive
                     - else
-                      | Mana cost: 
                       - if skill.mana == 0
-                        | 0
+                        span Mana cost: #{skill.mana}
                       - else
                         - skill.mana.times do
-                          = image_tag '/images/media/manaOrb.webp', id: 'manaOrb'
-                          / = image_tag '/images/media/manaOrb.png', id: 'manaOrb'
+                          = image_tag '/images/media/manaOrb.webp'
                   - if !skill.cooldown.blank?
                     .p3
-                      | Cooldown: 
-                      = skill.cooldown
+                      p Cooldown: #{skill.cooldown}
                   .p4
                     hr
-                    = skill.description
+                    p #{skill.description}

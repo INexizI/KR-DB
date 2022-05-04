@@ -1,25 +1,22 @@
-title = @char['name']
+title #{@char.name}
 
-= link_to 'javascript:history.back()', class: 'back', id: 'a' do
+= link_to 'javascript:history.back()', class: 'back' do
   img src='/images/left.svg' alt='Back'
 
-.char
+main style='background-image: url("/images/media/heroes/#{@char.name}/Loading Screen.webp")'
   .c-main
-    .c-sub.c-s1#centr
-      .c-avatar
-        / img src='/images/media/heroes/#{@char.name}/portrait.png' alt=@char.name
-        img src='/images/media/heroes/#{@char.name}/portrait.webp' alt=@char.name
-      .c-title
-        p#c-name = @char.name
+    .c-sub.c-bl1
+      img src='/images/media/heroes/#{@char.name}/portrait.webp' alt=@char.name
+      h4 #{@char.name}
 
-    .c-sub.c-s2#c-skill
+    .c-sub.c-bl2#c-skill
       = render 'skill'
       = render 'gear'
 
-    .c-sub.c-s3
+    .c-sub.c-bl3
       = render 'stat'
 
-    .c-sub.c-s4
+    .c-sub.c-bl4
       = render 'perk'
 
     / .c-sub

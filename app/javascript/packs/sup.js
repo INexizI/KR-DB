@@ -14,7 +14,7 @@
     });
 
     /* hero background image */
-    $('.char').css('background-image', 'url("/images/media/heroes/' + $('title').text() + '/Loading Screen.webp")');
+    // $('.c-main').css('background-image', 'url("/images/media/heroes/' + $('title').text() + '/Loading Screen.webp")');
     // $('.char').parent().css('overflow-y', 'hidden');
     // $bg = {
     //   'background-image': 'url("/images/media/background/bg' + Math.trunc(1 + Math.random() * 32) + '.webp")',
@@ -25,10 +25,10 @@
     // $('#bg').parent().css('background-image', 'url("/images/media/background/bg' + Math.trunc(1 + Math.random() * 31) + '.webp")');
 
     /* hero stats soft/hard cap */
-    $('.c-stat .r-stat').find('#s-val').each(function() {
+    $('.c-stats .c-stat').find('#s-val').each(function() {
       $zeroStat = $(this);
       $softcap = $($zeroStat).prev().text();
-      $zeroStat.text() === '0' ? $(this).parent().css('height', 0).children().hide() : $(this).parent().css('height', '25px').children().show();
+      $zeroStat.text() === '0' || $zeroStat.text() === '0%' ? $(this).parent().hide().children().hide() : $(this).parent().show().children().show();
       $(this).find('#plsSt1').text() === '' ? $softn = $zeroStat.text() : $softn = $(this).find('#plsSt1').text();
       if (($softcap == 'Crit') || ($softcap == 'ACC'))
         $softn > 1500 ? $(this).next('#s-per').text((1500 + ($softn - 1500)*0.5)/10 + '%') : $(this).next('#s-per').text($softn/10 + '%');
@@ -55,7 +55,7 @@
       $ap = $(this).find('#ap').text().split(/\n/);
       $(this).find('.a1').text($ap[1]);
       $(this).find('.a2').text($ap[4]);
-      $(this).find('#ap').text('');
+      $(this).find('#ap').remove();
     });
 
     /* change gear star upgrade */
