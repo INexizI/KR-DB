@@ -50,6 +50,7 @@ input {
 ::-webkit-scrollbar { display: none; }
 
 @media screen and (max-width: 1100px) {
+  main .c-main { grid-template-areas: "c1 c2" "c3 c4"; }
   .easy-autocomplete {
     width: 100% !important;
     position: relative;
@@ -211,8 +212,8 @@ main {
       margin: 5px 3px;
 
       img {
-        width: inherit;
-        height: inherit;
+        width: 50px;
+        height: 50px;
       }
     }
 
@@ -334,73 +335,45 @@ main {
     height: 15px !important;
   }
 }
-//
-// .calc-s-description {
-//   width: 400px;
-//   border: 1px solid;
-//   border-radius: 10px;
-//   background: rgba(210, 210, 210, 1);
-//   display: none;
-//   position: relative;
-//   padding: 0px 5px;
-//   font-size: medium;
-//
-//   p {padding: 3px;}
-// }
-// .c-perk-img:hover .p-description, .c-perk-img:hover .s-description, .c-perk-img:hover .calc-s-description  {
-//   display: grid;
-//   gap: 1px 1px;
-//   grid-template-areas: "p1 p1 p1" "p2 p2 p3" "p4 p4 p4";
-//
-//   .p1 {
-//     grid-area: p1;
-//     font-weight: bold;
-//     padding: 10px 5px 5px 5px;
-//   }
-//   .p2 {
-//     grid-area: p2;
-//     height: 20px;
-//     padding: 0 5px;
-//     margin: auto;
-//     margin-left: 0;
-//   }
-//   .p3 {
-//     grid-area: p3;
-//     height: 20px;
-//     margin: auto;
-//     margin-right: 0px;
-//     padding-right: 10px;
-//    }
-//   .p4 {
-//     grid-area: p4;
-//     padding: 10px 5px;
-//
-//     img {
-//       width: 20px !important;
-//       height: 20px !important;
-//       margin: -5px 5px;
-//     }
-//     .a1, .a2 {padding: 3px;}
-//     #a1 {filter: hue-rotate(90deg) saturate(2) drop-shadow(1px 1px 0 black);}
-//     #a2 {filter: hue-rotate(180deg) saturate(2) drop-shadow(1px 1px 0 black);}
-//   }
-// }
-// .sw-description {
-//   .p2 {height: fit-content !important;}
-//   .p4 {padding: 5px !important;}
-// }
-//
-// #manaOrb {
-  // width: 16px;
-  // height: 16px;
-  // margin: -2px 0px;
-// }
-//
-// #c-skill {
-//   display: grid;
-//   justify-content: center;
-// }
-//
+
+.c-img:hover .c-description {
+  display: grid;
+  gap: 1px 1px;
+}
+
+/*
+  Gear
+*/
+
+.g-t8, .g-tm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.g-t8 {
+  width: 620px;
+}
+.g-tm {
+  width: 400px;
+}
+
+.qwe {
+  width: 950px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .g-ut { padding: 3px;
+    .g-name { text-align: center;
+      img {
+        width: 50px !important;
+        height: 50px !important;
+      }
+    }
+    .g-un { display: flex; }
+  }
+}
+
 // /*
 //   Perk
 // */

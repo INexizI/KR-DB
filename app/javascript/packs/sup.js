@@ -3,14 +3,14 @@
     $('.h-title').click(function() {
       $(this).next('.h-heroes').fadeToggle('fast').css({'display': 'flex', 'flex-wrap': 'wrap'});
     });
-    $('.dscr').mouseenter(function() {
+    $('.c-img').mouseenter(function() {
       ($(document).width() - $(this).offset().left < $(document).width() / 2) ? $left = -1 : $left = 0;
       ($(document).height() - $(this).offset().top < $(document).height() / 2) ? $top = - 1 : $top = 0;
       x = $left * ($(this).find('div').first().width() - 42);
       y = $top * ($(this).find('div').first().height() + 60);
-      $('.s-description, .p-description, .g-description, .r-description, .s-desc, .p-desc, .g-desc', this).css({'left': x, 'top': y});
+      $('.c-description', this).css({'left': x, 'top': y});
     }).mouseleave(function() {
-      $('.s-description, .p-description, .g-description, .r-description, .s-desc, .p-desc, .g-desc').removeAttr('style');
+      $('.c-description').removeAttr('style');
     });
 
     /* hero background image */

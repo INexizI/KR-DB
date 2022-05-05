@@ -1,271 +1,272 @@
 title Gear
 
-.g-sub
-  .g-title T8 Sets
-  .g-main.mainB
-    .g-gear
-      - @gears.order(id: 'ASC').where.not(set: '').where(tier: 'T8').each do |gear|
-        .g-image.dscr
-          - if gear.gear_type == '7-J'
-            - if gear.name == "Hell's Eyes"
-              img src='/images/media/gears/#{gear.gear_type}/Ring/#{gear.set}.webp'
-            - elsif gear.name == "Fire Dragon's Blessing"
-              img src='/images/media/gears/#{gear.gear_type}/Earrings/#{gear.set}.webp'
-            - elsif gear.name == 'Price of Arrogance'
-              img src='/images/media/gears/#{gear.gear_type}/Necklace/#{gear.set}.webp'
-            - elsif gear.name == 'Fire Circle'
-              img src='/images/media/gears/#{gear.gear_type}/Bracelet/#{gear.set}.webp'
-            - elsif gear.name == 'Ring of Amplification'
-              img src='/images/media/gears/#{gear.gear_type}/Ring/#{gear.set}.webp'
-            - elsif gear.name == 'Earrings of Amplification'
-              img src='/images/media/gears/#{gear.gear_type}/Earrings/#{gear.set}.webp'
-            - else
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.name}/#{gear.set}.webp'
-          - else
-            img src='/images/media/gears/#{gear.gear_type}/#{gear.set}.webp'
-          .g-desc
-            .p1
-              p #{gear.set} #{gear.name}
-            .p2
-              - if gear.stat.name == 'HP'
-                | MAX HP
-              - else
-                | #{gear.stat.name}
-              br
-              | #{gear.stat.value}
-            .p4
-              hr
-              p = gear.description
+.c-main
+  / .c-sub
+  /   h4 T8 Sets
+  /   .g-t8
+  /     - @gears.order(id: 'ASC').where.not(set: '').where(tier: 'T8').each do |gear|
+  /       .c-img
+  /         - if gear.gear_type == '7-J'
+  /           - if gear.name == "Hell's Eyes"
+  /             img src='/images/media/gears/#{gear.gear_type}/Ring/#{gear.set}.webp'
+  /           - elsif gear.name == "Fire Dragon's Blessing"
+  /             img src='/images/media/gears/#{gear.gear_type}/Earrings/#{gear.set}.webp'
+  /           - elsif gear.name == 'Price of Arrogance'
+  /             img src='/images/media/gears/#{gear.gear_type}/Necklace/#{gear.set}.webp'
+  /           - elsif gear.name == 'Fire Circle'
+  /             img src='/images/media/gears/#{gear.gear_type}/Bracelet/#{gear.set}.webp'
+  /           - elsif gear.name == 'Ring of Amplification'
+  /             img src='/images/media/gears/#{gear.gear_type}/Ring/#{gear.set}.webp'
+  /           - elsif gear.name == 'Earrings of Amplification'
+  /             img src='/images/media/gears/#{gear.gear_type}/Earrings/#{gear.set}.webp'
+  /           - else
+  /             img src='/images/media/gears/#{gear.gear_type}/#{gear.name}/#{gear.set}.webp'
+  /         - else
+  /           img src='/images/media/gears/#{gear.gear_type}/#{gear.set}.webp'
+  /         .c-description
+  /           .p1
+  /             p #{gear.set} #{gear.name}
+  /           .p2
+  /             - if gear.stat.name == 'HP'
+  /               | MAX HP
+  /             - else
+  /               | #{gear.stat.name}
+  /             br
+  /             | #{gear.stat.value}
+  /           .p4
+  /             hr
+  /             p #{gear.description}
+  /
+  / .c-sub
+  /   h4 TM
+  /   .g-tm
+  /     - @gears.where(tier: 'TM', set: 'Reclaimed').each do |gear|
+  /       .c-img
+  /         - if gear.gear_type == '7-J'
+  /           img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} Perseverance #{gear.name}.webp'
+  /         - else
+  /           img src='/images/media/gears/#{gear.gear_type}/#{gear.set} Perseverance #{gear.name}.webp'
+  /         .c-description
+  /           .p1
+  /             p Reclaimed #{gear.name} of Perseverance #{gear.gear_skill}
+  /           .p2
+  /             | #{gear.description}
+  /             br
+  /             | #{gear.stat.value}
+  /           .p4
+  /             hr
+  /             - @gears.where(name: gear.name, set: 'Perseverance').each do |g|
+  /               p #{g.description}
+  /   .g-tm
+  /     - @gears.where(tier: 'TM', set: '').each do |gear|
+  /       .c-img
+  /         - if gear.gear_type == '7-J'
+  /           img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Perseverance #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
+  /         - else
+  /           img src='/images/media/gears/#{gear.gear_type}/Perseverance #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
+  /         .c-description
+  /           .p1
+  /             p #{gear.name} of Perseverance #{gear.gear_skill}
+  /           .p2
+  /             | #{gear.description}
+  /             br
+  /             | #{gear.stat.value}
+  /           .p4
+  /             hr
+  /             - @gears.where(name: gear.name, set: 'Perseverance').each do |g|
+  /               p #{g.description}
+  /   .g-tm
+  /     - @gears.where(tier: 'TM', set: 'Reclaimed').each do |gear|
+  /       .c-img
+  /         - if gear.gear_type == '7-J'
+  /           img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} Hope #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
+  /         - else
+  /           img src='/images/media/gears/#{gear.gear_type}/#{gear.set} Hope #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
+  /         .c-description
+  /           .p1
+  /             p Reclaimed #{gear.name} of Hope #{gear.gear_skill}
+  /           .p2
+  /             | #{gear.description}
+  /             br
+  /             | #{gear.stat.value}
+  /           .p4
+  /             hr
+  /             - @gears.where(name: gear.name, set: 'Hope').each do |g|
+  /               p #{g.description}
+  /   .g-tm
+  /     - @gears.where(tier: 'TM', set: '').each do |gear|
+  /       .c-img
+  /         - if gear.gear_type == '7-J'
+  /           img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Hope #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
+  /         - else
+  /           img src='/images/media/gears/#{gear.gear_type}/Hope #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
+  /         .c-description
+  /           .p1
+  /             p #{gear.name} of Hope #{gear.gear_skill}
+  /           .p2
+  /             | #{gear.description}
+  /             br
+  /             | #{gear.stat.value}
+  /           .p4
+  /             hr
+  /             - @gears.where(name: gear.name, set: 'Hope').each do |g|
+  /               p #{g.description}
+  /   .g-tm
+  /     - @gears.where(tier: 'TM', set: 'Reclaimed').each do |gear|
+  /       .c-img
+  /         - if gear.gear_type == '7-J'
+  /           img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} Authority #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
+  /         - else
+  /           img src='/images/media/gears/#{gear.gear_type}/#{gear.set} Authority #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
+  /         .c-description
+  /           .p1
+  /             p Reclaimed #{gear.name} of Authority #{gear.gear_skill}
+  /           .p2
+  /             | #{gear.description}
+  /             br
+  /             | #{gear.stat.value}
+  /           .p4
+  /             hr
+  /             - @gears.where(name: gear.name, set: 'Authority').each do |g|
+  /               p #{g.description}
+  /   .g-tm
+  /     - @gears.where(tier: 'TM', set: '').each do |gear|
+  /       .c-img
+  /         - if gear.gear_type == '7-J'
+  /           img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Authority #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
+  /         - else
+  /           img src='/images/media/gears/#{gear.gear_type}/Authority #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
+  /         .c-description
+  /           .p1
+  /             p #{gear.name} of Authority #{gear.gear_skill}
+  /           .p2
+  /             | #{gear.description}
+  /             br
+  /             | #{gear.stat.value}
+  /           .p4
+  /             hr
+  /             - @gears.where(name: gear.name, set: 'Authority').each do |g|
+  /               p #{g.description}
+  /
+  / .c-sub
+  /   h4 Mana Stone
+  /   .g-ms
+  /     - @gears.where(tier: 'T8', gear_type: '9-UT').each do |gear|
+  /       .c-img
+  /         img src='/images/media/gears/#{gear.gear_type}/mana.webp'
+  /         .c-description
+  /           .p1
+  /             p #{gear.set} #{gear.name}
+  /           .p2
+  /             - if gear.stat.name == 'HP'
+  /               | MAX HP
+  /             - else
+  /               | #{gear.stat.name}
+  /             br
+  /             | #{gear.stat.value}
+  /           .p4
+  /             hr
 
-  .g-title TM
-  .g-main.mainB
-    .g-gear-tm
-      - @gears.where(tier: 'TM', set: 'Reclaimed').each do |gear|
-        .g-image.dscr
-          - if gear.gear_type == '7-J'
-            img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} Perseverance #{gear.name}.webp'
-          - else
-            img src='/images/media/gears/#{gear.gear_type}/#{gear.set} Perseverance #{gear.name}.webp'
-          .g-desc
-            .p1
-              p Reclaimed #{gear.name} of Perseverance #{gear.gear_skill}
-            .p2
-              | #{gear.description}
-              br
-              | #{gear.stat.value}
-            .p4
-              hr
-              - @gears.where(name: gear.name, set: 'Perseverance').each do |g|
-                p = g.description
-    .g-gear-tm
-      - @gears.where(tier: 'TM', set: '').each do |gear|
-        .g-image.dscr
-          - if gear.gear_type == '7-J'
-            img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Perseverance #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
-          - else
-            img src='/images/media/gears/#{gear.gear_type}/Perseverance #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
-          .g-desc
-            .p1
-              p #{gear.name} of Perseverance #{gear.gear_skill}
-            .p2
-              | #{gear.description}
-              br
-              | #{gear.stat.value}
-            .p4
-              hr
-              - @gears.where(name: gear.name, set: 'Perseverance').each do |g|
-                p = g.description
-    .g-gear-tm
-      - @gears.where(tier: 'TM', set: 'Reclaimed').each do |gear|
-        .g-image.dscr
-          - if gear.gear_type == '7-J'
-            img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} Hope #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
-          - else
-            img src='/images/media/gears/#{gear.gear_type}/#{gear.set} Hope #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
-          .g-desc
-            .p1
-              p Reclaimed #{gear.name} of Hope #{gear.gear_skill}
-            .p2
-              | #{gear.description}
-              br
-              | #{gear.stat.value}
-            .p4
-              hr
-              - @gears.where(name: gear.name, set: 'Hope').each do |g|
-                p = g.description
-    .g-gear-tm
-      - @gears.where(tier: 'TM', set: '').each do |gear|
-        .g-image.dscr
-          - if gear.gear_type == '7-J'
-            img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Hope #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
-          - else
-            img src='/images/media/gears/#{gear.gear_type}/Hope #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
-          .g-desc
-            .p1
-              p #{gear.name} of Hope #{gear.gear_skill}
-            .p2
-              | #{gear.description}
-              br
-              | #{gear.stat.value}
-            .p4
-              hr
-              - @gears.where(name: gear.name, set: 'Hope').each do |g|
-                p = g.description
-    .g-gear-tm
-      - @gears.where(tier: 'TM', set: 'Reclaimed').each do |gear|
-        .g-image.dscr
-          - if gear.gear_type == '7-J'
-            img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} Authority #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
-          - else
-            img src='/images/media/gears/#{gear.gear_type}/#{gear.set} Authority #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
-          .g-desc
-            .p1
-              p Reclaimed #{gear.name} of Authority #{gear.gear_skill}
-            .p2
-              | #{gear.description}
-              br
-              | #{gear.stat.value}
-            .p4
-              hr
-              - @gears.where(name: gear.name, set: 'Authority').each do |g|
-                p = g.description
-    .g-gear-tm
-      - @gears.where(tier: 'TM', set: '').each do |gear|
-        .g-image.dscr
-          - if gear.gear_type == '7-J'
-            img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Authority #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
-          - else
-            img src='/images/media/gears/#{gear.gear_type}/Authority #{gear.name}.webp' title=(gear.set + ' ' + gear.name)
-          .g-desc
-            .p1
-              p #{gear.name} of Authority #{gear.gear_skill}
-            .p2
-              | #{gear.description}
-              br
-              | #{gear.stat.value}
-            .p4
-              hr
-              - @gears.where(name: gear.name, set: 'Authority').each do |g|
-                p = g.description
-
-  .g-title Mana Stone
-  .g-main.mainB
-    .g-gear
-      - @gears.where(tier: 'T8', gear_type: '9-UT').each do |gear|
-        .g-image.dscr
-          img src='/images/media/gears/#{gear.gear_type}/mana.webp'
-          .g-desc
-            .p1
-              p #{gear.set} #{gear.name}
-            .p2
-              - if gear.stat.name == 'HP'
-                | MAX HP
-              - else
-                | #{gear.stat.name}
-              br
-              | #{gear.stat.value}
-            .p4
-
-  .g-title Unique Treasure
-  .g-main.mainB
-    - @chars.order(name: 'ASC').each do |c|
-      .g-ut
-        .g-name
-          img src='/images/media/heroes/#{c.name}/portrait.webp'
-          p
-            = c.name
-        .g-un
-          - @gears.where(char: c, gear_type: '9-UT').each do |gear|
-            .g-image.dscr
-              img src='/images/media/heroes/#{c.name}/ut#{gear.gear_skill}.webp'
-              .g-desc
-                .p1
-                  p #{gear.set} #{gear.name}
-                .p2
-                  | MAX HP
-                  br
-                  | #{gear.stat.value}
-                .p4
-                  hr
-                  p = gear.description
-
-  .g-title Unique Weapon
-  .g-main.mainB
-    - @chars.order(name: 'ASC').each do |c|
-      .g-ut#g-uw
-        / .g-name
-          img src='/images/media/heroes/#{c.name}/portrait.webp'
-          p
-            = c.name
-        .g-un
-          - @gears.where(char: c, gear_type: '10-UW').each do |gear|
-            .g-image.dscr
-              img src='/images/media/heroes/#{c.name}/uw.webp'
-              .g-desc
-                .p1
-                  p #{gear.set} #{gear.name}
-                  br
-                  img src='/images/media/heroes/#{c.name}/portrait.webp'
-                  p
-                    = c.name
-                .p2
-                  | ATK
-                  br
-                  | #{gear.stat.value}
-                .p4
-                  hr
-                  p = gear.description
-
-  .g-title Class Unique Weapon
-  .g-main.mainB.cl
-    - @roles.order(id: 'ASC').each do |r|
-      .g-ut#cl
-        p
-          = r.name
-        .g-un
-          - @gears.where(role: r, gear_type: '10-UW').each do |gear|
-            .g-image.dscr
-              img src='/images/media/heroes/#{r.name.downcase}.webp'
-              .g-desc
-                .p1
-                  p #{gear.set} #{gear.name}
-                .p2
-                  | ATK
-                  br
-                  | #{gear.stat.value}
-                .p4
-                  hr
-                  p = gear.description
-
-  .g-title Soul Weapon
-  .g-main.mainB
-    .g-sw
+  .c-sub
+    h4 Unique Treasure
+    .qwe
       - @chars.order(name: 'ASC').each do |c|
         .g-ut
+          .g-name
+            img src='/images/media/heroes/#{c.name}/portrait.webp'
+            p #{c.name}
           .g-un
-            - @skills.where(char: c).where.not('length(parent_id) < 4').each do |skill|
-              .g-sw-desc.dscr
-                img src='/images/media/heroes/#{c.name}/sw.webp'
-                .g-desc
+            - @gears.where(char: c, gear_type: '9-UT').each do |gear|
+              .c-img
+                img src='/images/media/heroes/#{c.name}/ut#{gear.gear_skill}.webp'
+                .c-description
                   .p1
-                    | Soul of 
-                    = skill.name
+                    p #{gear.set} #{gear.name}
                   .p2
-                    | Charges: 
-                    = skill.mana
+                    | MAX HP
                     br
-                    = skill.skill_number
-                  .p3
-                    | Cooldown: 
-                    = skill.cooldown
+                    | #{gear.stat.value}
                   .p4
                     hr
-                    p = skill.description
-                    p#ap = skill.parent_id
-                    hr
-                    img src="/images/media/manaOrb.webp" id="a1" alt='ap1'
-                    span Advancement Phase 1
-                    .a1
-                    img src="/images/media/manaOrb.webp" id="a2" alt='ap2'
-                    span Advancement Phase 2
-                    .a2
+                    p #{gear.description}
+
+  / .g-title Unique Weapon
+  / .g-main.mainB
+  /   - @chars.order(name: 'ASC').each do |c|
+  /     .g-ut#g-uw
+  /       / .g-name
+  /         img src='/images/media/heroes/#{c.name}/portrait.webp'
+  /         p
+  /           = c.name
+  /       .g-un
+  /         - @gears.where(char: c, gear_type: '10-UW').each do |gear|
+  /           .g-image.dscr
+  /             img src='/images/media/heroes/#{c.name}/uw.webp'
+  /             .g-desc
+  /               .p1
+  /                 p #{gear.set} #{gear.name}
+  /                 br
+  /                 img src='/images/media/heroes/#{c.name}/portrait.webp'
+  /                 p
+  /                   = c.name
+  /               .p2
+  /                 | ATK
+  /                 br
+  /                 | #{gear.stat.value}
+  /               .p4
+  /                 hr
+  /                 p = gear.description
+  /
+  / .g-title Class Unique Weapon
+  / .g-main.mainB.cl
+  /   - @roles.order(id: 'ASC').each do |r|
+  /     .g-ut#cl
+  /       p
+  /         = r.name
+  /       .g-un
+  /         - @gears.where(role: r, gear_type: '10-UW').each do |gear|
+  /           .g-image.dscr
+  /             img src='/images/media/heroes/#{r.name.downcase}.webp'
+  /             .g-desc
+  /               .p1
+  /                 p #{gear.set} #{gear.name}
+  /               .p2
+  /                 | ATK
+  /                 br
+  /                 | #{gear.stat.value}
+  /               .p4
+  /                 hr
+  /                 p = gear.description
+  /
+  / .g-title Soul Weapon
+  / .g-main.mainB
+  /   .g-sw
+  /     - @chars.order(name: 'ASC').each do |c|
+  /       .g-ut
+  /         .g-un
+  /           - @skills.where(char: c).where.not('length(parent_id) < 4').each do |skill|
+  /             .g-sw-desc.dscr
+  /               img src='/images/media/heroes/#{c.name}/sw.webp'
+  /               .g-desc
+  /                 .p1
+  /                   | Soul of 
+  /                   = skill.name
+  /                 .p2
+  /                   | Charges: 
+  /                   = skill.mana
+  /                   br
+  /                   = skill.skill_number
+  /                 .p3
+  /                   | Cooldown: 
+  /                   = skill.cooldown
+  /                 .p4
+  /                   hr
+  /                   p = skill.description
+  /                   p#ap = skill.parent_id
+  /                   hr
+  /                   img src="/images/media/manaOrb.webp" id="a1" alt='ap1'
+  /                   span Advancement Phase 1
+  /                   .a1
+  /                   img src="/images/media/manaOrb.webp" id="a2" alt='ap2'
+  /                   span Advancement Phase 2
+  /                   .a2
