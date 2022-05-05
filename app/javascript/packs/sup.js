@@ -6,8 +6,8 @@
     $('.c-img').mouseenter(function() {
       ($(document).width() - $(this).offset().left < $(document).width() / 2) ? $left = -1 : $left = 0;
       ($(document).height() - $(this).offset().top < $(document).height() / 2) ? $top = - 1 : $top = 0;
-      x = $left * ($(this).find('div').first().width() - 42);
-      y = $top * ($(this).find('div').first().height() + 60);
+      x = $left * ($(this).find('div').first().width() - 35);
+      y = $top * ($(this).find('div').first().height() + 70);
       $('.c-description', this).css({'left': x, 'top': y});
     }).mouseleave(function() {
       $('.c-description').removeAttr('style');

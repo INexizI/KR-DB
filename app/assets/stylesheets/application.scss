@@ -194,32 +194,6 @@ main {
   min-height: 100vh;
   backdrop-filter: blur(3px) saturate(0.3) grayscale(0.5) opacity(0.8);
 
-  .c-sub {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    img {
-      border-radius: 10%;
-      width: 124px;
-      height: 124px;
-    }
-
-    .c-img {
-      width: 50px;
-      height: 50px;
-      margin: 5px 3px;
-
-      img {
-        width: 50px;
-        height: 50px;
-      }
-    }
-
-    .c-skill, .c-gear, .c-p { display: flex; }
-  }
-
   .c-bl3 {
     .c-stats { width: 300px; }
     #statHead {
@@ -268,7 +242,6 @@ main {
       }
     }
   }
-
   .c-bl4 {
     .c-pepe {
       display: grid;
@@ -277,6 +250,32 @@ main {
       "item5 item6 item7 item8";
     }
   }
+}
+
+.c-sub {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    border-radius: 10%;
+    width: 124px;
+    height: 124px;
+  }
+
+  .c-img {
+    width: 50px;
+    height: 50px;
+    margin: 5px 3px;
+
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .c-skill, .c-gear, .c-p, .flex { display: flex; }
 }
 
 // .c-background {
@@ -318,6 +317,9 @@ main {
   }
   .p3 {
     grid-area: p3;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
     position: absolute;
     bottom: 0;
     right: 0;
@@ -357,27 +359,37 @@ main {
   width: 400px;
 }
 
-.qwe {
+.g-unique {
   width: 950px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 
-  .g-ut { padding: 3px;
-    .g-name { text-align: center;
+  .c-unique {
+    margin: 3px;
+    padding: 5px 3px;
+    border-radius: 5%;
+    box-shadow: 0px 0px 10px 0px #404040;
+
+    p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
       img {
         width: 50px !important;
         height: 50px !important;
       }
+      span {
+        margin: 0 10px;
+      }
     }
-    .g-un { display: flex; }
   }
 }
 
 // /*
 //   Perk
 // */
-//
+
 // .perk {padding: 10px;
 //   .p-hero {display: flex;
 //      p {padding: 0 5px;}
