@@ -1,7 +1,11 @@
 (function() {
   $(document).on("turbolinks:load", function() {
     $('.h-title').click(function() {
-      $(this).next('.h-heroes').fadeToggle('fast').css({'display': 'flex', 'flex-wrap': 'wrap'});
+      $(this).next('.h-heroes').fadeToggle('fast').css({'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center'});
+    });
+    $('.main h4').click(function() {
+      $(this).next('.g-type').fadeToggle('fast').css({'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center'});
+      $(this).next('.g-tm').fadeToggle('fast').css({'display': 'grid', 'grid-template-areas': '"1 2" "3 4" "5 6"'});
     });
     $('.c-img').mouseenter(function() {
       ($(document).width() - $(this).offset().left < $(document).width() / 2) ? $left = -1 : $left = 0;

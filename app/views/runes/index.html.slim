@@ -1,57 +1,56 @@
 title Runes
 
-.cc
-  .r-sub#centr
-    .r-title Runes for Weapon
-    .r-main
-      - @runes.where(tier: 'Legendary', type_gear: 'weapon').each do |rune|
-        .r-rune.dscr
-          - if rune.name == 'MP Recovery/Attack'
-            img src='/images/media/runes/MPRA.webp' title=rune.name alt=rune.name
-          - else
-            img src='/images/media/runes/#{rune.name}.webp' title=rune.name alt=rune.name
-          .r-description
-            .p1 #{rune.name}
-            .p2
-              hr
-              - @runes.where(name: rune.name).each do |rune|
-                p = rune.tier + ': ' + rune.value
-
-    .r-title Runes for Armor
-    .r-main
-      - @runes.where(tier: 'Legendary', type_gear: 'armor').each do |rune|
-        .r-rune.dscr
+.main.rune
+  h4 Runes for Weapon
+  .c-sub
+    - @runes.where(tier: 'Legendary', type_gear: 'weapon').each do |rune|
+      .c-img
+        - if rune.name == 'MP Recovery/Attack'
+          img src='/images/media/runes/MPRA.webp' title=rune.name alt=rune.name
+        - else
           img src='/images/media/runes/#{rune.name}.webp' title=rune.name alt=rune.name
-          .r-description
-            .p1 #{rune.name}
-            .p2
-              hr
-              - @runes.where(name: rune.name).each do |rune|
-                p = rune.tier + ': ' + rune.value
+        .c-description
+          .p1 #{rune.name}
+          .p4
+            hr
+            - @runes.where(name: rune.name).each do |rune|
+              p #{rune.tier}: #{rune.value}
 
-    .r-title Runes for Secondary
-    .r-main
-      - @runes.where(tier: 'Legendary', type_gear: 'secondary').each do |rune|
-        .r-rune.dscr
-          - if rune.name == 'MP Recovery/DMG'
-            img src='/images/media/runes/MPRD.webp' title=rune.name alt=rune.name
-          - else
-            img src='/images/media/runes/#{rune.name}.webp' title=rune.name alt=rune.name
-          .r-description
-            .p1 #{rune.name}
-            .p2
-              hr
-              - @runes.where(name: rune.name).each do |rune|
-                p = rune.tier + ': ' + rune.value
+  h4 Runes for Armor
+  .c-sub
+    - @runes.where(tier: 'Legendary', type_gear: 'armor').each do |rune|
+      .c-img
+        img src='/images/media/runes/#{rune.name}.webp' title=rune.name alt=rune.name
+        .c-description
+          .p1 #{rune.name}
+          .p4
+            hr
+            - @runes.where(name: rune.name).each do |rune|
+              p #{rune.tier}: #{rune.value}
 
-    .r-title Velkazar Runes
-    .r-main
-      - @runes.where(type_gear: 'all').each do |rune|
-        .r-rune.dscr
-          img src='/images/media/runes/Velkazar/#{rune.id}.webp' title=rune.name alt=rune.name
-          .r-description
-            .p1 #{rune.name}
-            .p2
-              hr
-              - @runes.where(name: rune.name).each do |rune|
-                p = rune.value
+  h4 Runes for Secondary
+  .c-sub
+    - @runes.where(tier: 'Legendary', type_gear: 'secondary').each do |rune|
+      .c-img
+        - if rune.name == 'MP Recovery/DMG'
+          img src='/images/media/runes/MPRD.webp' title=rune.name alt=rune.name
+        - else
+          img src='/images/media/runes/#{rune.name}.webp' title=rune.name alt=rune.name
+        .c-description
+          .p1 #{rune.name}
+          .p4
+            hr
+            - @runes.where(name: rune.name).each do |rune|
+              p #{rune.tier}: #{rune.value}
+
+  h4 Velkazar Runes
+  .c-sub
+    - @runes.where(type_gear: 'all').each do |rune|
+      .c-img
+        img src='/images/media/runes/Velkazar/#{rune.id}.webp' title=rune.name alt=rune.name
+        .c-description
+          .p1 #{rune.name}
+          .p4
+            hr
+            - @runes.where(name: rune.name).each do |rune|
+              p #{rune.value}
