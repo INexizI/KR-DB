@@ -1,7 +1,7 @@
 class RunesController < ApplicationController
   before_action :set_rune, only: :show
   def index
-    @runes = Rune.all
+    @runes = Rune.all.load_async
   end
 
   def show

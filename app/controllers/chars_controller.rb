@@ -2,17 +2,16 @@ class CharsController < ApplicationController
   before_action :set_char, only: :show
 
   def index
-    @chars = Char.order('name ASC')
+    @chars = Char.order('name ASC').load_async
     # @chars = JSON.parse(File.read('./public/json/chars.json'))
     # render json: @chars
   end
 
   def show
-    # @perks = Perk.all
-    @perks = Perk.order('id ASC')
-    @skills = Skill.all
-    @stats = Stat.all
-    @gears = Gear.order('id ASC')
+    @perks = Perk.order('id ASC').load_async
+    @skills = Skill.all.load_async
+    @stats = Stat.all.load_async
+    @gears = Gear.order('id ASC').load_async
 
     # require('zip')
     # Zip::File.open('./public/images/media/genericPerks/generic_perks.zip') do |zip_file|

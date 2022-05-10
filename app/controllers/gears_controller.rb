@@ -2,16 +2,13 @@ class GearsController < ApplicationController
   before_action :set_gear, only: :show
 
   def index
-    # @gears = Gear.all
-    @gears = Gear.all
-    # @gears = Gear.order('gear_type,id ASC')
-    @chars = Char.all
-    @roles = Role.all
-    @skills = Skill.all
+    @roles = Role.all.load_async
+    @chars = Char.all.load_async
+    @gears = Gear.all.load_async
+    @skills = Skill.all.load_async
   end
 
   def show
-    @stats = Stat.all
   end
 
   private

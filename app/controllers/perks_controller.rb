@@ -2,7 +2,7 @@ class PerksController < ApplicationController
   before_action :set_perk, only: :show
 
   def index
-    @perks = Perk.all
+    @perks = Perk.all.load_async
   end
 
   def show

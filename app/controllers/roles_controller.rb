@@ -2,12 +2,11 @@ class RolesController < ApplicationController
   before_action :set_role, only: :show
 
   def index
-    @roles = Role.all
-    @stats = Stat.all
+    @roles = Role.all.load_async
+    @stats = Stat.all.load_async
   end
 
   def show
-    # @stats = Stat.all
   end
 
   private

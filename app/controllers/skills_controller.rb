@@ -2,8 +2,8 @@ class SkillsController < ApplicationController
   before_action :set_skill, only: :show
 
   def index
-    @skills = Skill.all
-    @chars = Char.all
+    @chars = Char.all.load_async
+    @skills = Skill.all.load_async
   end
 
   def show

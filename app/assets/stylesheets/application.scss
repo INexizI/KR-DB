@@ -172,10 +172,6 @@ input {
 //   to {opacity: 1}
 // }
 
-/*
-  Hero Show
-*/
-
 main {
   background-size: cover;
   background-position: center;
@@ -183,71 +179,80 @@ main {
   background-attachment: fixed;
 }
 
+.role {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  height: calc(100vh - 50px);
+  margin: 25px 0;
+  .c-sub { margin: 10px auto; }
+}
+
 .c-main {
   display: grid;
   grid-template-areas: "c1 c2 c3 c4";
+  height: calc(100vh - 10px);
   margin: 0 auto;
   padding: 5px 15px;
   font-size: 18px;
   text-shadow: 0 0 10px white;
-  min-height: 100vh;
   backdrop-filter: blur(3px) saturate(0.3) grayscale(0.5) opacity(0.8);
+}
 
-  .c-bl3 {
-    .c-stats { width: 300px; }
-    #statHead {
-      img {
-        width: 18px;
-        height: 18px;
-        margin-right: 5px;
-        vertical-align: -4px;
-      }
-    }
-    #statHead,
-    #statBase,
-    #statAdd { .c-stat { display: flex; } }
-    #statHead:before,
-    #statBase:before,
-    #statAdd:before,
-    #statHead:after,
-    #statBase:after,
-    #statAdd:after {
-      content: '';
-      display: block;
-      height: 20px;
-      background-size: 300px;
-    }
-    #statHead:before { background-image: url('/images/media/classes/basic head.webp'); }
-    #statBase:before { background-image: url('/images/media/classes/base head.webp'); }
-    #statAdd:before { background-image: url('/images/media/classes/add head.webp'); }
-    #statHead:after, #statBase:after, #statAdd:after {
-      background-image: url('/images/media/classes/stat foot.webp');
-      height: 8px;
-    }
-    .c-stat {
-      background-image: url('/images/media/classes/stat.webp');
-      background-size: 300px 25px;
-      color: rgb(171, 142, 116);
-      line-height: 25px;
-      font-size: 14px;
-
-      #s-name, #s-val { padding-left: 15px; }
-      #s-name { width: 90px ;}
-      #s-val { width: 135px; }
-      #s-per {
-        width: 35px;
-        margin-left: auto;
-        padding-right: 10px;
-      }
+.c-bl3 {
+  .c-stats { width: 300px; }
+  #statHead {
+    img {
+      width: 18px;
+      height: 18px;
+      margin-right: 5px;
+      vertical-align: -4px;
     }
   }
-  .c-bl4 {
-    .c-pepe {
-      display: grid;
-      grid-template:
-      "item1 item2 item3 item4"
-      "item5 item6 item7 item8";
+  #statHead,
+  #statBase,
+  #statAdd { .c-stat { display: flex; } }
+  #statHead:before,
+  #statBase:before,
+  #statAdd:before,
+  #statHead:after,
+  #statBase:after,
+  #statAdd:after {
+    content: '';
+    display: block;
+    height: 20px;
+    background-size: 300px;
+  }
+  #statHead:before { background-image: url('/images/media/classes/basic head.webp'); }
+  #statBase:before { background-image: url('/images/media/classes/base head.webp'); }
+  #statAdd:before { background-image: url('/images/media/classes/add head.webp'); }
+  #statHead:after, #statBase:after, #statAdd:after {
+    background-image: url('/images/media/classes/stat foot.webp');
+    height: 8px;
+  }
+  .c-stat {
+    background-image: url('/images/media/classes/stat.webp');
+    background-size: 300px 25px;
+    color: rgb(171, 142, 116);
+    line-height: 25px;
+    font-size: 14px;
+
+    #s-name, #s-val { padding-left: 15px; }
+    #s-name { width: 90px ;}
+    #s-val { width: 135px; }
+    #s-per {
+      width: 35px;
+      margin-left: auto;
+      padding-right: 10px;
     }
+  }
+}
+.c-bl4 {
+  .c-pepe {
+    display: grid;
+    grid-template:
+    "item1 item2 item3 item4"
+    "item5 item6 item7 item8";
   }
 }
 
@@ -302,22 +307,22 @@ main {
   }
   .p3 {
     grid-area: p3;
-    padding-right: 3px;
     display: flex;
     flex-direction: row;
     align-items: center;
     position: absolute;
     bottom: 0;
     right: 0;
+    text-align: center;
    }
   .p4 {
     grid-area: p4;
     padding: 5px 0;
-    p { padding: 3px; }
     img { margin: 0 5px; }
     #a1 { filter: hue-rotate(90deg) saturate(2) drop-shadow(1px 1px 0 black); }
     #a2 { filter: hue-rotate(180deg) saturate(2) drop-shadow(1px 1px 0 black); }
   }
+  .p3 p, .p4 p { padding: 3px; }
   img {
     width: 15px !important;
     height: 15px !important;

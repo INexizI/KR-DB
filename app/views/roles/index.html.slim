@@ -1,99 +1,24 @@
 title Class
 
-.r-stats
-  .h-title
-    = image_tag '/images/media/classes/knight.webp', alt: 'Knight'
-    span Knight
-  .h-main
-    .r-stat
-      - @stats.where(role_id: 1, stat_type: 'base').each do |s|
-        p = s.name
-        p = s.value
-    .r-stat
-      - @stats.where(role_id: 1, stat_type: 'class').order('notice ASC').each do |s|
-        p = s.name
-        p = s.value
-
-.r-stats
-  .h-title
-    = image_tag '/images/media/classes/warrior.webp', alt: 'Warrior'
-    span Warrior
-  .h-main
-    .r-stat
-      - @stats.where(role_id: 2, stat_type: 'base').each do |s|
-        p = s.name
-        p = s.value
-    .r-stat
-      - @stats.order('notice ASC').where(role_id: 2, stat_type: 'class').each do |s|
-        p = s.name
-        p = s.value
-
-.r-stats
-  .h-title
-    = image_tag '/images/media/classes/assassin.webp', alt: 'Assassin'
-    span Assassin
-  .h-main
-    .r-stat
-      - @stats.where(role_id: 3, stat_type: 'base').each do |s|
-        p = s.name
-        p = s.value
-    .r-stat
-      - @stats.order('notice ASC').where(role_id: 3, stat_type: 'class').each do |s|
-        p = s.name
-        p = s.value
-
-.r-stats
-  .h-title
-    = image_tag '/images/media/classes/archer.webp', alt: 'Archer'
-    span Archer
-  .h-main
-    .r-stat
-      - @stats.where(role_id: 4, stat_type: 'base').each do |s|
-        p = s.name
-        p = s.value
-    .r-stat
-      - @stats.order('notice ASC').where(role_id: 4, stat_type: 'class').each do |s|
-        p = s.name
-        p = s.value
-
-.r-stats
-  .h-title
-    = image_tag '/images/media/classes/mechanic.webp', alt: 'Mechanic'
-    span Mechanic
-  .h-main
-    .r-stat
-      - @stats.where(role_id: 5, stat_type: 'base').each do |s|
-        p = s.name
-        p = s.value
-    .r-stat
-      - @stats.order('notice ASC').where(role_id: 5, stat_type: 'class').each do |s|
-        p = s.name
-        p = s.value
-
-.r-stats
-  .h-title
-    = image_tag '/images/media/classes/wizard.webp', alt: 'Wizard'
-    span Wizard
-  .h-main
-    .r-stat
-      - @stats.where(role_id: 6, stat_type: 'base').each do |s|
-        p = s.name
-        p = s.value
-    .r-stat
-      - @stats.order('notice ASC').where(role_id: 6, stat_type: 'class').each do |s|
-        p = s.name
-        p = s.value
-
-.r-stats
-  .h-title
-    = image_tag '/images/media/classes/priest.webp', alt: 'Priest'
-    span Priest
-  .h-main
-    .r-stat
-      - @stats.where(role_id: 7, stat_type: 'base').each do |s|
-        p = s.name
-        p = s.value
-    .r-stat
-      - @stats.order('notice ASC').where(role_id: 7, stat_type: 'class').each do |s|
-        p = s.name
-        p = s.value
+.role
+  - @roles.each do |role|
+    .c-sub.c-bl3
+      .c-stats#statHead
+        p.c-stat
+          span#s-name Class
+          span#s-val
+            img src='/images/media/classes/#{role.name}.webp' alt=role.name
+            span #{role.name}
+      .c-stats#statBase
+        p
+        - @stats.where(role_id: role.id, stat_type: 'base').each do |stat|
+          p.c-stat
+            span#s-name #{stat.name}
+            span#s-val #{stat.value}
+      .c-stats#statAdd
+        p
+        - @stats.where(role_id: role.id, stat_type: 'class').each do |stat|
+          p.c-stat
+            span#s-name #{stat.name}
+            span#s-val #{stat.value}
+            span#s-per
