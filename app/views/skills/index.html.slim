@@ -2,16 +2,16 @@ title Skills
 
 .main
   .c-sub.skill
-    - @chars.order('name ASC').each do |c|
+    - @chars.order('name ASC').each do |char|
       .s-hero
-        img src='/images/media/heroes/#{c.name}/portrait.webp' alt=c.name
-        h4 #{c.name}
+        img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
+        h4 #{char.name}
         .flex
-          - @skills.where(char_id: c.id).order('skill_number ASC').each do |skill|
+          - @skills.where(char_id: char.id).order('skill_number ASC').each do |skill|
             - if skill.parent_id.blank?
               div
                 .c-img
-                  img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.webp' alt=skill.name
+                  img src='/images/media/heroes/#{char.name}/s#{skill.skill_number}.webp' alt=skill.name
                   .c-description
                     .p1 #{skill.name}
                     .p2
@@ -22,7 +22,7 @@ title Skills
                           span Mana cost: #{skill.mana}
                         - else
                           - skill.mana.times do
-                            = image_tag '/images/media/manaOrb.webp'
+                            img src='/images/media/manaOrb.webp'
                     - if !skill.cooldown.blank?
                       .p3
                         p Cooldown: #{skill.cooldown}
@@ -32,7 +32,7 @@ title Skills
                 - @skills.where(parent_id: skill.id).each do |skill|
                   - if !skill.parent_id.blank?
                     .c-img
-                      img src='/images/media/heroes/#{c.name}/s#{skill.skill_number}.webp' alt=skill.name
+                      img src='/images/media/heroes/#{char.name}/s#{skill.skill_number}.webp' alt=skill.name
                       .c-description
                         .p1 #{skill.name}
                         .p2
@@ -43,7 +43,7 @@ title Skills
                               span Mana cost: #{skill.mana}
                             - else
                               - skill.mana.times do
-                                = image_tag '/images/media/manaOrb.webp', id: 'manaOrb'
+                                img src='/images/media/manaOrb.webp'
                         - if !skill.cooldown.blank?
                           .p3
                             span Cooldown: #{skill.cooldown}

@@ -1,10 +1,9 @@
 import Rails from "@rails/ujs"
-import Turbolinks from "turbolinks"
-// import { Turbo } from "@hotwired/turbo-rails"
+import Turbo from "@hotwired/turbo"
 import * as ActiveStorage from "@rails/activestorage"
-import "channels"
-import "controllers"
-// import "src/stylesheets/application"
+import "../channels"
+import "../controllers"
+
 import jquery from "jquery"
 window.jQuery = jquery
 window.$ = jquery
@@ -29,16 +28,11 @@ window.addEventListener('load', () => {
   });
 });
 
-require("packs/sup")
-require("packs/jquery.easy-autocomplete.js")
-require("packs/search")
+require("./sup")
+require("./jquery.easy-autocomplete.js")
+require("./search")
 
-// import 'src/stylesheets/application'
-// const images = require.context('../images', true)
-
-// window.Turbo = Turbo
 Rails.start()
-Turbolinks.start()
 ActiveStorage.start()
 
-console.log('Webpacker loaded')
+console.log('Packs loaded')

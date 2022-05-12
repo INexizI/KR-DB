@@ -1,5 +1,5 @@
 (function() {
-  $(document).on("turbolinks:load", function() {
+  $(document).on("turbo:load", function() {
     $input = $("[data-behavior='autocomplete']");
     $options = {
       getValue: "name",
@@ -32,7 +32,7 @@
         onChooseEvent: function() {
           $url = $input.getSelectedItemData().url
           $input.val("")
-          Turbolinks.visit($url)
+          Turbo.visit($url)
         }
       }
     };

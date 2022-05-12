@@ -1,5 +1,5 @@
 (function() {
-  $(document).on("turbolinks:load", function() {
+  $(document).on("turbo:load", function() {
     $('.h-title').click(function() {
       $(this).next('.h-heroes').fadeToggle('fast').css({'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center'});
     });
