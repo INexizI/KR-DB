@@ -5,7 +5,7 @@
     });
     $('.main h4').click(function() {
       $(this).next('.g-type').fadeToggle('fast').css({'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center'});
-      $(this).next('.g-tm').fadeToggle('fast').css({'display': 'grid', 'grid-template-areas': '"1 2" "3 4" "5 6"'});
+      $(this).next('.g-tm').fadeToggle('fast').css({'display': 'flex'});
     });
     $('.c-img').mouseenter(function() {
       ($(document).width() - $(this).offset().left < $(document).width() / 2) ? $left = -1 : $left = 0;

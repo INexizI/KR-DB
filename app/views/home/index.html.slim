@@ -18,6 +18,8 @@ title King's Raid DB
           img src='/images/media/heroes/#{gear.char.name.downcase}/ut#{gear.gear_skill}.webp' title=gear.name alt=''
         - elsif gear.char_id.blank? && gear.gear_type == '9-UT'
           img src='/images/media/gears/#{gear.gear_type}/mana.webp' title=gear.name alt=''
+        - elsif gear.gear_type == 'art'
+          img src='/images/media/#{gear.gear_type}/#{gear.name}.webp' title=gear.name alt=''
 
         - elsif gear.set != 'Legendary' && gear.set != 'Technomagic' && gear.tier != 'TM'
           - if gear.gear_type == '7-J'
@@ -49,22 +51,14 @@ title King's Raid DB
         - elsif gear.tier == 'TM'
           - if gear.gear_type == '7-J'
             - if gear.set == 'Reclaimed'
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Reclaimed Perseverance #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Reclaimed Hope #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Reclaimed Authority #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
+              img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.notice} #{gear.set} #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
             - else
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Perseverance #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Hope #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/Authority #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
+              img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
           -else
             - if gear.set == 'Reclaimed'
-              img src='/images/media/gears/#{gear.gear_type}/Reclaimed Perseverance #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
-              img src='/images/media/gears/#{gear.gear_type}/Reclaimed Hope #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
-              img src='/images/media/gears/#{gear.gear_type}/Reclaimed Authority #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
+              img src='/images/media/gears/#{gear.gear_type}/#{gear.notice} #{gear.set} #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
             - else
-              img src='/images/media/gears/#{gear.gear_type}/Perseverance #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
-              img src='/images/media/gears/#{gear.gear_type}/Hope #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
-              img src='/images/media/gears/#{gear.gear_type}/Authority #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
+              img src='/images/media/gears/#{gear.gear_type}/#{gear.set} #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
   .home-a
     p Perk
     - @perks.each do |perk|
