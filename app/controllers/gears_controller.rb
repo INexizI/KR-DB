@@ -2,10 +2,10 @@ class GearsController < ApplicationController
   before_action :set_gear, only: :show
 
   def index
-    @roles = Role.all.load_async
-    @chars = Char.all.load_async
-    @gears = Gear.all.load_async
-    @skills = Skill.all.load_async
+    @roles = Role.order('id ASC').load_async
+    @chars = Char.order('name ASC').load_async
+    @gears = Gear.order('id ASC').load_async
+    @skills = Skill.where('length(parent_id) > 4').load_async
   end
 
   def show
