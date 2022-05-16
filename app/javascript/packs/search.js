@@ -41,7 +41,7 @@
     $('img').on('mousedown', function() {
       $di = $(this).attr('id');
       $('p#' + $di).parent().show();
-    }).on('mouseup mouseleave', function() {
+    }).on('mouseup mouseout', function() {
       $('.description').hide();
     });
   });

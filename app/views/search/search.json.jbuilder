@@ -6,40 +6,6 @@ json.chars do
   end
 end
 
-json.skills do
-  json.array!(@skills) do |skill|
-    json.name skill.name
-    if (skill.parent_id.include? 'Advancement Phase')
-      json.pic '/images/media/heroes/' + skill.char.name + '/sw.webp'
-    else
-      json.pic '/images/media/heroes/' + skill.char.name + '/s' + skill.skill_number + '.webp'
-    end
-    json.description skill.description
-    json.url '/chars/' + skill.char.slug
-  end
-end
-
-json.perks do
-  json.array!(@perks) do |perk|
-    if perk.perk_type == 't5'
-      json.name perk.tier + ' [' + perk.name.capitalize + ']'
-    else
-      json.name perk.name
-    end
-    if perk.perk_type == 'generic'
-      json.pic '/images/media/genericPerks/' + perk.name + '.webp'
-    else
-      json.pic '/images/media/heroes/' + perk.tier + '/' + perk.sequence + '.webp'
-    end
-    json.description perk.description
-    if perk.perk_type == 'generic'
-      json.url '/perks/'
-    else
-      json.url '/chars/' + perk.char.slug
-    end
-  end
-end
-
 json.gears do
   json.array!(@gears) do |gear|
     json.name gear.name
@@ -53,7 +19,7 @@ json.gears do
     elsif gear.char_id.blank? && gear.gear_type == '9-UT'
       json.pic '/images/media/gears/' + gear.gear_type + '/mana.webp'
     elsif gear.gear_type == 'art'
-      json.pic '/images/media/artifacts/' + gear.name + '.webp'
+      json.pic '/images/media/art/' + gear.name + '.webp'
     elsif gear.set != 'Legendary' && gear.set != 'Technomagic' && gear.tier != 'TM'
       if gear.gear_type == '7-J'
         json.pic '/images/media/gears/' + gear.gear_type + '/' + gear.name + '/' + gear.set + '.webp'
@@ -84,24 +50,16 @@ json.gears do
       end
     elsif gear.tier == 'TM'
       if gear.gear_type == '7-J'
-        if gear.set == 'Reclaimed'
-          json.pic '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Reclaimed Perseverance ' + gear.name + '.webp'
-          json.pic '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Reclaimed Hope ' + gear.name + '.webp'
-          json.pic '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Reclaimed Authority ' + gear.name + '.webp'
+        if gear.explanation == 'Reclaimed'
+          json.pic '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/' + gear.explanation + ' ' + gear.set + ' ' + gear.name + '.webp'
         else
-          json.pic '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Perseverance ' + gear.name + '.webp'
-          json.pic '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Hope ' + gear.name + '.webp'
-          json.pic '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/Authority ' + gear.name + '.webp'
+          json.pic '/images/media/gears/' + gear.gear_type + '/' + gear.gear_skill + '/' + gear.set + ' ' + gear.name + '.webp'
         end
       else
-        if gear.set == 'Reclaimed'
-          json.pic '/images/media/gears/' + gear.gear_type + '/Reclaimed Perseverance ' + gear.name + '.webp'
-          json.pic '/images/media/gears/' + gear.gear_type + '/Reclaimed Hope ' + gear.name + '.webp'
-          json.pic '/images/media/gears/' + gear.gear_type + '/Reclaimed Authority ' + gear.name + '.webp'
+        if gear.explanation == 'Reclaimed'
+          json.pic '/images/media/gears/' + gear.gear_type + '/' + gear.explanation + ' ' + gear.set + ' ' + gear.name + '.webp'
         else
-          json.pic '/images/media/gears/' + gear.gear_type + '/Perseverance ' + gear.name + '.webp'
-          json.pic '/images/media/gears/' + gear.gear_type + '/Hope ' + gear.name + '.webp'
-          json.pic '/images/media/gears/' + gear.gear_type + '/Authority ' + gear.name + '.webp'
+          json.pic '/images/media/gears/' + gear.gear_type + '/' + gear.set + ' ' + gear.name + '.webp'
         end
       end
     end
@@ -111,5 +69,39 @@ json.gears do
     else
       json.url '/chars/' + gear.char.slug
     end
+  end
+end
+
+json.perks do
+  json.array!(@perks) do |perk|
+    if perk.perk_type == 't5'
+      json.name perk.tier + ' [' + perk.name.capitalize + ']'
+    else
+      json.name perk.name
+    end
+    if perk.perk_type == 'generic'
+      json.pic '/images/media/genericPerks/' + perk.name + '.webp'
+    else
+      json.pic '/images/media/heroes/' + perk.tier + '/' + perk.sequence + '.webp'
+    end
+    json.description perk.description
+    if perk.perk_type == 'generic'
+      json.url '/perks/'
+    else
+      json.url '/chars/' + perk.char.slug
+    end
+  end
+end
+
+json.skills do
+  json.array!(@skills) do |skill|
+    json.name skill.name
+    if (skill.parent_id.include? 'Advancement Phase')
+      json.pic '/images/media/heroes/' + skill.char.name + '/sw.webp'
+    else
+      json.pic '/images/media/heroes/' + skill.char.name + '/s' + skill.skill_number + '.webp'
+    end
+    json.description skill.description
+    json.url '/chars/' + skill.char.slug
   end
 end

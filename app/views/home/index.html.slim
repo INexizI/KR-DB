@@ -11,11 +11,11 @@ title King's Raid DB
     - @gears.each do |gear|
       = link_to gears_path do
         - if !gear.char_id.blank? && gear.gear_type == '10-UW'
-          img src='/images/media/heroes/#{gear.char.name.downcase}/uw.webp' title=gear.name alt=''
+          img src='/images/media/heroes/#{gear.char.name.downcase}/uw.webp' title='#{gear.char.name} - #{gear.name}' alt=''
         - elsif gear.char_id.blank? && gear.gear_type == '10-UW'
-          img src='/images/media/heroes/#{gear.role.name.downcase}.webp' title=gear.name alt=''
+          img src='/images/media/heroes/#{gear.role.name.downcase}.webp' title='#{gear.role.name} - #{gear.name}' alt=''
         - elsif !gear.char_id.blank? && gear.gear_type == '9-UT'
-          img src='/images/media/heroes/#{gear.char.name.downcase}/ut#{gear.gear_skill}.webp' title=gear.name alt=''
+          img src='/images/media/heroes/#{gear.char.name.downcase}/ut#{gear.gear_skill}.webp' title='#{gear.char.name} - #{gear.name}' alt=''
         - elsif gear.char_id.blank? && gear.gear_type == '9-UT'
           img src='/images/media/gears/#{gear.gear_type}/mana.webp' title=gear.name alt=''
         - elsif gear.gear_type == 'art'
@@ -50,15 +50,15 @@ title King's Raid DB
 
         - elsif gear.tier == 'TM'
           - if gear.gear_type == '7-J'
-            - if gear.set == 'Reclaimed'
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.notice} #{gear.set} #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
+            - if gear.explanation == 'Reclaimed'
+              img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.explanation} #{gear.set} #{gear.name}.webp' title='#{gear.explanation} #{gear.name} of #{gear.set} #{gear.gear_skill}' alt=''
             - else
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
+              img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} #{gear.name}.webp' title='#{gear.explanation} #{gear.name} of #{gear.set} #{gear.gear_skill}' alt=''
           -else
-            - if gear.set == 'Reclaimed'
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.notice} #{gear.set} #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
+            - if gear.explanation == 'Reclaimed'
+              img src='/images/media/gears/#{gear.gear_type}/#{gear.explanation} #{gear.set} #{gear.name}.webp' title='#{gear.explanation} #{gear.name} of #{gear.set} #{gear.gear_skill}' alt=''
             - else
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.set} #{gear.name}.webp' title='#{gear.set} #{gear.name}' alt=''
+              img src='/images/media/gears/#{gear.gear_type}/#{gear.set} #{gear.name}.webp' title='#{gear.explanation} #{gear.name} of #{gear.set} #{gear.gear_skill}' alt=''
   .home-a
     p Perk
     - @perks.each do |perk|
@@ -68,7 +68,7 @@ title King's Raid DB
         - elsif perk.perk_type == 'generic'
           img src='/images/media/genericPerks/#{perk.name}.webp' title=perk.name
         - else
-          img src='/images/media/heroes/#{perk.tier.downcase}/#{perk.name}.webp' title='#{perk.tier} T5 #{perk.name.capitalize}'
+          img src='/images/media/heroes/#{perk.tier.downcase}/#{perk.name}.webp' title='#{perk.tier} [#{perk.name.capitalize}]'
   .home-a
     p Rune
     - @runes.each do |rune|
@@ -85,7 +85,7 @@ title King's Raid DB
     p Skill
     - @skills.each do |skill|
       = link_to skills_path do
-        img src='/images/media/heroes/#{skill.char.name}/s#{skill.skill_number}.webp' title=skill.name
+        img src='/images/media/heroes/#{skill.char.name}/s#{skill.skill_number}.webp' title='#{skill.char.name} - #{skill.name}'
   / .home-a
     p Calculator
     = link_to calcs_path do
