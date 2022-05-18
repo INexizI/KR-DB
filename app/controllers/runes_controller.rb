@@ -1,7 +1,7 @@
 class RunesController < ApplicationController
   before_action :set_rune, only: :show
   def index
-    @runes = Rune.all.load_async
+    @runes = Rune.where(tier: ['Legendary', 'Velkazar']).load_async
   end
 
   def show

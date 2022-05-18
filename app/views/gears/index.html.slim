@@ -78,7 +78,7 @@ title Gear
   .c-sub
     h4 Mana Stone
     .g-type
-      - @gears.where(tier: 'T8', gear_type: '9-UT').each do |gear|
+      - @gears.where(description: '', gear_type: '9-UT').each do |gear|
         .c-img
           img src='/images/media/gears/#{gear.gear_type}/mana.webp'
           .c-description
@@ -161,7 +161,7 @@ title Gear
                 span #{role.name}
               .p4
                 hr
-                p = gear.description
+                p #{gear.description}
   .c-sub
     h4 Soul Weapon
     .g-type
