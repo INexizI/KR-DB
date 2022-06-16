@@ -1,4 +1,7 @@
 class Char < ApplicationRecord
+  include Elasticsearch::Model
+  include Elasticsearch::Model::Callbacks
+  
   extend FriendlyId
   friendly_id :name, use: %i[slugged finders]
 

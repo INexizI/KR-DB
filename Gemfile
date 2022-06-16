@@ -36,6 +36,10 @@ gem 'turbo-rails', '~> 0.8.3'
 
 gem 'nokogiri', '~> 1.13', '>= 1.13.4'
 
+gem 'elasticsearch-model'
+gem 'elasticsearch-rails'
+gem 'elasticsearch-persistence'
+
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'brakeman'
