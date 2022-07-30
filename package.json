@@ -40,7 +40,7 @@
     "stimulus": "^3.0.1",
     "style-loader": "^3.3.1",
     "webpack": "^5.72.1",
-    "webpack-cli": "^4.9.2",
+    "webpack-cli": "^4.10.0",
     "webpack-remove-empty-scripts": "^0.8.0",
     "webpacker-pwa": "^0.1.2",
     "workbox-routing": "^6.5.2",
