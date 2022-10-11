@@ -43,7 +43,7 @@ gem 'elasticsearch-persistence'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'brakeman'
-  gem 'rspec-rails', '~> 6.0.0.rc1'
+  gem 'rspec-rails', '~> 6.0.0.0'
   gem 'rails-controller-testing'
 end
 
