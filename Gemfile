@@ -18,7 +18,7 @@ gem 'redis-namespace'
 gem 'redis-rails', '>= 5.0.2'
 gem 'sidekiq', '>= 6.4.2'
 gem 'hotwire-rails', '>= 0.1.3'
-gem 'meta-tags', '>= 2.17.0'
+gem 'meta-tags', '>= 2.18.0'
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'slim-rails', '>= 3.5.1'
@@ -43,7 +43,7 @@ gem 'elasticsearch-persistence'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'brakeman'
-  gem 'rspec-rails', '~> 6.0.0.rc1'
+  gem 'rspec-rails', '~> 6.0.1.0'
   gem 'rails-controller-testing'
 end
 
