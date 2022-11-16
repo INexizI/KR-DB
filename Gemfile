@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.1'
 
-gem 'rails', '~> 7.0.3', '>= 7.0.3.1'
+gem 'rails', '~> 7.0.4'
 gem 'pg'
 gem 'puma', '>= 5.6.4'
 gem 'bootsnap', require: false
@@ -16,9 +16,9 @@ gem 'json'
 gem 'redis'
 gem 'redis-namespace'
 gem 'redis-rails', '>= 5.0.2'
-gem 'sidekiq', '>= 6.4.2'
+gem 'sidekiq', '>= 7.0.0'
 gem 'hotwire-rails', '>= 0.1.3'
-gem 'meta-tags', '>= 2.16.0'
+gem 'meta-tags', '>= 2.18.0'
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
 gem 'slim-rails', '>= 3.5.1'
@@ -34,7 +34,7 @@ gem 'uglifier'
 
 gem 'turbo-rails', '~> 0.8.3'
 
-gem 'nokogiri', '~> 1.13', '>= 1.13.4'
+gem 'nokogiri', '~> 1.13'
 
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
@@ -43,7 +43,7 @@ gem 'elasticsearch-persistence'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'brakeman'
-  gem 'rspec-rails', '~> 6.0.0.rc1'
+  gem 'rspec-rails', '~> 6.0.1.0'
   gem 'rails-controller-testing'
 end
 
