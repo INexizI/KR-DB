@@ -34,7 +34,7 @@
     "node-forge": "1.3.1",
     "normalize-url": "7.1.0",
     "nth-check": "2.1.1",
-    "postcss": "8.4.18",
+    "postcss": "8.4.20",
     "rails-ujs": "^5.2.8",
     "set-value": "^4.1.0",
     "stimulus": "^3.2.1",
