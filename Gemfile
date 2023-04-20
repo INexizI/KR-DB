@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.3'
 
-gem 'rails', '~> 7.0.4', '>= 7.0.4.2'
+gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
 gem 'pg'
 gem 'puma', '>= 5.6.4'
 gem 'bootsnap', require: false
@@ -34,7 +34,7 @@ gem 'uglifier'
 
 gem 'turbo-rails', '~> 0.8.3'
 
-gem 'nokogiri', '~> 1.13'
+gem 'nokogiri', '~> 1.14'
 
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
