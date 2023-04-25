@@ -34,7 +34,7 @@ gem 'uglifier'
 
 gem 'turbo-rails', '~> 0.8.3'
 
-gem 'nokogiri', '~> 1.13'
+gem 'nokogiri', '~> 1.14'
 
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
