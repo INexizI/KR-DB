@@ -21,8 +21,8 @@ gem 'hotwire-rails', '>= 0.1.3'
 gem 'meta-tags', '>= 2.18.0'
 
 gem 'ransack', github: 'activerecord-hackery/ransack'
-gem 'slim-rails', '>= 3.5.1'
-gem 'simple_form', '>= 5.1.0'
+gem 'slim-rails', '>= 3.6.1'
+gem 'simple_form', '>= 5.2.0'
 gem 'friendly_id'
 # gem 'mini_magick'
 # gem 'carrierwave'
@@ -34,7 +34,7 @@ gem 'uglifier'
 
 gem 'turbo-rails', '~> 0.8.3'
 
-gem 'nokogiri', '~> 1.13'
+gem 'nokogiri', '~> 1.14'
 
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
