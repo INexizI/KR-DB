@@ -20,7 +20,7 @@ gem 'sidekiq', '>= 7.0.8'
 gem 'hotwire-rails', '>= 0.1.3'
 gem 'meta-tags', '>= 2.18.0'
 
-gem 'ransack', github: 'activerecord-hackery/ransack'
+gem 'ransack', :github => 'activerecord-hackery/ransack', :branch => 'main'
 gem 'slim-rails', '>= 3.6.1'
 gem 'simple_form', '>= 5.2.0'
 gem 'friendly_id'
