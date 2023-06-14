@@ -22,7 +22,7 @@
     "@rails/ujs": "^7.0.4",
     "ansi-regex": "6.0.1",
     "babel-plugin-macros": "^3.1.0",
-    "css-loader": "^6.7.3",
+    "css-loader": "^6.7.4",
     "dns-packet": "^5.4.0",
     "ejs": "3.1.8",
     "esbuild": "^0.17.10",
