@@ -38,7 +38,7 @@
     "rails-ujs": "^5.2.8",
     "set-value": "^4.1.0",
     "stimulus": "^3.2.1",
-    "style-loader": "^3.3.1",
+    "style-loader": "^3.3.3",
     "webpack": "^5.82.1",
     "webpack-cli": "^4.10.0",
     "webpack-remove-empty-scripts": "^0.8.4",
