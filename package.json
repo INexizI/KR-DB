@@ -39,7 +39,7 @@
     "set-value": "^4.1.0",
     "stimulus": "^3.2.1",
     "style-loader": "^3.3.3",
-    "webpack": "^5.88.0",
+    "webpack": "^5.88.1",
     "webpack-cli": "^4.10.0",
     "webpack-remove-empty-scripts": "^0.8.4",
     "webpacker-pwa": "^0.1.2",
