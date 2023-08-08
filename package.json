@@ -44,7 +44,7 @@
     "webpack-remove-empty-scripts": "^0.8.4",
     "webpacker-pwa": "^0.1.2",
     "workbox-routing": "^6.6.0",
-    "workbox-strategies": "^6.5.3",
+    "workbox-strategies": "^6.6.0",
     "ws": "^8.13.0"
   },
   "version": "0.1.0",
