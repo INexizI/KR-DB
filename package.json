@@ -13,7 +13,7 @@
     "@babel/plugin-transform-regenerator": "^7.21.5",
     "@babel/plugin-transform-runtime": "^7.22.9",
     "@babel/preset-env": "^7.22.9",
-    "@hotwired/stimulus": "^3.2.1",
+    "@hotwired/stimulus": "^3.2.2",
     "@hotwired/turbo": "^7.3.0",
     "@hotwired/turbo-rails": "^7.3.0",
     "@rails/actioncable": "^7.0.6",
