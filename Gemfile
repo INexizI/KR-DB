@@ -9,8 +9,8 @@ gem 'puma', '>= 5.6.4'
 gem 'bootsnap', require: false
 gem 'sass-rails', '>= 6.0.0'
 
-gem 'jsbundling-rails'
-gem 'cssbundling-rails'
+gem 'jsbundling-rails', '>= 1.2.0'
+gem 'cssbundling-rails', '>= 1.3.0'
 gem 'jbuilder', '>= 2.11.5'
 gem 'json'
 gem 'redis'
