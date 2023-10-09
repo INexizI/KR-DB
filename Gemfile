@@ -16,7 +16,7 @@ gem 'json'
 gem 'redis'
 gem 'redis-namespace'
 gem 'redis-rails', '>= 5.0.2'
-gem 'sidekiq', '>= 7.1.5'
+gem 'sidekiq', '>= 7.1.6'
 gem 'hotwire-rails', '>= 0.1.3'
 gem 'meta-tags', '>= 2.18.0'
 
@@ -32,7 +32,7 @@ gem 'rack-cors'
 gem 'rubyzip'
 gem 'uglifier'
 
-gem 'turbo-rails', '~> 0.9.0'
+gem 'turbo-rails', '~> 1.0.0'
 
 gem 'nokogiri', '~> 1.14'
 
