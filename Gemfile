@@ -9,8 +9,8 @@ gem 'puma', '>= 5.6.4'
 gem 'bootsnap', require: false
 gem 'sass-rails', '>= 6.0.0'
 
-gem 'jsbundling-rails', '>= 1.2.0'
-gem 'cssbundling-rails', '>= 1.3.0'
+gem 'jsbundling-rails', '>= 1.2.1'
+gem 'cssbundling-rails', '>= 1.3.1'
 gem 'jbuilder', '>= 2.11.5'
 gem 'json'
 gem 'redis'
@@ -32,7 +32,7 @@ gem 'rack-cors'
 gem 'rubyzip'
 gem 'uglifier'
 
-gem 'turbo-rails', '~> 0.8.3'
+gem 'turbo-rails', '~> 0.9.0'
 
 gem 'nokogiri', '~> 1.14'
 
@@ -43,7 +43,7 @@ gem 'elasticsearch-persistence'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'brakeman'
-  gem 'rspec-rails', '~> 6.0.1.0'
+  gem 'rspec-rails', '~> 6.0.2.0'
   gem 'rails-controller-testing'
 end
 
