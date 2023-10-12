@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.3'
 
-gem 'rails', '~> 7.1.0'
+gem 'rails', '~> 7.1.1'
 gem 'pg'
 gem 'puma', '>= 5.6.4'
 gem 'bootsnap', require: false
@@ -22,7 +22,7 @@ gem 'meta-tags', '>= 2.18.0'
 
 gem 'ransack', :github => 'activerecord-hackery/ransack', :branch => 'main'
 gem 'slim-rails', '>= 3.6.1'
-gem 'simple_form', '>= 5.2.0'
+gem 'simple_form', '>= 5.3.0'
 gem 'friendly_id'
 # gem 'mini_magick'
 # gem 'carrierwave'
