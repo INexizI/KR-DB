@@ -3,26 +3,26 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.3'
 
-gem 'rails', '~> 7.0.8'
+gem 'rails', '~> 7.1.1'
 gem 'pg'
 gem 'puma', '>= 5.6.4'
 gem 'bootsnap', require: false
 gem 'sass-rails', '>= 6.0.0'
 
-gem 'jsbundling-rails', '>= 1.2.0'
-gem 'cssbundling-rails', '>= 1.3.0'
+gem 'jsbundling-rails', '>= 1.2.1'
+gem 'cssbundling-rails', '>= 1.3.1'
 gem 'jbuilder', '>= 2.11.5'
 gem 'json'
 gem 'redis'
 gem 'redis-namespace'
 gem 'redis-rails', '>= 5.0.2'
-gem 'sidekiq', '>= 7.1.3'
+gem 'sidekiq', '>= 7.1.6'
 gem 'hotwire-rails', '>= 0.1.3'
 gem 'meta-tags', '>= 2.18.0'
 
 gem 'ransack', :github => 'activerecord-hackery/ransack', :branch => 'main'
 gem 'slim-rails', '>= 3.6.1'
-gem 'simple_form', '>= 5.2.0'
+gem 'simple_form', '>= 5.3.0'
 gem 'friendly_id'
 # gem 'mini_magick'
 # gem 'carrierwave'
@@ -32,7 +32,7 @@ gem 'rack-cors'
 gem 'rubyzip'
 gem 'uglifier'
 
-gem 'turbo-rails', '~> 0.8.3'
+gem 'turbo-rails', '~> 1.0.0'
 
 gem 'nokogiri', '~> 1.14'
 
@@ -43,7 +43,7 @@ gem 'elasticsearch-persistence'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'brakeman'
-  gem 'rspec-rails', '~> 6.0.1.0'
+  gem 'rspec-rails', '~> 6.0.2.0'
   gem 'rails-controller-testing'
 end
 
