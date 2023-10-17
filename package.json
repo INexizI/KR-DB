@@ -18,7 +18,7 @@
     "@hotwired/turbo-rails": "^7.3.0",
     "@rails/actioncable": "^7.0.7",
     "@rails/activestorage": "^7.0.8",
-    "@rails/request.js": "^0.0.8",
+    "@rails/request.js": "^0.0.9",
     "@rails/ujs": "^7.0.8",
     "ansi-regex": "6.0.1",
     "babel-plugin-macros": "^3.1.0",
