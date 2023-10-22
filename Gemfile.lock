@@ -403,7 +403,7 @@ DEPENDENCIES
   jsbundling-rails (>= 1.2.1)
   json
   listen
-  meta-tags (>= 2.18.0)
+  meta-tags (>= 2.19.0)
   nokogiri (~> 1.14)
   pg
   puma (>= 5.6.4)

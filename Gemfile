@@ -18,7 +18,7 @@ gem 'redis-namespace'
 gem 'redis-rails', '>= 5.0.2'
 gem 'sidekiq', '>= 7.1.6'
 gem 'hotwire-rails', '>= 0.1.3'
-gem 'meta-tags', '>= 2.18.0'
+gem 'meta-tags', '>= 2.19.0'
 
 gem 'ransack', :github => 'activerecord-hackery/ransack', :branch => 'main'
 gem 'slim-rails', '>= 3.6.1'
