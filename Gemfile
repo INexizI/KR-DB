@@ -21,7 +21,7 @@ gem 'hotwire-rails', '>= 0.1.3'
 gem 'meta-tags', '>= 2.19.0'
 
 gem 'ransack', :github => 'activerecord-hackery/ransack', :branch => 'main'
-gem 'slim-rails', '>= 3.6.1'
+gem 'slim-rails', '>= 3.6.3'
 gem 'simple_form', '>= 5.3.0'
 gem 'friendly_id'
 # gem 'mini_magick'
