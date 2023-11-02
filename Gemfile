@@ -16,7 +16,7 @@ gem 'json'
 gem 'redis'
 gem 'redis-namespace'
 gem 'redis-rails', '>= 5.0.2'
-gem 'sidekiq', '>= 7.1.6'
+gem 'sidekiq', '>= 7.2.0'
 gem 'hotwire-rails', '>= 0.1.3'
 gem 'meta-tags', '>= 2.19.0'
 
