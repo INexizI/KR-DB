@@ -10,7 +10,7 @@ gem 'bootsnap', require: false
 gem 'sass-rails', '>= 6.0.0'
 
 gem 'jsbundling-rails', '>= 1.2.1'
-gem 'cssbundling-rails', '>= 1.3.1'
+gem 'cssbundling-rails', '>= 1.4.0'
 gem 'jbuilder', '>= 2.11.5'
 gem 'json'
 gem 'redis'
