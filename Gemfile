@@ -9,7 +9,7 @@ gem 'puma', '>= 5.6.4'
 gem 'bootsnap', require: false
 gem 'sass-rails', '>= 6.0.0'
 
-gem 'jsbundling-rails', '>= 1.2.1'
+gem 'jsbundling-rails', '>= 1.2.2'
 gem 'cssbundling-rails', '>= 1.3.1'
 gem 'jbuilder', '>= 2.11.5'
 gem 'json'
@@ -18,7 +18,7 @@ gem 'redis-namespace'
 gem 'redis-rails', '>= 5.0.2'
 gem 'sidekiq', '>= 7.2.0'
 gem 'hotwire-rails', '>= 0.1.3'
-gem 'meta-tags', '>= 2.19.0'
+gem 'meta-tags', '>= 2.20.0'
 
 gem 'ransack', :github => 'activerecord-hackery/ransack', :branch => 'main'
 gem 'slim-rails', '>= 3.6.3'
