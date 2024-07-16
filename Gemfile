@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.3'
 
-gem 'rails', '~> 7.1.3', '>= 7.1.3.1'
+gem 'rails', '~> 7.1.3', '>= 7.1.3.3'
 gem 'pg'
 gem 'puma', '>= 6.4.2'
 gem 'bootsnap', require: false
@@ -16,7 +16,7 @@ gem 'json'
 gem 'redis'
 gem 'redis-namespace'
 gem 'redis-rails', '>= 5.0.2'
-gem 'sidekiq', '>= 7.2.2'
+gem 'sidekiq', '>= 7.2.4'
 gem 'hotwire-rails', '>= 0.1.3'
 gem 'meta-tags', '>= 2.21.0'
 
