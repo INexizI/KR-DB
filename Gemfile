@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.1.3'
 
-gem 'rails', '~> 7.1.3', '>= 7.1.3.3'
+gem 'rails', '~> 7.1.3', '>= 7.1.3.4'
 gem 'pg'
 gem 'puma', '>= 6.4.2'
 gem 'bootsnap', require: false
@@ -32,7 +32,7 @@ gem 'rack-cors'
 gem 'rubyzip'
 gem 'uglifier'
 
-gem 'turbo-rails', '~> 1.1.0'
+gem 'turbo-rails', '~> 1.3.0'
 
 gem 'nokogiri', '~> 1.16'
 
@@ -43,7 +43,7 @@ gem 'elasticsearch-persistence'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'brakeman'
-  gem 'rspec-rails', '~> 6.0.3.0'
+  gem 'rspec-rails', '~> 6.0.4.0'
   gem 'rails-controller-testing'
 end
 
