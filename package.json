@@ -20,7 +20,7 @@
     "@rails/activestorage": "^7.2.100",
     "@rails/request.js": "^0.0.11",
     "@rails/ujs": "^7.1.400",
-    "ansi-regex": "6.0.1",
+    "ansi-regex": "6.1.0",
     "babel-plugin-macros": "^3.1.0",
     "css-loader": "^6.11.0",
     "dns-packet": "^5.6.1",
