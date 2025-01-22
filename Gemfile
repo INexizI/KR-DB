@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.3'
+ruby '3.3.1'
 
 gem 'rails', '~> 7.1.5', '>= 7.1.5.1'
 gem 'pg'
@@ -32,9 +32,9 @@ gem 'rack-cors'
 gem 'rubyzip'
 gem 'uglifier'
 
-gem 'turbo-rails', '~> 1.3.0'
+gem 'turbo-rails'
 
-gem 'nokogiri', '~> 1.16'
+gem 'nokogiri'
 
 gem 'elasticsearch-model'
 gem 'elasticsearch-rails'
@@ -43,21 +43,21 @@ gem 'elasticsearch-persistence'
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'brakeman'
-  gem 'rspec-rails', '~> 6.0.4.0'
+  gem 'rspec-rails'
   gem 'rails-controller-testing'
 end
 
 group :development do
-  gem 'web-console', '>= 4.2.1'
+  gem 'web-console'
   gem 'listen'
   # gem 'spring'
   # gem 'spring-watcher-listen'
 end
 
 group :test do
-  gem 'capybara', '>= 3.40.0'
-  gem 'selenium-webdriver', '>= 4.11.0'
-  gem 'webdrivers', '>= 5.3.0'
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'webdrivers', '= 5.3.0'
   gem 'shoulda-matchers'
 end
 
