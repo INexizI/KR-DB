@@ -5,15 +5,15 @@ title King's Raid DB
     p Hero
     - @chars.each do |char|
       = link_to chars_path do
-        img src='/images/media/heroes/#{char.name}/portrait.webp' title=char.name
+        img src='/images/media/heroes/#{char.name.downcase}/portrait.webp' title=char.name
   .home-a
     p Gear
     - @gears.each do |gear|
       = link_to gears_path do
         - if !gear.char_id.blank? && gear.gear_type == '10-UW'
-          img src='/images/media/heroes/#{gear.char.name.downcase}/uw.webp' title='#{gear.char.name} - #{gear.name}' alt=''
+          img src='/images/media/heroes/#{gear.char.name.downcase}/uw.webp' title='#{gear.char.name.downcase} - #{gear.name}' alt=''
         - elsif gear.char_id.blank? && gear.gear_type == '10-UW'
-          img src='/images/media/heroes/#{gear.role.name.downcase}.webp' title='#{gear.role.name} - #{gear.name}' alt=''
+          img src='/images/media/heroes/#{gear.role.name.downcase}.webp' title='#{gear.role.name.downcase} - #{gear.name}' alt=''
         - elsif !gear.char_id.blank? && gear.gear_type == '9-UT'
           img src='/images/media/heroes/#{gear.char.name.downcase}/ut#{gear.gear_skill}.webp' title='#{gear.char.name} - #{gear.name}' alt=''
         - elsif gear.char_id.blank? && gear.gear_type == '9-UT'
@@ -85,7 +85,7 @@ title King's Raid DB
     p Skill
     - @skills.each do |skill|
       = link_to skills_path do
-        img src='/images/media/heroes/#{skill.char.name}/s#{skill.skill_number}.webp' title='#{skill.char.name} - #{skill.name}'
+        img src='/images/media/heroes/#{skill.char.name.downcase}/s#{skill.skill_number}.webp' title='#{skill.char.name} - #{skill.name}'
   / .home-a
     p Calculator
     = link_to calcs_path do

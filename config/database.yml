@@ -1,11 +1,11 @@
 development: &defaults
   adapter: postgresql
   encoding: utf8
-  database: <%= Rails.application.secrets.DB_DATABASE %>
-  username: <%= Rails.application.secrets.DB_USERNAME %>
-  password: <%= Rails.application.secrets.DB_PASSWORD %>
-  host: <%= Rails.application.secrets.DB_HOST %>
-  port: 5433
+  database: <%= Rails.application.credentials.database.name %>
+  username: <%= Rails.application.credentials.database.user %>
+  password: <%= Rails.application.credentials.database.password %>
+  host: <%= Rails.application.credentials.database.host %>
+  port: <%= Rails.application.credentials.database.port %>
   pool: 5
   timeout: 5000
 
@@ -13,11 +13,4 @@ production:
   url:
 
 test:
-  adapter: postgresql
-  encoding: utf8
-  database: <%= Rails.application.secrets.DB_DATABASE_TEST %>
-  username: <%= Rails.application.secrets.DB_USERNAME_TEST %>
-  password: <%= Rails.application.secrets.DB_PASSWORD_TEST %>
-  host: <%= Rails.application.secrets.DB_HOST_TEST %>
-  pool: 5
-  timeout: 5000
+  url:

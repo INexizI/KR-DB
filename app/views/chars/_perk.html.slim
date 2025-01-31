@@ -24,7 +24,7 @@ h4 Transcend
     .c-pepe
       - @perks.where(tier: @char.name).where(perk_type: 'hero').each do |perk|
         .c-img
-          img src='/images/media/heroes/#{@char.name}/#{perk.sequence}.webp' alt=perk.name
+          img src='/images/media/heroes/#{@char.name.downcase}/#{perk.sequence}.webp' alt=perk.name
           .c-description
             .p1
               p #{perk.name}
@@ -34,7 +34,7 @@ h4 Transcend
   .c-p
     - @perks.where(tier: @char.name, perk_type: 't5').each do |perk|
       .c-img
-        img src='/images/media/heroes/#{@char.name}/#{perk.name}.webp' alt=perk.name
+        img src='/images/media/heroes/#{@char.name.downcase}/#{perk.name}.webp' alt=perk.name
         .c-description
           .p1
             p #{@char.name + ' ' + '[' + perk.name.capitalize + ']'}

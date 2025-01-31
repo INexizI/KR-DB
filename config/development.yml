@@ -1,0 +1,9 @@
+development:
+  database:
+    name: KR
+    user: postgres
+    password: root
+    host: localhost
+    port: 5433
+  share_link_api:
+    api_dev_key: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMSJ9.m7m9f3zflL47U68AoZPV52gyxFc0dwT8-1CGX8Xg0A4

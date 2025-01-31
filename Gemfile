@@ -1,9 +1,9 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.3.1'
+ruby '3.4.1'
 
-gem 'rails', '~> 7.1.5', '>= 7.1.5.1'
+gem 'rails', ' ~> 8'
 gem 'pg'
 gem 'puma', '>= 6.4.3'
 gem 'bootsnap', require: false
@@ -15,7 +15,7 @@ gem 'jbuilder', '>= 2.11.5'
 gem 'json'
 gem 'redis'
 gem 'redis-namespace'
-gem 'redis-rails', '>= 5.0.2'
+# gem 'redis-rails', '>= 5.0.2'
 gem 'sidekiq', '>= 7.2.4'
 gem 'hotwire-rails', '>= 0.1.3'
 gem 'meta-tags', '>= 2.21.0'

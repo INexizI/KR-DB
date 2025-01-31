@@ -80,7 +80,7 @@ title Gear
     .g-type
       - @gears.where(description: '', gear_type: '9-UT').each do |gear|
         .c-img
-          img src='/images/media/gears/#{gear.gear_type}/mana.webp'
+          img src='/images/media/gears/#{gear.gear_type}/Mana.webp'
           .c-description
             .p1
               p #{gear.set} #{gear.name}
@@ -108,7 +108,7 @@ title Gear
       - @chars.each do |char|
         - @gears.where(char: char, gear_type: '9-UT').each do |gear|
           .c-img
-            img src='/images/media/heroes/#{char.name}/ut#{gear.gear_skill}.webp'
+            img src='/images/media/heroes/#{char.name.downcase}/ut#{gear.gear_skill}.webp'
             .c-description
               .p1
                 span #{gear.set} #{gear.name}
@@ -117,7 +117,7 @@ title Gear
                 br
                 sapn #{gear.stat.value}
               .p3
-                img src='/images/media/heroes/#{char.name}/portrait.webp'
+                img src='/images/media/heroes/#{char.name.downcase}/portrait.webp'
                 span #{char.name}
               .p4
                 hr
@@ -128,7 +128,7 @@ title Gear
       - @chars.each do |char|
         - @gears.where(char: char, gear_type: '10-UW').each do |gear|
           .c-img
-            img src='/images/media/heroes/#{char.name}/uw.webp'
+            img src='/images/media/heroes/#{char.name.downcase}/uw.webp'
             .c-description
               .p1
                 span #{gear.set} #{gear.name}
@@ -137,7 +137,7 @@ title Gear
                 br
                 span #{gear.stat.value}
               .p3
-                img src='/images/media/heroes/#{char.name}/portrait.webp'
+                img src='/images/media/heroes/#{char.name.downcase}/portrait.webp'
                 span #{char.name}
               .p4
                 hr
@@ -148,7 +148,7 @@ title Gear
       - @roles.each do |role|
         - @gears.where(role: role, gear_type: '10-UW').each do |gear|
           .c-img
-            img src='/images/media/heroes/#{role.name}.webp'
+            img src='/images/media/heroes/#{role.name.downcase}.webp'
             .c-description
               .p1
                 span #{gear.set} #{gear.name}
@@ -157,7 +157,7 @@ title Gear
                 br
                 span #{gear.stat.value}
               .p3
-                img src='/images/media/classes/#{role.name}.webp'
+                img src='/images/media/classes/#{role.name.downcase}.webp'
                 span #{role.name}
               .p4
                 hr
@@ -168,7 +168,7 @@ title Gear
       - @chars.each do |char|
         - @skills.where(char: char).each do |skill|
           .c-img
-            img src='/images/media/heroes/#{char.name}/sw.webp' alt=skill.name
+            img src='/images/media/heroes/#{char.name.downcase}/sw.webp' alt=skill.name
             .c-description.sw-description
               .p1
                 span Soul of #{skill.name}

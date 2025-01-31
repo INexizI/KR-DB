@@ -4,7 +4,7 @@ h4 Skills
     - if skill.parent_id.blank?
       div
         .c-img
-          img src='/images/media/heroes/#{@char.name}/s#{skill.skill_number}.webp' alt=skill.name
+          img src='/images/media/heroes/#{@char.name.downcase}/s#{skill.skill_number}.webp' alt=skill.name
           .c-description
             .p1
               p #{skill.name}
@@ -26,7 +26,7 @@ h4 Skills
         - @skills.where(parent_id: skill.id).each do |skill|
           - if !skill.parent_id.blank?
             .c-img
-              img src='/images/media/heroes/#{@char.name}/s#{skill.skill_number}.webp' alt=skill.name
+              img src='/images/media/heroes/#{@char.name.downcase}/s#{skill.skill_number}.webp' alt=skill.name
               .c-description
                   .p1
                     p #{skill.name}
