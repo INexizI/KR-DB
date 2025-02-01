@@ -1,7 +1,7 @@
 json.chars do
   json.array!(@chars) do |char|
     json.name char.name
-    json.pic '/images/media/heroes/' + char.name + '/portrait.webp'
+    json.pic '/images/media/heroes/' + char.name.downcase + '/portrait.webp'
     json.url char_path(char)
   end
 end
@@ -82,7 +82,7 @@ json.perks do
     if perk.perk_type == 'generic'
       json.pic '/images/media/genericPerks/' + perk.name + '.webp'
     else
-      json.pic '/images/media/heroes/' + perk.tier + '/' + perk.sequence + '.webp'
+      json.pic '/images/media/heroes/' + perk.tier.downcase + '/' + perk.sequence + '.webp'
     end
     json.description perk.description
     if perk.perk_type == 'generic'
@@ -97,9 +97,9 @@ json.skills do
   json.array!(@skills) do |skill|
     json.name skill.name
     if (skill.parent_id.include? 'Advancement Phase')
-      json.pic '/images/media/heroes/' + skill.char.name + '/sw.webp'
+      json.pic '/images/media/heroes/' + skill.char.name.downcase + '/sw.webp'
     else
-      json.pic '/images/media/heroes/' + skill.char.name + '/s' + skill.skill_number + '.webp'
+      json.pic '/images/media/heroes/' + skill.char.name.downcase + '/s' + skill.skill_number + '.webp'
     end
     json.description skill.description
     json.url '/chars/' + skill.char.slug

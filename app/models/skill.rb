@@ -8,4 +8,12 @@ class Skill < ApplicationRecord
   validate :cooldown
   validates :skill_number, presence: true
   validate :parent_id
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["char_id", "cooldown", "created_at", "description", "id", "mana", "name", "parent_id", "skill_number", "updated_at"]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    ["char", "parent"]
+  end
 end

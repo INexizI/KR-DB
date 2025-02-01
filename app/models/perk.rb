@@ -9,4 +9,12 @@ class Perk < ApplicationRecord
   validates :tier, presence: true
   validates :sequence, presence: true
   validates :perk_type, presence: true
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["char_id", "created_at", "description", "id", "name", "perk_type", "sequence", "tier", "updated_at"]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    ["char"]
+  end
 end

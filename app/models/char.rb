@@ -17,4 +17,8 @@ class Char < ApplicationRecord
   validates_uniqueness_of :slug, case_insensitive: true
 
   # default_scope { order('name ASC') }
+
+  def self.ransackable_attributes(auth_object = nil)
+    ["created_at", "description", "id", "id_value", "name", "position", "role_id", "slug", "type_dmg", "updated_at"]
+  end
 end

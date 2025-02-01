@@ -6,7 +6,7 @@ title Search
     - @chars.each do |char|
       .search-block
         = link_to char, title: char.name do
-          img src='/images/media/heroes/#{char.name}/portrait.webp' alt=''
+          img src='/images/media/heroes/#{char.name.downcase}/portrait.webp' alt=''
         span #{char.name}
   .search-sub
     h1 Gears
@@ -94,7 +94,7 @@ title Search
             img src='/images/media/genericPerks/#{perk.name}.webp' alt=''
         - else
           = link_to '/chars/' + perk.char.slug, title: perk.tier do
-            img src='/images/media/heroes/#{perk.tier}/#{perk.sequence}.webp' alt=''
+            img src='/images/media/heroes/#{perk.tier.downcase}/#{perk.sequence}.webp' alt=''
         - if perk.perk_type == 't5'
           span #{perk.tier} [#{perk.name.capitalize}]
         - else
@@ -112,9 +112,9 @@ title Search
           img src='/images/help.svg' id='s#{skill.id.to_s}' alt=''
         = link_to skill.char, title: skill.char.name do
           - if (skill.parent_id.include? 'Advancement Phase')
-            img src='/images/media/heroes/#{skill.char.name}/sw.webp' alt=''
+            img src='/images/media/heroes/#{skill.char.name.downcase}/sw.webp' alt=''
           - else
-            img src='/images/media/heroes/#{skill.char.name}/s#{skill.skill_number}.webp' alt=''
+            img src='/images/media/heroes/#{skill.char.name.downcase}/s#{skill.skill_number}.webp' alt=''
         span #{skill.name}
       .description
         p id='s#{skill.id}'
