@@ -2,7 +2,8 @@
   "name": "kr_calc",
   "private": true,
   "scripts": {
-    "build": "webpack --config ./config/webpack/webpack.config.js",
+    "b": "webpack --config ./config/webpack/webpack.config.js",
+    "s": "rails s",
     "check": "bundle outdated",
     "clean": "bundle clean --force"
   },
@@ -63,5 +64,8 @@
     "presets": [
       "@babel/preset-env"
     ]
-  }
+  },
+  "trustedDependencies": [
+    "core-js"
+  ]
 }

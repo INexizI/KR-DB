@@ -8,6 +8,7 @@ development: &defaults
   port: <%= Rails.application.credentials.database.port %>
   pool: 5
   timeout: 5000
+  query_cache: 100
 
 production:
   url:

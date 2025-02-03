@@ -4,14 +4,14 @@ title Skills
   .c-sub.skill
     - @chars.each do |char|
       .s-hero
-        img src='/images/media/heroes/#{char.name}/portrait.webp' alt=char.name
+        img src='/images/media/heroes/#{char.name.downcase}/portrait.webp' alt=char.name
         h4 #{char.name}
         .flex
           - @skills.where(char_id: char.id).each do |skill|
             - if skill.parent_id.blank?
               div
                 .c-img
-                  img src='/images/media/heroes/#{char.name}/s#{skill.skill_number}.webp' alt=skill.name
+                  img src='/images/media/heroes/#{char.name.downcase}/s#{skill.skill_number}.webp' alt=skill.name
                   .c-description
                     .p1 #{skill.name}
                     .p2
@@ -19,20 +19,20 @@ title Skills
                         span Passive
                       - else
                         - if skill.mana == 0
-                          span Mana cost: #{skill.mana}
+                          span Mana cost: #{skill.mana}
                         - else
                           - skill.mana.times do
                             img src='/images/media/manaOrb.webp'
                     - if !skill.cooldown.blank?
                       .p3
-                        p Cooldown: #{skill.cooldown}
+                        p Cooldown: #{skill.cooldown}
                     .p4
                       hr
                       p #{skill.description}
                 - @skills.where(parent_id: skill.id).each do |skill|
                   - if !skill.parent_id.blank?
                     .c-img
-                      img src='/images/media/heroes/#{char.name}/s#{skill.skill_number}.webp' alt=skill.name
+                      img src='/images/media/heroes/#{char.name.downcase}/s#{skill.skill_number}.webp' alt=skill.name
                       .c-description
                         .p1 #{skill.name}
                         .p2
@@ -40,13 +40,13 @@ title Skills
                             span Passive
                           - else
                             - if skill.mana == 0
-                              span Mana cost: #{skill.mana}
+                              span Mana cost: #{skill.mana}
                             - else
                               - skill.mana.times do
                                 img src='/images/media/manaOrb.webp'
                         - if !skill.cooldown.blank?
                           .p3
-                            span Cooldown: #{skill.cooldown}
+                            span Cooldown: #{skill.cooldown}
                         .p4
                           hr
                           p #{skill.description}
