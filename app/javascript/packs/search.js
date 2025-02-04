@@ -1,9 +1,9 @@
-(function() {
-  $(document).on("turbo:load", function() {
+(function () {
+  $(document).on("turbo:load", function () {
     $input = $("[data-behavior='autocomplete']");
     $options = {
       getValue: "name",
-      url: function(phrase) {
+      url: function (phrase) {
         return "/search.json?q=" + phrase;
       },
       categories: [
@@ -29,7 +29,7 @@
         }
       ],
       list: {
-        onChooseEvent: function() {
+        onChooseEvent: function () {
           $url = $input.getSelectedItemData().url
           $input.val("")
           Turbo.visit($url)
@@ -38,10 +38,10 @@
     };
     $("#srch").easyAutocomplete($options);
 
-    $('img').on('mousedown', function() {
+    $('img').on('mousedown', function () {
       $di = $(this).attr('id');
       $('p#' + $di).parent().show();
-    }).on('mouseup mouseout', function() {
+    }).on('mouseup mouseout', function () {
       $('.description').hide();
     });
   });

@@ -6,7 +6,6 @@
   {
     "name": "HP Up",
     "effect": "HP is increased by 30%"
-
   },
   {
     "name": "DEF Up",
@@ -15,7 +14,6 @@
   {
     "name": "Crit Resistance Up",
     "effect": "Crit Resistance increases by 250"
-
   },
   {
     "name": "Monster Hunting",

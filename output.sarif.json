@@ -8,14 +8,10 @@
           "name": "Brakeman",
           "informationUri": "https://brakemanscanner.org",
           "semanticVersion": "5.0.1",
-          "rules": [
-
-          ]
+          "rules": []
         }
       },
-      "results": [
-
-      ]
+      "results": []
     }
   ]
 }

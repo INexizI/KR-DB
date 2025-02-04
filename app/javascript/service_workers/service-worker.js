@@ -1,8 +1,8 @@
-import {registerRoute} from 'workbox-routing';
-import {CacheFirst} from 'workbox-strategies';
+import { registerRoute } from 'workbox-routing';
+import { CacheFirst } from 'workbox-strategies';
 
 registerRoute(
-  ({request}) => true,
+  ({ request }) => true,
   new CacheFirst({
     cacheName: 'static-resources',
   })
@@ -25,8 +25,8 @@ self.addEventListener('install', function (event) {
 
 self.addEventListener('activate', async function (event) {
   event.waitUntil((async () => {
-  // Enable navigation preload if it's supported.
-  // See https://developers.google.com/web/updates/2017/02/navigation-preload
+    // Enable navigation preload if it's supported.
+    // See https://developers.google.com/web/updates/2017/02/navigation-preload
     if ('navigationPreload' in self.registration) {
       await self.registration.navigationPreload.enable();
     }
@@ -39,27 +39,27 @@ self.addEventListener('activate', async function (event) {
 self.addEventListener('fetch', function (event) {
   // We only want to call event.respondWith() if this is a navigation request
   // for an HTML page.
-    event.respondWith((async () => {
-      try {
-        // First, try to use the navigation preload response if it's supported.
-        const preloadResponse = await event.preloadResponse;
-        if (preloadResponse) {
-          return preloadResponse;
-        }
-
-        return await caches.match(event.request) || await fetch(event.request);
-      } catch (error) {
-        // catch is only triggered if an exception is thrown, which is likely
-        // due to a network error.
-        // If fetch() returns a valid HTTP response with a response code in
-        // the 4xx or 5xx range, the catch() will NOT be called.
-        console.log('Fetch failed; returning offline page instead.', error);
-
-        const cache = await caches.open(CACHE_NAME);
-        const cachedResponse = await cache.match(OFFLINE_URL);
-        return cachedResponse;
+  event.respondWith((async () => {
+    try {
+      // First, try to use the navigation preload response if it's supported.
+      const preloadResponse = await event.preloadResponse;
+      if (preloadResponse) {
+        return preloadResponse;
       }
-    })());
+
+      return await caches.match(event.request) || await fetch(event.request);
+    } catch (error) {
+      // catch is only triggered if an exception is thrown, which is likely
+      // due to a network error.
+      // If fetch() returns a valid HTTP response with a response code in
+      // the 4xx or 5xx range, the catch() will NOT be called.
+      console.log('Fetch failed; returning offline page instead.', error);
+
+      const cache = await caches.open(CACHE_NAME);
+      const cachedResponse = await cache.match(OFFLINE_URL);
+      return cachedResponse;
+    }
+  })());
 });
 
 // self.addEventListener('install', function(event) {

@@ -40,7 +40,6 @@
     "advancement": "Advancement Phase 1\nEach stack of 'Judgement of Ignisius' also reduces the target's M.DEF by 2%\n\nAdvancement Phase 2\nIncreases the duration of 'Judgement of Ignisius' by 5 sec, and changes the max number of stacks to 20 times."
   },
   {
-
     "name": "God's Book, Genesis",
     "description": "Summons the soul of God's Book, Genesis, increasing the number of targets of normal attacks to 2 for 10 sec, healing HP of all allies by 92864 and dispelling negative effects every 2 sec.",
     "charges": 5,
@@ -89,7 +88,6 @@
     "advancement": "Advancement Phase 1\nChanges the duration of the effect to 15 sec.\n\nAdvancement Phase 2\nFor the duration of Skill, increases own DMG dealt to enemies by 20%. Normal attacks have a 10% chance to stun the target for 1.5 sec."
   },
   {
-
     "name": "Prism Nova, Arc Lumineir",
     "description": "Summons the soul of Prism Nova, Arc lumineir for 10 sec. For the duration of the Skill, the soul attack according to the Light Chrisha owns every 3 sec.\n'Red Light' - Attacks the enemy and deals 76248 M.DMG that ignores DEF.\n'Blue Light' - Attack all enemies, dealing 50832 M.DMG and recovering all allies' 1 orb of Mana.\n'Green Light' - Attacks 2 enemies, dealing 127080 M.DMG and reducing targets ATK by 35% for 5 sec.",
     "charges": 7,

@@ -4,10 +4,11 @@ link href="/images/apple-touch-icon.png" rel="apple-touch-icon"
 = csrf_meta_tags
 = csp_meta_tag
 
+meta name="turbo-prefetch" content="false"
 meta name="google" content="notranslate"
 meta name="viewport" content="width=device-width, initial-scale=1"
 meta name="theme-color" content="#757575"
 
-= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload'
+= stylesheet_link_tag 'application', media: 'all', 'data-turbo-track': 'reload'
 = javascript_include_tag 'application', 'data-turbo-track': 'reload', defer: true
 = favicon_link_tag asset_path('manaOrb.webp')

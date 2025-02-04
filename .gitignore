@@ -46,7 +46,6 @@ dump*
 
 # Ignore ruby gems
 /vendor
-/system
 
 # Ignore service-worker
 /public/service-worker.js*
@@ -67,3 +66,7 @@ yarn-debug.log*
 /config/credentials/development.key
 
 *.Identifier
+/app/assets/builds/*
+!/app/assets/builds/.keep
+/app/assets/builds/*
+!/app/assets/builds/.keep

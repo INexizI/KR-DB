@@ -6,8 +6,6 @@
   text-decoration: none;
 }
 
-html, body {}
-
 body {
   margin: auto;
   background: #757575;
@@ -166,11 +164,6 @@ input {
   }
 }
 
-// @keyframes fadein {
-//   from {opacity: 0}
-//   to {opacity: 1}
-// }
-
 main {
   background-size: cover;
   background-position: center;
@@ -292,7 +285,6 @@ main {
   background: rgba(210, 210, 210, 1);
   position: relative;
   padding: 5px 7.5px;
-  // font-size: medium;
   font-size: 15px;
 
   .p1 {
@@ -416,7 +408,6 @@ main {
     vertical-align: -4px;
   }
 }
-.easy-autocomplete-container ul li:last-child {}
 .easy-autocomplete-container ul li.selected {
   background: none repeat scroll 0 0 rgb(200, 200, 200);
   color: rgb(0, 0, 0);
