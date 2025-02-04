@@ -1,8 +1,8 @@
 h4 Unique Weapon
 .c-gear
-  - @gears.where(char: @char).where(gear_type: '10-UW').each do |gear|
+  - @gears.where(gear_type: '10-UW').each do |gear|
     .c-img
-      img src='/images/media/heroes/#{@char.name.downcase}/uw.webp' alt=gear.name
+      img src='/images/media/heroes/#{hero}/uw.webp' alt=gear.name
       .c-description
         .p1
           p #{gear.name}
@@ -14,9 +14,9 @@ h4 Unique Weapon
 
 h4 Unique Treasures
 .c-gear
-  - @gears.where(char: @char).where(gear_type: '9-UT').each do |gear|
+  - @gears.where(gear_type: '9-UT').each do |gear|
     .c-img
-      img src='/images/media/heroes/#{@char.name.downcase}/ut#{gear.gear_skill}.webp' alt=gear.name
+      img src='/images/media/heroes/#{hero}/ut#{gear.gear_skill}.webp' alt=gear.name
       .c-description
         .p1
           p #{gear.name}
@@ -28,19 +28,19 @@ h4 Unique Treasures
 
 h4 Soul Weapon
 .c-gear
-  - @skills.where(char: @char).where.not('length(parent_id) < 4').each do |skill|
+  - @skills.where.not('length(parent_id) < 4').each do |skill|
     .c-img
-      img src='/images/media/heroes/#{@char.name.downcase}/sw.webp' alt=skill.name
+      img src='/images/media/heroes/#{hero}/sw.webp' alt=skill.name
       .c-description.sw-description
         .p1
-          p Soul of #{skill.name}
+          p Soul of #{skill.name}
         .p2
           p
-            | Charges: #{skill.mana}
+            | Charges: #{skill.mana}
             br
             | #{skill.skill_number}
         .p3
-          p Cooldown: #{skill.cooldown}
+          p Cooldown: #{skill.cooldown}
         .p4
           hr
           p #{skill.description}

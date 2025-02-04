@@ -1,4 +1,5 @@
 h4 Transcend
+
 .c-perk
   .c-p
     - @perks.where(tier: 'Generic').each do |perk|
@@ -11,7 +12,7 @@ h4 Transcend
             hr
             P #{perk.description}
   .c-p
-    - @perks.where(tier: @char.role.name).each do |perk|
+    - @perks.where(tier: hero.role.name).each do |perk|
       .c-img
         img src='/images/media/genericPerks/#{perk.name}.webp' alt=perk.name
         .c-description
@@ -22,22 +23,15 @@ h4 Transcend
             p #{perk.description}
   .c-p
     .c-pepe
-      - @perks.where(tier: @char.name).where(perk_type: 'hero').each do |perk|
+      - @perks.where(tier: hero.name).each do |perk|
         .c-img
-          img src='/images/media/heroes/#{@char.name.downcase}/#{perk.sequence}.webp' alt=perk.name
+          img src='/images/media/heroes/#{hero.name.downcase}/#{perk.sequence}.webp' alt=perk.name
           .c-description
             .p1
-              p #{perk.name}
+              - if perk.perk_type == 't5'
+                p #{hero.name + ' ' + '[' + perk.name.capitalize + ']'}
+              - else 
+                p #{perk.name}
             .p4
               hr
               p #{perk.description}
-  .c-p
-    - @perks.where(tier: @char.name, perk_type: 't5').each do |perk|
-      .c-img
-        img src='/images/media/heroes/#{@char.name.downcase}/#{perk.name}.webp' alt=perk.name
-        .c-description
-          .p1
-            p #{@char.name + ' ' + '[' + perk.name.capitalize + ']'}
-          .p4
-            hr
-            p #{perk.description}

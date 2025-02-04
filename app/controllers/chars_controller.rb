@@ -2,16 +2,23 @@ class CharsController < ApplicationController
   before_action :set_char, only: :show
 
   def index
-    @chars = Char.order('name ASC').load_async
-    # @chars = JSON.parse(File.read('./public/json/chars.json'))
+    @knight = Char.where(role_id: 1).order('name ASC').load_async
+    @warrior = Char.where(role_id: 2).order('name ASC').load_async
+    @assassin = Char.where(role_id: 3).order('name ASC').load_async
+    @archer = Char.where(role_id: 4).order('name ASC').load_async
+    @mechanic = Char.where(role_id: 5).order('name ASC').load_async
+    @wizard = Char.where(role_id: 6).order('name ASC').load_async
+    @priest = Char.where(role_id: 7).order('name ASC').load_async
+    # @chars = Char.order('name ASC').load_async
+    # @chars = JSON.parse(File.read('./public/json/heroes.json'))
     # render json: @chars
   end
 
   def show
-    @perks = Perk.order('id ASC').load_async
-    @skills = Skill.all.load_async
-    @stats = Stat.all.load_async
-    @gears = Gear.order('id ASC').load_async
+    @perks = Perk.where('tier = ? OR perk_type = ?', @char.name, 'generic').load_async
+    @skills = Skill.where(char_id: @char.id).load_async
+    @stats = Stat.where(role_id: @char.role_id).load_async
+    @gears = Gear.where(char_id: @char.id).load_async
 
     # require('zip')
     # Zip::File.open('./public/images/media/genericPerks/generic_perks.zip') do |zip_file|

@@ -10,14 +10,14 @@ main style='background-image: url("/images/media/heroes/#{@char.name.downcase}/L
       h4 #{@char.name}
 
     .c-sub.c-bl2#c-skill
-      = render 'skill'
-      = render 'gear'
+      = render partial: 'skill', locals: { hero: @char.name.downcase }
+      = render partial: 'gear', locals: { hero: @char.name.downcase }
 
     .c-sub.c-bl3
-      = render 'stat'
+      = render partial: 'stat', locals: { hero: @char }
 
     .c-sub.c-bl4
-      = render 'perk'
+      = render partial: 'perk', locals: { hero: @char }
 
     / .c-sub
       p = @char.description

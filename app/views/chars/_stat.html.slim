@@ -1,25 +1,26 @@
 .c-stats#statHead
   p.c-stat
     span#s-name Class
-    span#s-val #{@char.role.name}
+    span#s-val #{hero.role.name}
   p.c-stat
     span#s-name ATK Type
     span#s-val
-      img src='/images/media/#{@char.type_dmg}.webp' alt=@char.type_dmg
-      span #{@char.type_dmg}
+      img src='/images/media/#{hero.type_dmg}.webp' alt=hero.type_dmg
+      span #{hero.type_dmg}
   p.c-stat
     span#s-name Position
-    span#s-val #{@char.position}
+    span#s-val #{hero.position}
 .c-stats#statBase
   p
-  - @stats.where(role_id: @char.role, stat_type: 'base').each do |stat|
+  - @stats.where(stat_type: 'base').each do |stat|
     p.c-stat
       span#s-name #{stat.name}
       span#s-val #{stat.value}
 .c-stats#statAdd
   p
-  - @stats.where(role_id: @char.role, stat_type: 'class').each do |stat|
-    p.c-stat
-      span#s-name #{stat.name}
-      span#s-val #{stat.value}
-      span#s-per
+  - @stats.where(stat_type: 'class').each do |stat|
+    - if stat.value != 0
+      p.c-stat
+        span#s-name #{stat.name}
+        span#s-val #{stat.value}
+        span#s-per
