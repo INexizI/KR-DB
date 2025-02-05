@@ -2,9 +2,7 @@
   "name": "kr_calc",
   "private": true,
   "scripts": {
-    "s": "bun bun.config.js && rails s",
     "build": "bun bun.config.js",
-    "build:css": "tailwindcss -i ./app/assets/stylesheets/application.tailwind.css -o ./app/assets/builds/application.css --minify",
     "check": "bundle outdated",
     "clean": "bundle clean --force"
   },
@@ -17,6 +15,7 @@
     "@rails/ujs": "^7.1.501",
     "ansi-regex": "6.1.0",
     "autoprefixer": "^10.4.20",
+    "caniuse-lite": "^1.0.30001697",
     "css-loader": "^6.11.0",
     "dns-packet": "^5.6.1",
     "ejs": "3.1.10",
