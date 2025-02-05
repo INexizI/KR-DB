@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "bun bun.config.js",
+    "watch": "rails tailwindcss:watch",
     "check": "bundle outdated",
     "clean": "bundle clean --force"
   },

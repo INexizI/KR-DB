@@ -5,88 +5,31 @@ title King's Raid DB
     p Hero
     - @chars.each do |char|
       = link_to chars_path do
-        img src='/images/media/heroes/#{char.name.downcase}/portrait.webp' title=char.name
+        img src="/images/media/heroes/#{char.name.downcase}/portrait.webp" title=char.name alt=char.name
   .home-a
     p Gear
     - @gears.each do |gear|
       = link_to gears_path do
-        - if !gear.char_id.blank? && gear.gear_type == '10-UW'
-          img src='/images/media/heroes/#{gear.char.name.downcase}/uw.webp' title='#{gear.char.name.downcase} - #{gear.name}' alt=''
-        - elsif gear.char_id.blank? && gear.gear_type == '10-UW'
-          img src='/images/media/heroes/#{gear.role.name.downcase}.webp' title='#{gear.role.name.downcase} - #{gear.name}' alt=''
-        - elsif !gear.char_id.blank? && gear.gear_type == '9-UT'
-          img src='/images/media/heroes/#{gear.char.name.downcase}/ut#{gear.gear_skill}.webp' title='#{gear.char.name} - #{gear.name}' alt=''
-        - elsif gear.char_id.blank? && gear.gear_type == '9-UT'
-          img src='/images/media/gears/#{gear.gear_type}/Mana.webp' title=gear.name alt=''
-        - elsif gear.gear_type == 'art'
-          img src='/images/media/#{gear.gear_type}/#{gear.name}.webp' title=gear.name alt=''
-
-        - elsif gear.set != 'Legendary' && gear.set != 'Technomagic' && gear.tier != 'TM'
-          - if gear.gear_type == '7-J'
-            img src='/images/media/gears/#{gear.gear_type}/#{gear.name}/#{gear.set}.webp' title='#{gear.set} #{gear.name}' alt=''
-          - else
-            img src='/images/media/gears/#{gear.gear_type}/#{gear.set}.webp' title='#{gear.set} #{gear.name}' alt=''
-
-        - elsif gear.set == 'Legendary'
-          - if gear.name == "Hell's Eyes"
-            img src='/images/media/gears/#{gear.gear_type}/Ring/#{gear.set}.webp' title='#{gear.set} #{gear.name}' alt=''
-          - elsif gear.name == "Fire Dragon's Blessing"
-            img src='/images/media/gears/#{gear.gear_type}/Earrings/#{gear.set}.webp' title='#{gear.set} #{gear.name}' alt=''
-          - elsif gear.name == 'Price of Arrogance'
-            img src='/images/media/gears/#{gear.gear_type}/Necklace/#{gear.set}.webp' title='#{gear.set} #{gear.name}' alt=''
-          - elsif gear.name == 'Fire Circle'
-            img src='/images/media/gears/#{gear.gear_type}/Bracelet/#{gear.set}.webp' title='#{gear.set} #{gear.name}' alt=''
-          - else
-            img src='/images/media/gears/#{gear.gear_type}/#{gear.set}.webp' title='#{gear.set} #{gear.name}' alt=''
-
-        - elsif gear.set == 'Technomagic'
-          - if gear.gear_type == '7-J'
-            - if gear.name == 'Ring of Amplification'
-              img src='/images/media/gears/#{gear.gear_type}/Ring/#{gear.set}.webp' title='#{gear.set} #{gear.name}' alt=''
-            - elsif gear.name == 'Earrings of Amplification'
-              img src='/images/media/gears/#{gear.gear_type}/Earrings/#{gear.set}.webp' title='#{gear.set} #{gear.name}' alt=''
-          - else
-            img src='/images/media/gears/#{gear.gear_type}/#{gear.set}.webp' title='#{gear.set} #{gear.name}' alt=''
-
-        - elsif gear.tier == 'TM'
-          - if gear.gear_type == '7-J'
-            - if gear.explanation == 'Reclaimed'
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.explanation} #{gear.set} #{gear.name}.webp' title='#{gear.explanation} #{gear.name} of #{gear.set} #{gear.gear_skill}' alt=''
-            - else
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} #{gear.name}.webp' title='#{gear.explanation} #{gear.name} of #{gear.set} #{gear.gear_skill}' alt=''
-          -else
-            - if gear.explanation == 'Reclaimed'
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.explanation} #{gear.set} #{gear.name}.webp' title='#{gear.explanation} #{gear.name} of #{gear.set} #{gear.gear_skill}' alt=''
-            - else
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.set} #{gear.name}.webp' title='#{gear.explanation} #{gear.name} of #{gear.set} #{gear.gear_skill}' alt=''
+        img src="/images/media/#{gear.gear_type}/#{gear.name}.webp" title=gear.name alt=gear.name
   .home-a
     p Perk
     - @perks.each do |perk|
       = link_to perks_path do
-        - if perk.perk_type == 'hero'
-          img src='/images/media/heroes/#{perk.tier.downcase}/#{perk.sequence}.webp' title='#{perk.tier} - #{perk.name}'
-        - elsif perk.perk_type == 'generic'
-          img src='/images/media/genericPerks/#{perk.name}.webp' title=perk.name
-        - else
-          img src='/images/media/heroes/#{perk.tier.downcase}/#{perk.name}.webp' title='#{perk.tier} [#{perk.name.capitalize}]'
+        img src="/images/media/heroes/#{perk.tier.downcase}/#{perk.sequence}.webp" title="#{perk.tier} - #{perk.name}"
   .home-a
     p Rune
     - @runes.each do |rune|
       = link_to runes_path do
-        - if rune.name == 'MP Recovery/Attack'
-          img src='/images/media/runes/MPRA.webp' title='#{rune.tier} #{rune.name} #{rune.value}'
-        - elsif rune.name == 'MP Recovery/DMG'
-          img src='/images/media/runes/MPRD.webp' title='#{rune.tier} #{rune.name} #{rune.value}'
-        - elsif rune.tier == 'Velkazar'
-          img src='/images/media/runes/Velkazar/#{rune.id}.webp' title='#{rune.name} #{rune.value}'
+        - if rune.name == "MP Recovery/Attack"
+          img src="/images/media/runes/MPRA.webp" title="#{rune.tier} #{rune.name} #{rune.value}"
+        - elsif rune.name == "MP Recovery/DMG"
+          img src="/images/media/runes/MPRD.webp" title="#{rune.tier} #{rune.name} #{rune.value}"
+        - elsif rune.tier == "Velkazar"
+          img src="/images/media/runes/Velkazar/#{rune.id}.webp" title="#{rune.name} #{rune.value}"
         - else
-          img src='/images/media/runes/#{rune.name}.webp' title='#{rune.tier} #{rune.name} #{rune.value}'
+          img src="/images/media/runes/#{rune.name}.webp" title="#{rune.tier} #{rune.name} #{rune.value}"
   .home-a
     p Skill
     - @skills.each do |skill|
       = link_to skills_path do
-        img src='/images/media/heroes/#{skill.char.name.downcase}/s#{skill.skill_number}.webp' title='#{skill.char.name} - #{skill.name}'
-  / .home-a
-    p Calculator
-    = link_to calcs_path do
-      p Calculator
+        img src="/images/media/heroes/#{skill.char.name.downcase}/s#{skill.skill_number}.webp" title="#{skill.char.name} - #{skill.name}"
