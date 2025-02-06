@@ -3,6 +3,9 @@
     $('.h-title').click(function () {
       $(this).next('.h-heroes').fadeToggle('fast').css({ 'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center' });
     });
+    $('.rune h4').click(function () {
+      $(this).next('.c-sub').fadeToggle('fast').css({ 'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center' });
+    });
     $('.main h4').click(function () {
       $(this).next('.g-type').fadeToggle('fast').css({ 'display': 'flex', 'flex-wrap': 'wrap', 'justify-content': 'center' });
       $(this).next('.g-tm').fadeToggle('fast').css({ 'display': 'flex' });
@@ -69,10 +72,10 @@
     });
 
     /* hide null stat */
-    $('.c-stat .r-stat, .h-main .r-stat').find('p').each(function () {
-      $zeroStat = $(this).text();
-      if ($zeroStat === '0')
-        $(this).hide().prev('p').hide();
-    });
+    // $('.c-stat .r-stat, .h-main .r-stat').find('p').each(function () {
+    //   $zeroStat = $(this).text();
+    //   if ($zeroStat === '0')
+    //     $(this).hide().prev('p').hide();
+    // });
   });
 }).call(this);

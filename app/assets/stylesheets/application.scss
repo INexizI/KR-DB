@@ -56,7 +56,8 @@ input {
 .h-heroes,
 .c-description,
 .g-type,
-.g-tm {
+.g-tm,
+.rune .c-sub {
   display: none;
 }
 
@@ -402,6 +403,7 @@ main {
   .c-sub {
     flex-wrap: wrap;
     flex-direction: row;
+    cursor: pointer;
   }
 }
 

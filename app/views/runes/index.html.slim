@@ -6,11 +6,11 @@ title Runes
     - @runes.where(tier: 'Legendary').each do |rune|
       .c-img
         - if rune.name == 'MP Recovery/Attack'
-          img src='/images/media/runes/MPRA.webp' alt=rune.name
+          = image_tag "/images/media/runes/MPRA.webp", alt: rune.name
         - elsif rune.name == 'MP Recovery/DMG'
-          img src='/images/media/runes/MPRD.webp' alt=rune.name
+          = image_tag "/images/media/runes/MPRD.webp", alt: rune.name
         - else
-          img src='/images/media/runes/#{rune.name}.webp' alt=rune.name
+          = image_tag "/images/media/runes/#{rune.name}.webp", alt: rune.name
         .c-description
           .p1 #{rune.name}
           .p4
@@ -22,7 +22,7 @@ title Runes
   .c-sub
     - @runes.where(tier: 'Velkazar').each do |rune|
       .c-img
-        img src='/images/media/runes/Velkazar/#{rune.id}.webp' alt=rune.name
+        = image_tag "/images/media/runes/Velkazar/#{rune.id}.webp", alt: rune.name
         .c-description
           .p1 #{rune.name}
           .p4

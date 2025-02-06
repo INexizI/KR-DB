@@ -1,5 +1,7 @@
 title Class
 
+.main
+  h4 Class Stats
 .role
   - @roles.each do |role|
     .c-sub.c-bl3
@@ -7,7 +9,7 @@ title Class
         p.c-stat
           span#s-name Class
           span#s-val
-            img src='/images/media/classes/#{role.name}.webp' alt=role.name
+            img src='/images/media/classes/#{role.name.downcase}.webp' alt=role.name
             span #{role.name}
       .c-stats#statBase
         p
@@ -19,6 +21,7 @@ title Class
         p
         - @stats.where(role_id: role.id, stat_type: 'class').each do |stat|
           p.c-stat
-            span#s-name #{stat.name}
-            span#s-val #{stat.value}
-            span#s-per
+            - if stat.value != 0
+              span#s-name #{stat.name}
+              span#s-val #{stat.value}
+              span#s-per

@@ -2,7 +2,9 @@
   "name": "kr_calc",
   "private": true,
   "scripts": {
-    "build": "bun bun.config.js",
+    "dev": "bun bun.config.js && rails tailwindcss:build && rails s",
+    "build:assets": "bun bun.config.js && rails tailwindcss:build",
+    "build": "bun.config.js",
     "watch": "rails tailwindcss:watch",
     "check": "bundle outdated",
     "clean": "bundle clean --force"

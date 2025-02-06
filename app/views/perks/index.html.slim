@@ -3,88 +3,23 @@ title Perk
 .main.perk
   h4 T1 Generic
   .c-sub
-    - @perks.where(tier: 'Generic').each do |perk|
+    - @perks.where(tier: "Generic").each do |perk|
       .c-img
-        img src='/images/media/genericPerks/#{perk.name}.webp' title=perk.description
+        = image_tag "/images/media/genericPerks/#{perk.name}.webp", title: perk.description
         .c-description
           .p1 #{perk.name}
           .p4
             hr
             p #{perk.description}
-
-  h4 T2 Knight
-  .c-sub
-    - @perks.where(tier: 'Knight').each do |perk|
-      .c-img
-        img src='/images/media/genericPerks/#{perk.name}.webp' title=perk.description
-        .c-description
-          .p1 #{perk.name}
-          .p4
-            hr
-            p #{perk.description}
-
-  h4 T2 Warrior
-  .c-sub
-    - @perks.where(tier: 'Warrior').each do |perk|
-      .c-img
-        img src='/images/media/genericPerks/#{perk.name}.webp' title=perk.description
-        .c-description
-          .p1 #{perk.name}
-          .p4
-            hr
-            p #{perk.description}
-
-  h4 T2 Assassin
-  .c-sub
-    - @perks.where(tier: 'Assassin').each do |perk|
-      .c-img
-        img src='/images/media/genericPerks/#{perk.name}.webp' title=perk.description
-        .c-description
-          .p1 #{perk.name}
-          .p4
-            hr
-            p #{perk.description}
-
-  h4 T2 Archer
-  .c-sub
-    - @perks.where(tier: 'Archer').each do |perk|
-      .c-img
-        img src='/images/media/genericPerks/#{perk.name}.webp' title=perk.description
-        .c-description
-          .p1 #{perk.name}
-          .p4
-            hr
-            p #{perk.description}
-
-  h4 T2 Mechanic
-  .c-sub
-    - @perks.where(tier: 'Mechanic').each do |perk|
-      .c-img
-        img src='/images/media/genericPerks/#{perk.name}.webp' title=perk.description
-        .c-description
-          .p1 #{perk.name}
-          .p4
-            hr
-            p #{perk.description}
-
-  h4 T2 Wizard
-  .c-sub
-    - @perks.where(tier: 'Wizard').each do |perk|
-      .c-img
-        img src='/images/media/genericPerks/#{perk.name}.webp' title=perk.description
-        .c-description
-          .p1 #{perk.name}
-          .p4
-            hr
-            p #{perk.description}
-
-  h4 T2 Priest
-  .c-sub
-    - @perks.where(tier: 'Priest').each do |perk|
-      .c-img
-        img src='/images/media/genericPerks/#{perk.name}.webp' title=perk.description
-        .c-description
-          .p1 #{perk.name}
-          .p4
-            hr
-            p #{perk.description}
+  
+  - @roles.each do |role|
+    h4 T2 #{role.name}
+    .c-sub
+      - @perks.where(tier: role.name).each do |perk|
+        .c-img
+          = image_tag "/images/media/genericPerks/#{perk.name}.webp", title: perk.description
+          .c-description
+            .p1 #{perk.name}
+            .p4
+              hr
+              p #{perk.description}
