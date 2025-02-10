@@ -9,13 +9,13 @@ title King's Raid DB
           title: char.name, alt: char.name
   .home-a
     p Gear
-    - @gears.each do |gear|
+    - @gears.where(gear_type: "art").each do |gear|
       = link_to gears_path do
         = image_tag "/images/media/#{gear.gear_type}/#{gear.name}.avif",
           title: gear.name, alt: gear.name
   .home-a
     p Perk
-    - @perks.each do |perk|
+    - @perks.where(perk_type: "hero").each do |perk|
       = link_to perks_path do
         = image_tag "/images/media/heroes/#{perk.tier.downcase}/#{perk.sequence}.avif",
           title: "#{perk.tier} - #{(perk.name)}", alt: perk.name
@@ -37,7 +37,7 @@ title King's Raid DB
             title: "#{rune.tier} #{rune.name} #{rune.value}", alt: rune.name
   .home-a
     p Skill
-    - @skills.each do |skill|
+    - @skills.where(parent_id: "").each do |skill|
       = link_to skills_path do
         = image_tag "/images/media/heroes/#{skill.char.name.downcase}/s#{skill.skill_number}.avif",
           title: "#{skill.char.name} - #{skill.name}", alt: skill.name

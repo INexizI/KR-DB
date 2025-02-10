@@ -1,17 +1,16 @@
-development: &defaults
-  adapter: postgresql
-  encoding: utf8
-  database: <%= Rails.application.credentials.database.name %>
-  username: <%= Rails.application.credentials.database.user %>
-  password: <%= Rails.application.credentials.database.password %>
-  host: <%= Rails.application.credentials.database.host %>
-  port: <%= Rails.application.credentials.database.port %>
-  pool: 5
-  timeout: 5000
-  query_cache: 100
-
-production:
-  url:
-
-test:
-  url:
+development: &default
+  primary: &primary_dev
+    adapter: postgresql
+    encoding: utf8
+    database: <%= Rails.application.credentials.database.name %>
+    username: <%= Rails.application.credentials.database.user %>
+    password: <%= Rails.application.credentials.database.password %>
+    host: <%= Rails.application.credentials.database.host %>
+    port: <%= Rails.application.credentials.database.port %>
+    pool: 5
+    timeout: 5000
+    query_cache: 100
+  cache:
+    <<: *primary_dev
+    database: dev_cache
+    migrations_paths: db/cache_migrate

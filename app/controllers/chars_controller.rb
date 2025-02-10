@@ -1,9 +1,10 @@
 class CharsController < ApplicationController
+  before_action :cache_char
   before_action :set_char, only: :show
 
   def index
     @roles = Role.all.load_async
-    @chars = Char.order('name ASC').load_async
+    @chars = @c.load_async
     # @chars = JSON.parse(File.read('./public/json/heroes.json'))
     # render json: @chars
   end
@@ -35,10 +36,17 @@ class CharsController < ApplicationController
 
   private
     def set_char
-      @char = Char.friendly.find(params[:id])
+      # @char = Char.friendly.find(params[:id])
+      @char = @c.friendly.find(params[:id])
     end
 
     def char_params
       params.require(:char).permit(:name, :description, :type_dmg, :position)
+    end
+
+    def cache_char
+      @c = Rails.cache.fetch("chars", expires_in: 7.days) do
+        Char.order("name ASC").all
+      end
     end
 end
