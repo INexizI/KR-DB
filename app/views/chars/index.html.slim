@@ -3,9 +3,9 @@ title Hero
 .main
   - @roles.each do |role|
     .h-title
-      = image_tag "/images/media/classes/#{role.name.downcase}.webp", alt: role.name
+      = image_tag "/images/media/classes/#{role.name.downcase}.avif", alt: role.name
       span #{role.name}
     .h-heroes
       - @chars.where(role_id: role.id).each do |char|
         = link_to char, title: char.name do
-          = image_tag "/images/media/heroes/#{char.name.downcase}/portrait.webp", alt: char.name
+          = image_tag "/images/media/heroes/#{char.name.downcase}/portrait.avif", alt: char.name

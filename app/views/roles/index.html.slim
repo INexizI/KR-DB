@@ -9,7 +9,7 @@ title Class
         p.c-stat
           span#s-name Class
           span#s-val
-            img src='/images/media/classes/#{role.name.downcase}.webp' alt=role.name
+            = image_tag "/images/media/classes/#{role.name.downcase}.avif", alt: role.name
             span #{role.name}
       .c-stats#statBase
         p

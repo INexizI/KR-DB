@@ -2,7 +2,7 @@ h4 Unique Weapon
 .c-gear
   - @gears.where(gear_type: '10-UW').each do |gear|
     .c-img
-      img src='/images/media/heroes/#{hero}/uw.webp' alt=gear.name
+      = image_tag "/images/media/heroes/#{hero}/uw.avif", alt: gear.name
       .c-description
         .p1
           p #{gear.name}
@@ -16,7 +16,7 @@ h4 Unique Treasures
 .c-gear
   - @gears.where(gear_type: '9-UT').each do |gear|
     .c-img
-      img src='/images/media/heroes/#{hero}/ut#{gear.gear_skill}.webp' alt=gear.name
+      = image_tag "/images/media/heroes/#{hero}/ut#{gear.gear_skill}.avif", alt: gear.name
       .c-description
         .p1
           p #{gear.name}
@@ -30,7 +30,7 @@ h4 Soul Weapon
 .c-gear
   - @skills.where.not('length(parent_id) < 4').each do |skill|
     .c-img
-      img src='/images/media/heroes/#{hero}/sw.webp' alt=skill.name
+      = image_tag "/images/media/heroes/#{hero}/sw.avif", alt: skill.name
       .c-description.sw-description
         .p1
           p Soul of #{skill.name}
@@ -46,9 +46,9 @@ h4 Soul Weapon
           p #{skill.description}
           p#ap #{skill.parent_id}
           hr
-          img src="/images/media/manaOrb.webp" id="a1" alt='Advancement Phase 1'
+          = image_tag "/images/media/manaOrb.avif", id: "a1", alt: "Advancement Phase 1"
           span Advancement Phase 1
           p.a1
-          img src="/images/media/manaOrb.webp" id="a2" alt='Advancement Phase 2'
+          = image_tag "/images/media/manaOrb.avif", id: "a2", alt: "Advancement Phase 2"
           span Advancement Phase 2
           p.a2

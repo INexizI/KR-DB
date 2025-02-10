@@ -5,7 +5,7 @@
   p.c-stat
     span#s-name ATK Type
     span#s-val
-      img src='/images/media/#{hero.type_dmg}.webp' alt=hero.type_dmg
+      = image_tag "/images/media/#{hero.type_dmg}.avif", alt: hero.type_dmg
       span #{hero.type_dmg}
   p.c-stat
     span#s-name Position

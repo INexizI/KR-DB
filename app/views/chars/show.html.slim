@@ -1,23 +1,23 @@
 title #{@char.name}
 
-= link_to 'javascript:history.back()', class: 'back' do
-  img src='/images/left.svg' alt='Back'
+= link_to "javascript:history.back()", class: "back" do
+  = image_tag "/images/left.svg", alt: "Back"
 
-main style='background-image: url("/images/media/heroes/#{@char.name.downcase}/Loading Screen.webp")'
+main style="background-image: url('/images/media/heroes/#{@char.name.downcase}/Loading Screen.avif')"
   .c-main
     .c-sub.c-bl1
-      img src='/images/media/heroes/#{@char.name.downcase}/portrait.webp' alt=@char.name
+      = image_tag "/images/media/heroes/#{@char.name.downcase}/portrait.avif", alt: @char.name
       h4 #{@char.name}
 
     .c-sub.c-bl2#c-skill
-      = render partial: 'skill', locals: { hero: @char.name.downcase }
-      = render partial: 'gear', locals: { hero: @char.name.downcase }
+      = render partial: "skill", locals: { hero: @char.name.downcase }
+      = render partial: "gear", locals: { hero: @char.name.downcase }
 
     .c-sub.c-bl3
-      = render partial: 'stat', locals: { hero: @char }
+      = render partial: "stat", locals: { hero: @char }
 
     .c-sub.c-bl4
-      = render partial: 'perk', locals: { hero: @char }
+      = render partial: "perk", locals: { hero: @char }
 
     / .c-sub
       p = @char.description

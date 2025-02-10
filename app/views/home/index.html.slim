@@ -5,39 +5,39 @@ title King's Raid DB
     p Hero
     - @chars.each do |char|
       = link_to chars_path do
-        = image_tag "/images/media/heroes/#{char.name.downcase}/portrait.webp",
+        = image_tag "/images/media/heroes/#{char.name.downcase}/portrait.avif",
           title: char.name, alt: char.name
   .home-a
     p Gear
     - @gears.each do |gear|
       = link_to gears_path do
-        = image_tag "/images/media/#{gear.gear_type}/#{gear.name}.webp",
+        = image_tag "/images/media/#{gear.gear_type}/#{gear.name}.avif",
           title: gear.name, alt: gear.name
   .home-a
     p Perk
     - @perks.each do |perk|
       = link_to perks_path do
-        = image_tag "/images/media/heroes/#{perk.tier.downcase}/#{perk.sequence}.webp",
+        = image_tag "/images/media/heroes/#{perk.tier.downcase}/#{perk.sequence}.avif",
           title: "#{perk.tier} - #{(perk.name)}", alt: perk.name
   .home-a
     p Rune
     - @runes.each do |rune|
       = link_to runes_path do
         - if rune.name == "MP Recovery/Attack"
-          = image_tag "/images/media/runes/MPRA.webp",
+          = image_tag "/images/media/runes/MPRA.avif",
             title: "#{rune.tier} #{rune.name} #{rune.value}", alt: rune.name
         - elsif rune.name == "MP Recovery/DMG"
-          = image_tag "/images/media/runes/MPRD.webp",
+          = image_tag "/images/media/runes/MPRD.avif",
             title: "#{rune.tier} #{rune.name} #{rune.value}", alt: rune.name
         - elsif rune.tier == "Velkazar"
-          = image_tag "/images/media/runes/Velkazar/#{rune.id}.webp",
+          = image_tag "/images/media/runes/Velkazar/#{rune.id}.avif",
             title: "#{rune.name} #{rune.value}", alt: rune.name
         - else
-          = image_tag "/images/media/runes/#{rune.name}.webp",
+          = image_tag "/images/media/runes/#{rune.name}.avif",
             title: "#{rune.tier} #{rune.name} #{rune.value}", alt: rune.name
   .home-a
     p Skill
     - @skills.each do |skill|
       = link_to skills_path do
-        = image_tag "/images/media/heroes/#{skill.char.name.downcase}/s#{skill.skill_number}.webp",
+        = image_tag "/images/media/heroes/#{skill.char.name.downcase}/s#{skill.skill_number}.avif",
           title: "#{skill.char.name} - #{skill.name}", alt: skill.name

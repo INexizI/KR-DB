@@ -4,14 +4,14 @@ title Skills
   .c-sub.skill
     - @chars.each do |char|
       .s-hero
-        img src='/images/media/heroes/#{char.name.downcase}/portrait.webp' alt=char.name
+        = image_tag "/images/media/heroes/#{char.name.downcase}/portrait.avif", alt: char.name
         h4 #{char.name}
         .flex
           - @skills.where(char_id: char.id).each do |skill|
             - if skill.parent_id.blank?
               div
                 .c-img
-                  img src='/images/media/heroes/#{char.name.downcase}/s#{skill.skill_number}.webp' alt=skill.name
+                  = image_tag "/images/media/heroes/#{char.name.downcase}/s#{skill.skill_number}.avif", alt: skill.name
                   .c-description
                     .p1 #{skill.name}
                     .p2
@@ -22,7 +22,7 @@ title Skills
                           span Mana cost: #{skill.mana}
                         - else
                           - skill.mana.times do
-                            img src='/images/media/manaOrb.webp'
+                            = image_tag "/images/media/manaOrb.avif"
                     - if !skill.cooldown.blank?
                       .p3
                         p Cooldown: #{skill.cooldown}
@@ -32,7 +32,7 @@ title Skills
                 - @skills.where(parent_id: skill.id).each do |skill|
                   - if !skill.parent_id.blank?
                     .c-img
-                      img src='/images/media/heroes/#{char.name.downcase}/s#{skill.skill_number}.webp' alt=skill.name
+                      = image_tag "/images/media/heroes/#{char.name.downcase}/s#{skill.skill_number}.avif", alt: skill.name
                       .c-description
                         .p1 #{skill.name}
                         .p2
@@ -43,7 +43,7 @@ title Skills
                               span Mana cost: #{skill.mana}
                             - else
                               - skill.mana.times do
-                                img src='/images/media/manaOrb.webp'
+                                = image_tag "/images/media/manaOrb.avif"
                         - if !skill.cooldown.blank?
                           .p3
                             span Cooldown: #{skill.cooldown}

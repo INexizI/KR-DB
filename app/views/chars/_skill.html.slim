@@ -1,11 +1,11 @@
 h4 Skills
 
 .c-skill
-  - @skills.where(char: @char).order('skill_number ASC').each do |skill|
+  - @skills.where(char: @char).order("skill_number ASC").each do |skill|
     - if skill.parent_id.blank?
       div
         .c-img
-          img src='/images/media/heroes/#{hero}/s#{skill.skill_number}.webp' alt=skill.name
+          = image_tag "/images/media/heroes/#{hero}/s#{skill.skill_number}.avif", alt: skill.name
           .c-description
             .p1
               p #{skill.name}
@@ -17,7 +17,7 @@ h4 Skills
                   span Mana cost: #{skill.mana}
                 - else
                   - skill.mana.times do
-                    = image_tag '/images/media/manaOrb.webp'
+                    = image_tag "/images/media/manaOrb.avif"
             - if !skill.cooldown.blank?
               .p3
                 p Cooldown: #{skill.cooldown}
@@ -27,7 +27,7 @@ h4 Skills
         - @skills.where(parent_id: skill.id).each do |skill|
           - if !skill.parent_id.blank?
             .c-img
-              img src='/images/media/heroes/#{hero}/s#{skill.skill_number}.webp' alt=skill.name
+              = image_tag "/images/media/heroes/#{hero}/s#{skill.skill_number}.avif", alt: skill.name
               .c-description
                   .p1
                     p #{skill.name}
@@ -39,7 +39,7 @@ h4 Skills
                         span Mana cost: #{skill.mana}
                       - else
                         - skill.mana.times do
-                          = image_tag '/images/media/manaOrb.webp'
+                          = image_tag "/images/media/manaOrb.avif"
                   - if !skill.cooldown.blank?
                     .p3
                       p Cooldown: #{skill.cooldown}

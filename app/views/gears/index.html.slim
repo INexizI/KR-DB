@@ -4,31 +4,31 @@ title Gear
   .c-sub
     h4 T8 Sets
     .g-type#g-t8
-      - @gears.where.not(gear_type: '9-UT').where(tier: 'T8').each do |gear|
+      - @gears.where.not(gear_type: "9-UT").where(tier: "T8").each do |gear|
         .c-img
-          - if gear.gear_type == '7-J'
+          - if gear.gear_type == "7-J"
             - if gear.name == "Hell's Eyes"
-              img src='/images/media/gears/#{gear.gear_type}/Ring/#{gear.set}.webp'
+              = image_tag "/images/media/gears/#{gear.gear_type}/Ring/#{gear.set}.avif"
             - elsif gear.name == "Fire Dragon's Blessing"
-              img src='/images/media/gears/#{gear.gear_type}/Earrings/#{gear.set}.webp'
-            - elsif gear.name == 'Price of Arrogance'
-              img src='/images/media/gears/#{gear.gear_type}/Necklace/#{gear.set}.webp'
-            - elsif gear.name == 'Fire Circle'
-              img src='/images/media/gears/#{gear.gear_type}/Bracelet/#{gear.set}.webp'
-            - elsif gear.name == 'Ring of Amplification'
-              img src='/images/media/gears/#{gear.gear_type}/Ring/#{gear.set}.webp'
-            - elsif gear.name == 'Earrings of Amplification'
-              img src='/images/media/gears/#{gear.gear_type}/Earrings/#{gear.set}.webp'
+              = image_tag "/images/media/gears/#{gear.gear_type}/Earrings/#{gear.set}.avif"
+            - elsif gear.name == "Price of Arrogance"
+              = image_tag "/images/media/gears/#{gear.gear_type}/Necklace/#{gear.set}.avif"
+            - elsif gear.name == "Fire Circle"
+              = image_tag "/images/media/gears/#{gear.gear_type}/Bracelet/#{gear.set}.avif"
+            - elsif gear.name == "Ring of Amplification"
+              = image_tag "/images/media/gears/#{gear.gear_type}/Ring/#{gear.set}.avif"
+            - elsif gear.name == "Earrings of Amplification"
+              = image_tag "/images/media/gears/#{gear.gear_type}/Earrings/#{gear.set}.avif"
             - else
-              img src='/images/media/gears/#{gear.gear_type}/#{gear.name}/#{gear.set}.webp'
+              = image_tag "/images/media/gears/#{gear.gear_type}/#{gear.name}/#{gear.set}.avif"
           - else
-            img src='/images/media/gears/#{gear.gear_type}/#{gear.set}.webp'
+            = image_tag "/images/media/gears/#{gear.gear_type}/#{gear.set}.avif"
           .c-description
             .p1
               span #{gear.set} #{gear.name}
             .p2
               span
-                - if gear.stat.name == 'HP'
+                - if gear.stat.name == "HP"
                   | MAX HP
                 - else
                   | #{gear.stat.name}
@@ -42,12 +42,12 @@ title Gear
     h4 TM
     .g-tm
       #g-tm
-        - @gears.where(tier: 'TM', explanation: '').each do |gear|
+        - @gears.where(tier: "TM", explanation: "").each do |gear|
           .c-img
-            - if gear.gear_type == '7-J'
-                img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} #{gear.name}.webp'
+            - if gear.gear_type == "7-J"
+                = image_tag "/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} #{gear.name}.avif"
             - else
-                img src='/images/media/gears/#{gear.gear_type}/#{gear.set} #{gear.name}.webp'
+                = image_tag "/images/media/gears/#{gear.gear_type}/#{gear.set} #{gear.name}.avif"
             .c-description
               .p1
                 span #{gear.explanation} #{gear.name} of #{gear.set} #{gear.gear_skill}
@@ -59,12 +59,12 @@ title Gear
                 hr
                 p #{gear.notice}
       #g-tm
-        - @gears.where(tier: 'TM', explanation: 'Reclaimed').each do |gear|
+        - @gears.where(tier: "TM", explanation: "Reclaimed").each do |gear|
           .c-img
-            - if gear.gear_type == '7-J'
-                img src='/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.explanation} #{gear.set} #{gear.name}.webp'
+            - if gear.gear_type == "7-J"
+                = image_tag "/images/media/gears/#{gear.gear_type}/#{gear.gear_skill}/#{gear.explanation} #{gear.set} #{gear.name}.avif"
             - else
-                img src='/images/media/gears/#{gear.gear_type}/#{gear.explanation} #{gear.set} #{gear.name}.webp'
+                = image_tag "/images/media/gears/#{gear.gear_type}/#{gear.explanation} #{gear.set} #{gear.name}.avif"
             .c-description
               .p1
                 span #{gear.explanation} #{gear.name} of #{gear.set} #{gear.gear_skill}
@@ -78,9 +78,9 @@ title Gear
   .c-sub
     h4 Mana Stone
     .g-type
-      - @gears.where(description: '', gear_type: '9-UT').each do |gear|
+      - @gears.where(description: "", gear_type: "9-UT").each do |gear|
         .c-img
-          img src='/images/media/gears/#{gear.gear_type}/Mana.webp'
+          = image_tag "/images/media/gears/#{gear.gear_type}/Mana.avif"
           .c-description
             .p1
               p #{gear.set} #{gear.name}
@@ -93,9 +93,9 @@ title Gear
   .c-sub
     h4 Artifacts
     .g-type
-      - @gears.where(gear_type: 'art').each do |gear|
+      - @gears.where(gear_type: "art").each do |gear|
         .c-img
-          img src='/images/media/art/#{gear.name}.webp'
+          = image_tag "/images/media/art/#{gear.name}.avif"
           .c-description
             .p1
               span #{gear.set} #{gear.name}
@@ -106,9 +106,9 @@ title Gear
     h4 Unique Treasure
     .g-type#g-treasure
       - @chars.each do |char|
-        - @gears.where(char: char, gear_type: '9-UT').each do |gear|
+        - @gears.where(char: char, gear_type: "9-UT").each do |gear|
           .c-img
-            img src='/images/media/heroes/#{char.name.downcase}/ut#{gear.gear_skill}.webp'
+            = image_tag "/images/media/heroes/#{char.name.downcase}/ut#{gear.gear_skill}.avif"
             .c-description
               .p1
                 span #{gear.set} #{gear.name}
@@ -117,7 +117,7 @@ title Gear
                 br
                 sapn #{gear.stat.value}
               .p3
-                img src='/images/media/heroes/#{char.name.downcase}/portrait.webp'
+                = image_tag "/images/media/heroes/#{char.name.downcase}/portrait.avif"
                 span #{char.name}
               .p4
                 hr
@@ -126,9 +126,9 @@ title Gear
     h4 Unique Weapon
     .g-type
       - @chars.each do |char|
-        - @gears.where(char: char, gear_type: '10-UW').each do |gear|
+        - @gears.where(char: char, gear_type: "10-UW").each do |gear|
           .c-img
-            img src='/images/media/heroes/#{char.name.downcase}/uw.webp'
+            = image_tag "/images/media/heroes/#{char.name.downcase}/uw.avif"
             .c-description
               .p1
                 span #{gear.set} #{gear.name}
@@ -137,7 +137,7 @@ title Gear
                 br
                 span #{gear.stat.value}
               .p3
-                img src='/images/media/heroes/#{char.name.downcase}/portrait.webp'
+                = image_tag "/images/media/heroes/#{char.name.downcase}/portrait.avif"
                 span #{char.name}
               .p4
                 hr
@@ -146,9 +146,9 @@ title Gear
     h4 Class Unique Weapon
     .g-type
       - @roles.each do |role|
-        - @gears.where(role: role, gear_type: '10-UW').each do |gear|
+        - @gears.where(role: role, gear_type: "10-UW").each do |gear|
           .c-img
-            img src='/images/media/heroes/#{role.name.downcase}.webp'
+            = image_tag "/images/media/heroes/#{role.name.downcase}.avif"
             .c-description
               .p1
                 span #{gear.set} #{gear.name}
@@ -157,7 +157,7 @@ title Gear
                 br
                 span #{gear.stat.value}
               .p3
-                img src='/images/media/classes/#{role.name.downcase}.webp'
+                = image_tag "/images/media/classes/#{role.name.downcase}.avif"
                 span #{role.name}
               .p4
                 hr
@@ -168,24 +168,24 @@ title Gear
       - @chars.each do |char|
         - @skills.where(char: char).each do |skill|
           .c-img
-            img src='/images/media/heroes/#{char.name.downcase}/sw.webp' alt=skill.name
+            = image_tag "/images/media/heroes/#{char.name.downcase}/sw.avif", alt: skill.name
             .c-description.sw-description
               .p1
-                span Soul of #{skill.name}
+                span Soul of #{skill.name}
               .p2
-                span Charges: #{skill.mana}
+                span Charges: #{skill.mana}
                 br
                 span #{skill.skill_number}
               .p3
-                span Cooldown: #{skill.cooldown}
+                span Cooldown: #{skill.cooldown}
               .p4
                 hr
                 p #{skill.description}
                 p#ap #{skill.parent_id}
                 hr
-                img src="/images/media/manaOrb.webp" id="a1" alt='Advancement Phase 1'
+                = image_tag "/images/media/manaOrb.avif", id: "a1", alt: "Advancement Phase 1"
                 span Advancement Phase 1
                 p.a1
-                img src="/images/media/manaOrb.webp" id="a2" alt='Advancement Phase 2'
+                = image_tag "/images/media/manaOrb.avif", id: "a2", alt: "Advancement Phase 2"
                 span Advancement Phase 2
                 p.a2

@@ -3,14 +3,14 @@ title Runes
 .main.rune
   h4 Runes
   .c-sub
-    - @runes.where(tier: 'Legendary').each do |rune|
+    - @runes.where(tier: "Legendary").each do |rune|
       .c-img
-        - if rune.name == 'MP Recovery/Attack'
-          = image_tag "/images/media/runes/MPRA.webp", alt: rune.name
-        - elsif rune.name == 'MP Recovery/DMG'
-          = image_tag "/images/media/runes/MPRD.webp", alt: rune.name
+        - if rune.name == "MP Recovery/Attack"
+          = image_tag "/images/media/runes/MPRA.avif", alt: rune.name
+        - elsif rune.name == "MP Recovery/DMG"
+          = image_tag "/images/media/runes/MPRD.avif", alt: rune.name
         - else
-          = image_tag "/images/media/runes/#{rune.name}.webp", alt: rune.name
+          = image_tag "/images/media/runes/#{rune.name}.avif", alt: rune.name
         .c-description
           .p1 #{rune.name}
           .p4
@@ -20,9 +20,9 @@ title Runes
 
   h4 Velkazar Runes
   .c-sub
-    - @runes.where(tier: 'Velkazar').each do |rune|
+    - @runes.where(tier: "Velkazar").each do |rune|
       .c-img
-        = image_tag "/images/media/runes/Velkazar/#{rune.id}.webp", alt: rune.name
+        = image_tag "/images/media/runes/Velkazar/#{rune.id}.avif", alt: rune.name
         .c-description
           .p1 #{rune.name}
           .p4

@@ -4,7 +4,7 @@ h4 Transcend
   .c-p
     - @perks.where(tier: 'Generic').each do |perk|
       .c-img
-        img src='/images/media/genericPerks/#{perk.name}.webp' alt=perk.name
+        = image_tag "/images/media/genericPerks/#{perk.name}.avif", alt: perk.name
         .c-description
           .p1
             p #{perk.name}
@@ -14,7 +14,7 @@ h4 Transcend
   .c-p
     - @perks.where(tier: hero.role.name).each do |perk|
       .c-img
-        img src='/images/media/genericPerks/#{perk.name}.webp' alt=perk.name
+        = image_tag "/images/media/genericPerks/#{perk.name}.avif", alt: perk.name
         .c-description
           .p1
             p #{perk.name}
@@ -25,7 +25,7 @@ h4 Transcend
     .c-pepe
       - @perks.where(tier: hero.name).each do |perk|
         .c-img
-          img src='/images/media/heroes/#{hero.name.downcase}/#{perk.sequence}.webp' alt=perk.name
+          = image_tag "/images/media/heroes/#{hero.name.downcase}/#{perk.sequence}.avif", alt: perk.name
           .c-description
             .p1
               - if perk.perk_type == 't5'

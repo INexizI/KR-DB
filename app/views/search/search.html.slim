@@ -9,7 +9,7 @@ title Search
     - @chars.each do |char|
       .search-block
         = link_to char, title: char.name do
-          = image_tag "#{c}/#{char.name.downcase}/portrait.webp", alt: char.name
+          = image_tag "#{c}/#{char.name.downcase}/portrait.avif", alt: char.name
         span #{char.name}
   .search-sub
     h1 Gears
@@ -19,69 +19,69 @@ title Search
           = image_tag "/images/help.svg", id: "g#{gear.id.to_s}", alt: ""
         - if !gear.char_id.blank? && gear.gear_type == "10-UW"
           = link_to gear.char, title: gear.char.name do
-            = image_tag "#{c}/#{gear.char.name.downcase}/uw.webp", alt: ""
+            = image_tag "#{c}/#{gear.char.name.downcase}/uw.avif", alt: ""
         - elsif gear.char_id.blank? && gear.gear_type == "10-UW"
           = link_to "/gears", title: gear.name do
-            = image_tag "#{c}/#{gear.role.name.downcase}.webp", alt: ""
+            = image_tag "#{c}/#{gear.role.name.downcase}.avif", alt: ""
         - elsif !gear.char_id.blank? && gear.gear_type == "9-UT"
           = link_to gear.char, title: gear.char.name do
-            = image_tag "#{c}/#{gear.char.name.downcase}/ut#{gear.gear_skill}.webp", alt: ""
+            = image_tag "#{c}/#{gear.char.name.downcase}/ut#{gear.gear_skill}.avif", alt: ""
         - elsif gear.char_id.blank? && gear.gear_type == "9-UT"
           = link_to "/gears", title: gear.name do
-            = image_tag "#{g}/#{gear.gear_type}/mana.webp", alt: ""
+            = image_tag "#{g}/#{gear.gear_type}/mana.avif", alt: ""
         - elsif gear.gear_type == "art"
           = link_to "/gears", title: gear.name do
-            = image_tag "/images/media/#{gear.gear_type}/#{gear.name}.webp", alt: ""
+            = image_tag "/images/media/#{gear.gear_type}/#{gear.name}.avif", alt: ""
 
         - elsif gear.set != "Legendary" && gear.set != "Technomagic" && gear.tier != "TM"
           - if gear.gear_type == "7-J"
             = link_to "/gears", title: gear.name do
-              = image_tag "#{g}/#{gear.gear_type}/#{gear.name}/#{gear.set}.webp", alt: ""
+              = image_tag "#{g}/#{gear.gear_type}/#{gear.name}/#{gear.set}.avif", alt: ""
           - else
             = link_to "/gears", title: gear.name do
-              = image_tag "#{g}/#{gear.gear_type}/#{gear.set}.webp", alt: ""
+              = image_tag "#{g}/#{gear.gear_type}/#{gear.set}.avif", alt: ""
 
         - elsif gear.set == "Legendary"
           - if gear.name == "Hell's Eyes"
             = link_to "/gears", title: gear.name do
-              = image_tag "#{g}/#{gear.gear_type}/Ring/#{gear.set}.webp", alt: ""
+              = image_tag "#{g}/#{gear.gear_type}/Ring/#{gear.set}.avif", alt: ""
           - elsif gear.name == "Fire Dragon's Blessing"
             = link_to "/gears", title: gear.name do
-              = image_tag "#{g}/#{gear.gear_type}/Earrings/#{gear.set}.webp", alt: ""
+              = image_tag "#{g}/#{gear.gear_type}/Earrings/#{gear.set}.avif", alt: ""
           - elsif gear.name == "Price of Arrogance"
             = link_to "/gears", title: gear.name do
-              = image_tag "#{g}/#{gear.gear_type}/Necklace/#{gear.set}.webp", alt: ""
+              = image_tag "#{g}/#{gear.gear_type}/Necklace/#{gear.set}.avif", alt: ""
           - elsif gear.name == "Fire Circle"
             = link_to "/gears", title: gear.name do
-              = image_tag "#{g}/#{gear.gear_type}/Bracelet/#{gear.set}.webp", alt: ""
+              = image_tag "#{g}/#{gear.gear_type}/Bracelet/#{gear.set}.avif", alt: ""
           - else
             = link_to "/gears", title: gear.name do
-              = image_tag "#{g}/#{gear.gear_type}/#{gear.set}.webp", alt: ""
+              = image_tag "#{g}/#{gear.gear_type}/#{gear.set}.avif", alt: ""
 
         - elsif gear.set == "Technomagic"
           - if gear.gear_type == "7-J"
             - if gear.name == "Ring of Amplification"
               = link_to "/gears", title: gear.name do
-                = image_tag "#{g}/#{gear.gear_type}/Ring/#{gear.set}.webp", alt: ""
+                = image_tag "#{g}/#{gear.gear_type}/Ring/#{gear.set}.avif", alt: ""
             - elsif gear.name == "Earrings of Amplification"
               = link_to "/gears", title: gear.name do
-                = image_tag "#{g}/#{gear.gear_type}/Earrings/#{gear.set}.webp", alt: ""
+                = image_tag "#{g}/#{gear.gear_type}/Earrings/#{gear.set}.avif", alt: ""
           - else
             = link_to "/gears", title: gear.name do
-              = image_tag "#{g}/#{gear.gear_type}/#{gear.set}.webp", alt: ""
+              = image_tag "#{g}/#{gear.gear_type}/#{gear.set}.avif", alt: ""
 
         - elsif gear.tier == "TM"
           = link_to "/gears", title: gear.name do
             - if gear.gear_type == "7-J"
               - if gear.explanation == "Reclaimed"
-                = image_tag "#{g}/#{gear.gear_type}/#{gear.gear_skill}/#{gear.explanation} #{gear.set} #{gear.name}.webp", alt: ""
+                = image_tag "#{g}/#{gear.gear_type}/#{gear.gear_skill}/#{gear.explanation} #{gear.set} #{gear.name}.avif", alt: ""
               - else
-                = image_tag "#{g}/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} #{gear.name}.webp", alt: ""
+                = image_tag "#{g}/#{gear.gear_type}/#{gear.gear_skill}/#{gear.set} #{gear.name}.avif", alt: ""
             - else
               - if gear.explanation == "Reclaimed"
-                = image_tag "#{g}/#{gear.gear_type}/#{gear.explanation} #{gear.set} #{gear.name}.webp", alt: ""
+                = image_tag "#{g}/#{gear.gear_type}/#{gear.explanation} #{gear.set} #{gear.name}.avif", alt: ""
               - else
-                = image_tag "#{g}/#{gear.gear_type}/#{gear.set} #{gear.name}.webp", alt: ""
+                = image_tag "#{g}/#{gear.gear_type}/#{gear.set} #{gear.name}.avif", alt: ""
 
         - if gear.tier == "TM"
           p #{gear.explanation} #{gear.name} of #{gear.set} #{gear.gear_skill}
@@ -97,10 +97,10 @@ title Search
           = image_tag "/images/help.svg", id: "p#{perk.id.to_s}", alt: ""
         - if perk.perk_type == "generic"
           = link_to "/perks", title: perk.tier do
-            = image_tag "/images/media/genericPerks/#{perk.name}.webp", alt: ""
+            = image_tag "/images/media/genericPerks/#{perk.name}.avif", alt: ""
         - else
           = link_to "/chars/" + perk.char.slug, title: perk.tier do
-            = image_tag "#{c}/#{perk.tier.downcase}/#{perk.sequence}.webp", alt: ""
+            = image_tag "#{c}/#{perk.tier.downcase}/#{perk.sequence}.avif", alt: ""
         span #{perk.name}
       .description
         p id="p#{perk.id}"
@@ -115,9 +115,9 @@ title Search
           = image_tag "/images/help.svg", id: "s#{skill.id.to_s}", alt: ""
         = link_to skill.char, title: skill.char.name do
           - if (skill.parent_id.include? "Advancement Phase")
-            = image_tag "#{c}/#{skill.char.name.downcase}/sw.webp", alt: ""
+            = image_tag "#{c}/#{skill.char.name.downcase}/sw.avif", alt: ""
           - else
-            = image_tag "#{c}/#{skill.char.name.downcase}/s#{skill.skill_number}.webp", alt: ""
+            = image_tag "#{c}/#{skill.char.name.downcase}/s#{skill.skill_number}.avif", alt: ""
         span #{skill.name}
       .description
         p id="s#{skill.id}"
