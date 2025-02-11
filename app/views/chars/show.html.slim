@@ -3,7 +3,8 @@ title #{@char.name}
 = link_to "javascript:history.back()", class: "back" do
   = image_tag "/images/left.svg", alt: "Back"
 
-main style="background-image: url('/images/media/heroes/#{@char.name.downcase}/Loading Screen.avif')"
+/ main style="background-image: url('/images/media/heroes/#{@char.name.downcase}/Loading Screen.avif')"
+main
   .c-main
     .c-sub.c-bl1
       = image_tag "/images/media/heroes/#{@char.name.downcase}/portrait.avif", alt: @char.name

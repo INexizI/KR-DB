@@ -244,22 +244,22 @@ main {
     background-size: 300px;
   }
   #statHead:before {
-    background-image: url("/images/media/classes/basic head.webp");
+    background-image: url("/images/media/classes/basic head.avif");
   }
   #statBase:before {
-    background-image: url("/images/media/classes/base head.webp");
+    background-image: url("/images/media/classes/base head.avif");
   }
   #statAdd:before {
-    background-image: url("/images/media/classes/add head.webp");
+    background-image: url("/images/media/classes/add head.avif");
   }
   #statHead:after,
   #statBase:after,
   #statAdd:after {
-    background-image: url("/images/media/classes/stat foot.webp");
+    background-image: url("/images/media/classes/stat foot.avif");
     height: 8px;
   }
   .c-stat {
-    background-image: url("/images/media/classes/stat.webp");
+    background-image: url("/images/media/classes/stat.avif");
     background-size: 300px 25px;
     color: rgb(171, 142, 116);
     line-height: 25px;

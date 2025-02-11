@@ -11,9 +11,9 @@ class CharsController < ApplicationController
 
   def show
     @perks = Perk.where('tier = ? OR perk_type = ?', @char.name, 'generic').load_async
-    @skills = Skill.where(char_id: @char.id).load_async
+    @skills = Skill.where(char: @char.id).load_async
     @stats = Stat.where(role_id: @char.role_id).load_async
-    @gears = Gear.where(char_id: @char.id).load_async
+    @gears = Gear.where(char: @char.id).load_async
 
     # require('zip')
     # Zip::File.open('./public/images/media/genericPerks/generic_perks.zip') do |zip_file|
@@ -35,18 +35,17 @@ class CharsController < ApplicationController
   end
 
   private
+    def cache_char
+      @c = Rails.cache.fetch("chars", expires_in: 7.days) do
+        Char.order("name ASC").all
+      end
+    end
+    
     def set_char
-      # @char = Char.friendly.find(params[:id])
       @char = @c.friendly.find(params[:id])
     end
 
     def char_params
       params.require(:char).permit(:name, :description, :type_dmg, :position)
-    end
-
-    def cache_char
-      @c = Rails.cache.fetch("chars", expires_in: 7.days) do
-        Char.order("name ASC").all
-      end
     end
 end
