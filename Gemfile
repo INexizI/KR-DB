@@ -54,7 +54,7 @@ gem "elasticsearch-model"
 gem "elasticsearch-rails"
 gem "elasticsearch-persistence"
 
-gem "tailwindcss-ruby", "4.1.5"
+gem "tailwindcss-ruby", "4.1.6"
 gem "tailwindcss-rails"
 
 group :development, :test do
