@@ -134,7 +134,7 @@ GEM
       elasticsearch (~> 8)
       elasticsearch-model (= 8)
       hashie
-    elasticsearch-rails (8.0.0)
+    elasticsearch-rails (8.0.1)
     erb (5.0.2)
     erubi (1.13.1)
     et-orbi (1.2.11)
@@ -480,14 +480,14 @@ DEPENDENCIES
   propshaft
   puma (>= 6.4.3)
   rack-cors
-  rails (~> 8.0.2)
+  rails (~> 8.0.2, >= 8.0.2.1)
   ransack!
   rubocop-rails-omakase
   sass-rails
   selenium-webdriver
   simple_form
   slim-rails
-  solid_cable
+  solid_cable (>= 3.0.12)
   solid_cache
   solid_queue
   sqlite3 (>= 2.1)
