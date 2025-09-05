@@ -134,7 +134,7 @@ GEM
       elasticsearch (~> 8)
       elasticsearch-model (~> 8.0)
       hashie
-    elasticsearch-rails (8.0.0)
+    elasticsearch-rails (8.0.1)
     erb (5.0.2)
     erubi (1.13.1)
     et-orbi (1.2.11)
