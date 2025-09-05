@@ -124,7 +124,7 @@ GEM
       elasticsearch-api (= 8.19.1)
     elasticsearch-api (8.19.1)
       multi_json
-    elasticsearch-model (8.0.0)
+    elasticsearch-model (8.0.1)
       activesupport (> 3)
       elasticsearch (~> 8)
       hashie
