@@ -18,7 +18,7 @@ gem "jbuilder"
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-gem "solid_cache"
+gem "solid_cache", ">= 1.0.8"
 gem "solid_queue"
 gem "solid_cable", ">= 3.0.12"
 
