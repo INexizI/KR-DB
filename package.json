@@ -16,7 +16,7 @@
     "@rails/activestorage": "^7.2.201",
     "@rails/request.js": "^0.0.12",
     "@rails/ujs": "^7.1.501",
-    "ansi-regex": "6.2.0",
+    "ansi-regex": "6.2.2",
     "autoprefixer": "^10.4.20",
     "caniuse-lite": "^1.0.30001697",
     "css-loader": "^6.11.0",
