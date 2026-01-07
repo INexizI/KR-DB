@@ -14,9 +14,9 @@ jobs:
         ruby: [3.0.0p0]
 
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Setup reviewdog
-        uses: reviewdog/action-setup@v1.4.0
+        uses: reviewdog/action-setup@v1.5.0
       # - name: Github Release
       #   uses: elgohr/Github-Release-Action@v3.1
