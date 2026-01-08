@@ -14,7 +14,7 @@
     "@hotwired/turbo-rails": "^8.0.12",
     "@rails/actioncable": "^7.2.201",
     "@rails/activestorage": "^7.2.201",
-    "@rails/request.js": "^0.0.12",
+    "@rails/request.js": "^0.0.13",
     "@rails/ujs": "^7.1.501",
     "ansi-regex": "6.2.2",
     "autoprefixer": "^10.4.20",
