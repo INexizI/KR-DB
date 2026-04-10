@@ -24,7 +24,7 @@ gem "solid_cable", ">= 3.0.12"
 
 gem "bootsnap", require: false
 
-gem "kamal", require: false
+gem "kamal", ">= 2.11.0", require: false
 
 gem "thruster", require: false
 
