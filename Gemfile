@@ -3,7 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.4.1"
 
-gem "rails", "~> 8.1.2"
+gem "rails", "~> 8.1.2", ">= 8.1.2.1"
 gem "propshaft"
 gem "pg"
 gem "sqlite3", ">= 2.1"
@@ -19,7 +19,7 @@ gem "jbuilder"
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "solid_cache"
-gem "solid_queue"
+gem "solid_queue", ">= 1.4.0"
 gem "solid_cable", ">= 3.0.12"
 
 gem "bootsnap", require: false
